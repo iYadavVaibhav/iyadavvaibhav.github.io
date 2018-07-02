@@ -25,6 +25,6 @@ I graduated in Information Technology from UIET, CSJM University. Kanpur, Uttar 
 ### Contact me
 
 [Email me](mailto:iyadavvaibhav+github@gmail.com)
-or reach to my social networks below
+or reach to my social networks using below links.
 
 > Happy Coding..! ;)
