@@ -10,7 +10,6 @@ GitHub Pages further pushed me to learn Git, GitHub and Jekyll (blogging with Gi
 
 These notes can help you setup Git on Mac and link it with GitHub account.
 
-
 I have followed an excellent [post](https://kbroman.org/github_tutorial/) by Karl Broman on the same. You can find summary of his guide below:
 
 ## 1. Install Git
@@ -30,8 +29,6 @@ Now that you have all set up, you can setup GitHub Pages to launch your site.
 Further, if you want to blog on your site you can setup Jekyll.
 
 Follow this post, [Setting Jekyll Now on GitHub] to get started with bloggin and personal site.
-
----
 
 ## End Notes
 Hope this article helped you. Any questions? Please let me know in comments below.

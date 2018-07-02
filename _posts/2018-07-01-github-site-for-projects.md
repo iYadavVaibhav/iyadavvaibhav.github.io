@@ -9,10 +9,10 @@ GitHub can be used for personal site and blog.
 It can further be used to project sites. This is kinf of a sub-site/sub-domain of main site.
 
 My site:
-myname.github.io/
+```myname.github.io/```
 
 Project Site:
-myname.github.io/abc_project/
+```myname.github.io/abc_project/```
 
 All projects repository come under **gh-pages** branch and not master.
 

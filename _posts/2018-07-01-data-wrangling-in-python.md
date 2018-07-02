@@ -1,7 +1,9 @@
 ---
+layout: post
 title: Data Wrangling in Python
-layout: posts
+categories: howtos
 ---
+
 
 R to python useful data wrangling snippets
 

@@ -11,18 +11,18 @@ This post has notes on setting up environment and best practice for blogging in 
 So, this post is third part of related posts.
 
 **See Also:**
+
 1 [Setting Jekyll Now on GitHub](https://iyadavvaibhav.github.io)
+
 2 [Setting Git and GitHub on Mac](https://iyadavvaibhav.github.io)
 
----
 
+## The Setup
 I am using Mac, GitHub and Jekyll for blogging.
 
 Editing tool I am using is Sublime Text 3.1.1
 
 This version of Sublime text comes with support for markdown and provides very minimum syntax highlighting.
-
-This works for, however, i
 
 ## Extending Sublime Text for Markdown Support:
 If you want more syntax highlighting and better preview of what you write then you can extend Sublime Text by installing  package.
@@ -47,8 +47,6 @@ So I removed this package. But you may like it.
 To remove the package, simply press ``Cmd + Shift + P`` and the type ``remove package``.
 
 This will give you list of packages installed and you can select ``Markdown Editing`` to remove it.
-
----
 
 ## End Notes
 Hope this helps you, do check out my related post to help you setup things better.

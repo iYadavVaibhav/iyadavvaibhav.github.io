@@ -15,7 +15,7 @@ The readme.md in above repository is a very good tutorial that you can follow an
 Posts can be published in 3 ways:
 
 ### 1. Directly write on GitHub.com:
-This is fastest way and requires no setup. You can go to ``_posts`` folder on this repository and create new .md file.
+This is fastest way and requires no setup. You can go to `_posts` folder on this repository and create new .md file.
 
 ### 2. Local MD files
 You can use Sublime, atom or any other text editor on your local machine and the upload it to GitHub or use Git locally then commit and push to GitHub ([more info](https://iyadavvaibhav.github.io/Setting-Git-and-Github-on-Mac)).
@@ -23,13 +23,14 @@ You can use Sublime, atom or any other text editor on your local machine and the
 ### 3. Local Jekyll setup
 Or you can install Jekyll locally on your machine. This will require you to install Ruby as well. Then on localhost you can render your entire website (blog) and see changes. Then you can push it to GitHub.
 
-**Preference**
+**Preference:**
+
 I *personally* prefer 2nd way, Local MD files, I create in Sublime text, and the push it to GitHub once done. Here is another post on how to setup local environment for same, [MarkDown Blogging with Jekyll](https://iyadavvaibhav.github.io/MarkDown-Blogging-with-Jekyll).
 
-### Advanced Jekyll
+**Advanced Jekyll**
+
 If you need to extend the functionality of Jekyll posts then advanced tutorial can be found at [here](https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/).
 
----
 ## End Notes
 Hope this helps you setup Jekyll and wish you good luck with raw blogging.
 
