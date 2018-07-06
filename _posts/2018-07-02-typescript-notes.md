@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Notes on TypeScript
-categories: howtos
+categories: notes
 ---
 
 Notes on my understanding of TypeScript

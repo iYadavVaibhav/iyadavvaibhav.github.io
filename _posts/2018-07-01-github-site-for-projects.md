@@ -1,7 +1,7 @@
 ---
 layout: post
 title: GitHub Site for Projects
-categories: notes
+categories: howtos
 ---
 
 GitHub can be used for personal site and blog.
