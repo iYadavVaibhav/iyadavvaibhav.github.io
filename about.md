@@ -6,6 +6,12 @@ permalink: /about/
 
 I currently work as Data Analyst with Barclays India. My job is to understand business analyst's requirement. Mine data, do some ETL (Teradata, Impala, R) and deliver polished reports in popular BI tools like Tableau, Shiny and D3JS.
 
+### My Work
+
+You can see my recent work around data analytics by visiting following links:
+ - Data Analytics on [Kaggle](https://www.kaggle.com/iyadavvaibhav)
+ - Data Visualization on [Tableau Public](https://public.tableau.com/profile/vaibhavyadav)
+
 ### More Information
 
 I am certified Big Data Hadoop developer by Horton Works and certified Mongo DB developer by Mongo DB.
