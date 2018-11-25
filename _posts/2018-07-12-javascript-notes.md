@@ -4,11 +4,9 @@ title: JavaScript Notes
 categories: notes, javascript
 ---
 
-## JavaScript Notes
-
 Notes on JavaScript as I learn and improve my understanding.
 
-### Functions Concepts
+## Functions Concepts
 
 Functions can do whatever we want them to do.. :)
 
@@ -37,9 +35,9 @@ myFunction(arg1, arg2).done( function (data) {
 });
 ```
 
-Now we see that, done would be triggered once myFunction is completed.
+Now we see that, done would be triggered once myFunction is completed. All jQuery promises provide a done method that takes a callback.
 
-### JS Objects Concept
+## JS Objects Concept
 
 JS Object can hold anything, they can even hold another function.
 They are accessed using . DOT notation.
