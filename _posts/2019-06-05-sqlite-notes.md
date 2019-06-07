@@ -1,3 +1,9 @@
+---
+title: Understanding SQLite
+layout: post
+categories: notes, database
+---
+
 # SQLite
 
 It is a micro database that can work in memory or a file.

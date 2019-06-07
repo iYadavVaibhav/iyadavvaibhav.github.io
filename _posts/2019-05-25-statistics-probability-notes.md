@@ -1,3 +1,9 @@
+---
+title: Understanding Statistics and Probability
+layout: post
+categories: notes, maths
+---
+
 # Statistics
 
 ## Summarising Quantitative Data

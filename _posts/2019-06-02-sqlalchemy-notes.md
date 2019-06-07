@@ -1,3 +1,9 @@
+---
+title: Understanding SQLAlchemy
+layout: post
+categories: notes, database, python
+---
+
 # SQLAlchemy
 
 **ORMs** allow applications to manage a database using high-level entities such as classes, objects and methods instead of tables and SQL. The job of the ORM is to translate the high-level operations into database commands.

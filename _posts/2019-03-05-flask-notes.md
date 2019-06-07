@@ -1,3 +1,11 @@
+---
+title: Understanding Flask
+layout: post
+categories: notes, python
+---
+
+Flask is a microframework in Python. It is used to create a webapp. It can start a python web server. It can handle HTTP requests. It can also be used to make a webapp API.
+
 # Flask Mega Tutuorial Notes
 
 In this tutorial by Miguel Grinberg, we are learning to crate a micro-blogging site using flask and other dependencies.
