@@ -8,3 +8,7 @@ Gemfile
 Gemfile.lock
 node_modules
 package.json
+
+# Uoload only .md in _posts
+/_posts/*
+!/_posts/*.md
