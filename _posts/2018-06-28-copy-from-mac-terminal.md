@@ -1,12 +1,16 @@
 ---
 layout: post
-title: Copy from Mac Terminal using Command
+title: Mac Terminal Notes
 categories: snippets
 ---
 
-This snippet gives us command to copy file content from shell to clipboard with a command
-```shell
-$ pbcopy < my_filename.ext
-```
-This copies content of file to clipboard.
+Here are some basic understandings and commands that can be used on UNIX terminal and eventually on Mac. 
+
+
+## Copy to clipboard
+`$ pbcopy < my_filename.ext` it copies the content of file to clipboard.
+
 It is helpful to quickly copy RSA key to clipboard which you need to paste on, may be, GitHub.
+
+## Emac Basic
+Press `ctrl + c + x` to save and exit a file.
