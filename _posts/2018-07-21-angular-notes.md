@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Angular Notes
-categories: notes, angular
+categories: notes angular
 ---
 
 Notes on angular

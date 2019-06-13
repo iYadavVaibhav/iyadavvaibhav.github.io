@@ -1,7 +1,7 @@
 ---
 title: Understanding SQLite
 layout: post
-categories: notes, database
+categories: notes database
 ---
 
 # SQLite

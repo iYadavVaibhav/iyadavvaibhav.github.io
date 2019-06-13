@@ -1,4 +1,7 @@
 ---
+layout: post
+categories: notes
+title: Understanding Jekyll
 ---
 
 Jekyll is a Ruby library to make blog and pages site.

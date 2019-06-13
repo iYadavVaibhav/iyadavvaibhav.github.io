@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Python Notes
-categories: notes, python
+categories: notes python
 ---
 
 Notes on Python as I learn and improve my understanding.

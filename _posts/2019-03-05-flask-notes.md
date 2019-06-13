@@ -1,7 +1,7 @@
 ---
 title: Understanding Flask
 layout: post
-categories: notes, python
+categories: notes python
 ---
 
 Flask is a microframework in Python. It is used to create a webapp. It can start a python web server. It can handle HTTP requests. It can also be used to make a webapp API.

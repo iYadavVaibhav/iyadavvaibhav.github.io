@@ -1,7 +1,7 @@
 ---
 title: Understanding Statistics and Probability
 layout: post
-categories: notes, maths
+categories: notes maths
 ---
 
 # Statistics

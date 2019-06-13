@@ -1,7 +1,7 @@
 ---
 layout: post
 title: JavaScript Notes
-categories: notes, javascript
+categories: notes javascript
 ---
 
 Notes on JavaScript as I learn and improve my understanding.

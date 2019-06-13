@@ -1,7 +1,7 @@
 ---
 title: Understanding SQLAlchemy
 layout: post
-categories: notes, database, python
+categories: notes database python
 ---
 
 # SQLAlchemy
