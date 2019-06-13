@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mac Terminal Notes
-categories: snippets
+categories: notes, snippets
 ---
 
 Here are some basic understandings and commands that can be used on UNIX terminal and eventually on Mac. 
