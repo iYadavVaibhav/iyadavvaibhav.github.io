@@ -1,5 +1,7 @@
 ---
-layout: default
+layout: page
+permalink: home
+title: home
 ---
 
 ## Archive
