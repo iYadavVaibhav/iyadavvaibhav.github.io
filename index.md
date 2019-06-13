@@ -2,10 +2,13 @@
 layout: default
 ---
 
-Welcome to my blog! I'm a data engineer, currently living in Delhi, India. 
+Welcome to my blog! I'm a software engineer turned data analyst learing data science ;) , currently living in Delhi, India. 
+
+---
 
 **Articles**
-These are basic guides as I learn through:
+
+Some of the very basic how to guides as I learn through:
 {% for post in site.posts %}
 {% unless post.categories contains 'notes' %}
 - [{{ post.title }}]({{ post.url }})
@@ -13,6 +16,7 @@ These are basic guides as I learn through:
 {% endfor %}
 
 **Notes**
+
 Reference docs I prepared for personal learning:
 {% for post in site.categories.notes %}
 - [{{ post.title }}]({{ post.url }})
