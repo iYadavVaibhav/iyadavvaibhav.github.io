@@ -6,7 +6,7 @@ Welcome to my blog! I'm a software engineer turned data analyst learing data sci
 
 ---
 
-**Articles**
+# **Articles**
 
 Some of the very basic how to guides as I learn through:
 {% for post in site.posts %}
@@ -15,14 +15,14 @@ Some of the very basic how to guides as I learn through:
 {% endunless %}
 {% endfor %}
 
-**Notes**
+##### **Notes**
 
 Reference docs I prepared for personal learning:
 {% for post in site.categories.notes %}
 - [{{ post.title }}]({{ post.url }})
 {% endfor %}
 
-**Kaggle**
+#### **Kaggle**
 
 Amazing place for data science enthusiasts. If you are learning data science you can find kernels and data sets on [Kaggle](https://www.kaggle.com). Some of my work are:
 - [Linear Regression in Machine Learning](https://www.kaggle.com/iyadavvaibhav/machine-learning-linear-regression)
@@ -30,7 +30,8 @@ Amazing place for data science enthusiasts. If you are learning data science you
 
 Or you may see all my Kernels [here](https://www.kaggle.com/iyadavvaibhav/kernels).
 
-**Tableau Public**
+
+### **Tableau Public**
 
 Data Visualization has been my passion since I started my journey in Data and Analytics. You can find some of the dashboards I created in Tableau below:
 - [Whatsapp Chat Analysis](https://public.tableau.com/profile/iyadavvaibhav#!/vizhome/WhatsappChatAnalysis/Allsheets) - It shows chats by gender, time of the day and how chats grew over the month.
@@ -38,7 +39,8 @@ Data Visualization has been my passion since I started my journey in Data and An
 
 Or click here to browse my [Tableau Public Profile](https://public.tableau.com/profile/iyadavvaibhav).
 
-**Old Work**
+
+## **Old Work**
 - [Easy Soft Sys](http://www.easysoftsys.com) - College days start up.
 - [First Website](https://sites.google.com/site/vebs0205/) - Late 2009, I created my personal site using google sites.
 
