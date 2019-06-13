@@ -25,3 +25,8 @@ title: home
 {% endfor %}
 
 **Archives**
+{% for post in site.posts %}
+{% if (post.categories | first) != 'notes' %}
+- [{{ post.title }}]({{ post.url }})
+{% endif %}
+{% endfor %}
