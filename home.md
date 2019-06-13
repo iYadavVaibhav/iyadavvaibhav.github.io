@@ -24,9 +24,9 @@ title: home
 - [{{ post.title }}]({{ post.url }})
 {% endfor %}
 
-**Archives**
+**Archives excludes notes**
 {% for post in site.posts %}
-{% if post.categories.exclude?('notes') %}
+{% unless post.categories contains 'notes' %}
 - [{{ post.title }}]({{ post.url }})
 {% endif %}
 {% endfor %}
