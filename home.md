@@ -16,5 +16,5 @@ title: home
 
 ## Notes
 {% for post in site.categories['notes'] %}
-- [{{ post.title }}]({{ post.url }})
+  - [{{ post.title }}]({{ post.url }})
 {% endfor %}
