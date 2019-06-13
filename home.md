@@ -14,7 +14,7 @@ title: home
 {% for category in site.categories %}
 {% if category[0] != 'notes' %}
 {% for post in category[1] %}
-- [{{ post.title }}]({{ site.baseurl }}{{ post.url }}) under {{ post.categories }}
+- [{{ post.title }}]({{ site.baseurl }}{{ post.url }}) under {{ post.categories | first }}
 {% endfor %}
 {% endif %}
 {% endfor %}
