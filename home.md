@@ -19,3 +19,10 @@ title: home
 {% for post in site.categories['notes'] %}
   - [{{ post.title }}]({{ post.url }})
 {% endfor %}
+
+**Notes:**
+  {% for post in site.categories.notes %}
+    {% if post.url %}
+        - {{ post.url }} {{ post.title }}
+    {% endif %}
+  {% endfor %}
