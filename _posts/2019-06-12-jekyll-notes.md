@@ -20,3 +20,14 @@ For eg. 'default.html' can include 'meta.html'.
 
 **some_post.md** can use `post.html` as layout. So all markdown from this file will be populated to `{{ content }}` of 'post.html'.
 
+**To list all categories in site**
+
+Category returns two array items, first is category name and second is another array of posts.
+
+Categories in site:
+```ruby
+{% for category in site.categories %}
+- {{ category[0] }}
+{% endfor %}
+```
+
