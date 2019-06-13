@@ -26,7 +26,7 @@ title: home
 
 **Archives**
 {% for post in site.posts %}
-{% if (post.categories | first) != 'notes' %}
+{% if post.categories.exclude?('notes') %}
 - [{{ post.title }}]({{ post.url }})
 {% endif %}
 {% endfor %}
