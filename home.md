@@ -4,6 +4,11 @@ permalink: home
 title: home
 ---
 
+**Categories**
+{% for category in site.categories %}
+- {{ category[0] }}
+{% endfor %}
+
 ## Archive
 
 
