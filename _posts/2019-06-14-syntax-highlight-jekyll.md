@@ -4,7 +4,26 @@ title: How to add syntax highlighting to Jekyll Sites
 categories: howtos
 ---
 
-Jekyll supports syntax highlighting by default using gem `rouge`.
+Jekyll supports syntax highlighting by default using gem `rouge`. It can highlight 100 different language.
+
+You need to add one line in `config.yml` 
+
+```yml
+highlighter: rouge
+```
+
+and need to ensure that `rouge` gem is installed. If you have forked any jeklyy site then you can skip this step, else run:
+```bash
+gem install rouge
+```
+
+**Themes**: There are many themes available for syntax highlighting. They can be [previewed here](http://richleland.github.io/pygments-css/). They can be downloaded from [here](https://github.com/richleland/pygments-css).
+
+I personally prefer Github flavoured theme which I downloaded from [here](https://raw.githubusercontent.com/PhilipTrauner/pygments-github-css/master/github.css).
+
+Once you have decided the theme then you can replace the file `_syntax-highlighting.scss` file located in `_scss` directory. Every Jekyll site must have this file by default.
+
+Please see below some of the use cases.
 
 Ruby:
 
@@ -34,3 +53,4 @@ HTML
   </body>
 </html>
 ```
+
