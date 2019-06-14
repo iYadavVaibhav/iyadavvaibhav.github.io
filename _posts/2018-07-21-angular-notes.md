@@ -10,7 +10,7 @@ Notes on angular
 
 We can define a resource in app folder eg: hero.ts to include the class with it's members.
 
-We can make components for various behaviours of our app.
+We can make components for various behaviors of our app.
 
 eg: 
 

@@ -6,7 +6,7 @@ categories: notes python
 
 Flask is a microframework in Python. It is used to create a webapp. It can start a python web server. It can handle HTTP requests. It can also be used to make a webapp API.
 
-# Flask Mega Tutuorial Notes
+# Flask Mega Tutorial Notes
 
 In this tutorial by Miguel Grinberg, we are learning to crate a micro-blogging site using flask and other dependencies.
 
@@ -33,7 +33,7 @@ We can use to create table and manage changes
 
 `(venv) $ python -m smtpd -n -c DebuggingServer localhost:8025` this command starts emulated email server.
 
-Some varibles that we might need to export:
+Some variables that we might need to export:
 ```
 export MAIL_SERVER=smtp.googlemail.com
 export MAIL_PORT=587
@@ -72,7 +72,7 @@ This defines app folder as a python package.
 **Services:** Here we have various services defined. We use them across app like db, login, mail.
 
 ## Blueprints
-We can seperate out application logical modules in application. Like we can create separate package for auth, error handling etc.
+We can separate out application logical modules in application. Like we can create separate package for auth, error handling etc.
 
 `from flask import Blueprint` is what we need to use.
 
@@ -94,8 +94,8 @@ In each Blueprint package we make \_\_initII.py that has name information and im
 
 - You can install elastic search by `brew install elasticsearch` on mac.
 - Access `http://localhost:9200` to view service JSON output.
-- Also, intall in python `pip install elasticsearch`
-- To have launchd start elasticsearch now and restart at login: `brew services start elasticsearch`
+- Also, install in python `pip install elasticsearch`
+- To have launched start elasticsearch now and restart at login: `brew services start elasticsearch`
 - Or, if you don't want/need a background service you can just run: `elasticsearch`
 
 Todo: Search not working, fix it.

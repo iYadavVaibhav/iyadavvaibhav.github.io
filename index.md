@@ -2,7 +2,7 @@
 layout: default
 ---
 
-Welcome to my blog! I'm a software engineer turned data analyst learing data science ;) , currently living in Delhi, India. 
+Welcome to my blog! I'm a software engineer turned data analyst learning data science ;) , currently living in Delhi, India. 
 
 ---
 

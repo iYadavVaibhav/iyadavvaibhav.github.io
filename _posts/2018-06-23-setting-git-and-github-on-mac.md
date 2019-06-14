@@ -16,7 +16,7 @@ I have followed an excellent [post](https://kbroman.org/github_tutorial/) by Kar
 Git is version controlling that can be installed locally. 
 
 ## 2. Setup RSA for SSL
-RSA is used for making safe authetications via SSL.
+RSA is used for making safe authentications via SSL.
 
 ## 3. Setup GitHub Account
 You will get an online space to upload your code with version controlling.
@@ -28,7 +28,7 @@ THis will help you sync your local code repositories with online one.
 Now that you have all set up, you can setup GitHub Pages to launch your site.
 Further, if you want to blog on your site you can setup Jekyll.
 
-Follow this post, [Setting Jekyll Now on GitHub] to get started with bloggin and personal site.
+Follow this post, [Setting Jekyll Now on GitHub] to get started with blogging and personal site.
 
 ## End Notes
 Hope this article helped you. Any questions? Please let me know in comments below.

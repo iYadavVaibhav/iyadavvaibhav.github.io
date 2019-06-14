@@ -12,7 +12,7 @@ You need to add one line in `config.yml`
 highlighter: rouge
 ```
 
-and need to ensure that `rouge` gem is installed. If you have forked any jeklyy site then you can skip this step, else run:
+and need to ensure that `rouge` gem is installed. If you have forked any Jekyll site then you can skip this step, else run:
 ```bash
 gem install rouge
 ```

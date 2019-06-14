@@ -53,7 +53,7 @@ def my_square(num):
   """
   This is DocString
   Can be multiline
-  THis func sqaures a number
+  THis func squares a number
   """
   return num**2
 ```
@@ -71,7 +71,7 @@ It computes my_square for all items in seq.
 
 **Lambda**
 
-This is used to define a funciton in a line.
+This is used to define a function in a line.
 
 `lambda num: num*2`
 
@@ -89,7 +89,7 @@ eg: to get even values
 
 #### Methods
 
-These are call to object propery. Like a string object has property length.
+These are call to object property. Like a string object has property length.
 
 `str.lower()`
 

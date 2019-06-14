@@ -6,8 +6,8 @@ categories: notes maths
 
 # Statistics
 
-## Summarising Quantitative Data
-Mean median and mode are three ways to summarise the data and measure the central tendency of data. These are usually found for quantitative data. 
+## Summarizing Quantitative Data
+Mean median and mode are three ways to summarize the data and measure the central tendency of data. These are usually found for quantitative data. 
 
 ### Mean
 Average or mean are one and the same thing. It is some of all the data points divided by number of data points. 

@@ -6,7 +6,7 @@ categories: howtos
 
 GitHub can be used for personal site and blog.
 
-It can further be used to project sites. This is kinf of a sub-site/sub-domain of main site.
+It can further be used to project sites. This is kind of a sub-site/sub-domain of main site.
 
 My site:
 ```myname.github.io/```
