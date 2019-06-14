@@ -31,6 +31,9 @@ Logistic is also called Sigmod. Sown in function below.
 
 ϕ(z)=11+e−z
 ϕ(z)=11+e−z
+\begin{equation*}
+P(E)   = {n \choose k} p^k (1-p)^{ n-k}
+\end{equation*}
 this always outputs b/w 0 and 1.
 
 Difference
@@ -42,19 +45,19 @@ p=11+e−(b0+b1x)
 
 
 ### Model Evaluation
-​
+
 Use **confusion matrix** to evaluate classification model.
-​
+
 Classifiaction model is when we classify our predisctions against test data.
-​
+
 Confusion matrix puts predictions and tests together to compare.
-​
-​
-n=165|Predicted=NO|Predicted=YES
----|---|---|---
+
+
+n=165 | Predicted=NO | Predicted=YES
+--- | --- | --- | ---
 Actual: NO | TN = 50 | FP = 10 | 60
 Actual: YES | FN = 5 | TP = 100 | 105
- | 55 | 110 |
+ | 55 | 110 | 
  
  
  False Positive FP is Type 1 error
@@ -70,3 +73,6 @@ Actual: YES | FN = 5 | TP = 100 | 105
  
  Our mode is 9% wrong.
  
+\begin{equation*}
+P(E)   = {n \choose k} p^k (1-p)^{ n-k}
+\end{equation*}
