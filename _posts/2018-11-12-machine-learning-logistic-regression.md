@@ -31,7 +31,9 @@ Logistic is also called Sigmod. Shown in function below.
 
 $$
 ϕ(z)=11+e−z
+
 ϕ(z)=11+e−z
+
 P(E)   = {n \choose k} p^k (1-p)^{ n-k}
 $$
 
@@ -43,6 +45,7 @@ where as logistic is shown in equation below (also same as ϕ(z)ϕ(z) eq above) 
 
 $$
 p=11+e−(b0+b1x)
+
 p=11+e−(b0+b1x)
 $$
 
@@ -59,18 +62,18 @@ n=165 | Predicted=NO | Predicted=YES |
 Actual: NO | TN = 50 | FP = 10 | 60
 Actual: YES | FN = 5 | TP = 100 | 105
  | 55 | 110 | 
-  
- False Positive FP is Type 1 error
- FN is Type 2 error
- 
- ### Accuracy:
- 
- **Correct:** (TP + TN) / total = 150/165 = 0.91
- 
- Our model is 91% correct,
- 
- **Wrong:** (FP + FN)/100 = 15/165 = 0.09
- 
- Our mode is 9% wrong.
+
+False Positive FP is Type 1 error
+FN is Type 2 error
+
+### Accuracy:
+
+**Correct:** (TP + TN) / total = 150/165 = 0.91
+
+Our model is 91% correct,
+
+**Wrong:** (FP + FN)/100 = 15/165 = 0.09
+
+Our mode is 9% wrong.
 
 
