@@ -6,7 +6,7 @@ categories: notes machineLearning
 
 Logistic Regression is mainly used when we have to work on probability. It outputs values between 0 and 1. So 0.5 is cutoff point and anything below 0.5 goes to class 0 and rest to class 1.
 
-Logistic is also called **Sigmod**. Sown in function below.
+Logistic is also called **Sigmod**. Shown in function below.
 
 $$
 \phi (z) = \frac{1}{1 + e^{-z}}
@@ -23,20 +23,6 @@ where as logistic is shown in equation below (also same as $\phi (z)$ eq above) 
 $$
 p = \frac{1}{1 + e^{-(b_0 + b_1 x)}}
 $$
-
-**Logistic Regression** is mainly used when we have to work on probability. It outputs values between 0 and 1. So 0.5 is cutoff point and anything below 0.5 goes to class 0 and rest to class 1.
-
-Logistic is also called Sigmod. Shown in function below.
-
-$$ ϕ(z) = 11 + e−z $$
-
-$$ ϕ(z) = 11 + e−z $$
-
-$$
-P(E)   = {n \choose k} p^k (1-p)^{ n-k}
-$$
-
-this always outputs b/w 0 and 1.
 
 
 ### Model Evaluation
