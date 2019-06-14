@@ -29,11 +29,11 @@ It is mainly used when we have to work on probability. It outputs values between
 
 Logistic is also called Sigmod. Shown in function below.
 
+$ ϕ(z)=11+e−z $
+
+$ ϕ(z)=11+e−z $
+
 $$
-ϕ(z)=11+e−z
-
-ϕ(z)=11+e−z
-
 P(E)   = {n \choose k} p^k (1-p)^{ n-k}
 $$
 
@@ -43,11 +43,9 @@ Difference
 linear model: y=b0+b1xy=b0+b1x
 where as logistic is shown in equation below (also same as ϕ(z)ϕ(z) eq above) :
 
-$$
-p=11+e−(b0+b1x)
+$ p=11+e−(b0+b1x) $
 
-p=11+e−(b0+b1x)
-$$
+$ p=11+e−(b0+b1x) $
 
 ### Model Evaluation
 
