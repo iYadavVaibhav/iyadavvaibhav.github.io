@@ -27,22 +27,24 @@ $$
 Logistic Regression
 It is mainly used when we have to work on probability. It outputs values between 0 and 1. So 0.5 is cutoff point and anything below 0.5 goes to class 0 and rest to class 1.
 
-Logistic is also called Sigmod. Sown in function below.
+Logistic is also called Sigmod. Shown in function below.
 
+$$
 ϕ(z)=11+e−z
 ϕ(z)=11+e−z
-\begin{equation*}
 P(E)   = {n \choose k} p^k (1-p)^{ n-k}
-\end{equation*}
+$$
+
 this always outputs b/w 0 and 1.
 
 Difference
 linear model: y=b0+b1xy=b0+b1x
 where as logistic is shown in equation below (also same as ϕ(z)ϕ(z) eq above) :
 
+$$
 p=11+e−(b0+b1x)
 p=11+e−(b0+b1x)
-
+$$
 
 ### Model Evaluation
 
@@ -52,14 +54,12 @@ Classifiaction model is when we classify our predisctions against test data.
 
 Confusion matrix puts predictions and tests together to compare.
 
-
-n=165 | Predicted=NO | Predicted=YES
+n=165 | Predicted=NO | Predicted=YES | 
 --- | --- | --- | ---
 Actual: NO | TN = 50 | FP = 10 | 60
 Actual: YES | FN = 5 | TP = 100 | 105
  | 55 | 110 | 
- 
- 
+  
  False Positive FP is Type 1 error
  FN is Type 2 error
  
@@ -72,7 +72,5 @@ Actual: YES | FN = 5 | TP = 100 | 105
  **Wrong:** (FP + FN)/100 = 15/165 = 0.09
  
  Our mode is 9% wrong.
- 
-\begin{equation*}
-P(E)   = {n \choose k} p^k (1-p)^{ n-k}
-\end{equation*}
+
+
