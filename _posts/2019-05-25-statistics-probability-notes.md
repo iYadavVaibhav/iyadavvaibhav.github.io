@@ -15,28 +15,33 @@ Basics of statistics for Data Science.
 ## Summarizing Quantitative Data
 Mean median and mode are three ways to summarize the data and measure the central tendency of data. These are usually calculated for quantitative data. 
 
-### Mean
+**Mean**
+
 Average or mean are one and the same thing. It is some of all the data points divided by number of data points. 
 
 $ \mu = \frac{ \sum_{i=0}^n x_i }{ n } $
 
-### Median 
+**Median**
+
 It is the middle number. We find it by sorting the entire dataset into an ordered list. 
 
 If it's even then it is sum of two middle number by two else it's the middle one. 
 
 if $ n = even $ then: $ (a+b)/2 $ where a and b are middle numbers.
 
-### Mode
+**Mode**
+
 It is the most *common number* or the most frequent number in the dataset. If the values in a given set all occur the same number of times, the data set has no mode because no number is any more common than any other. 
 
-### Effect of Outliers
+**Effect of Outliers**
+
 Removing a big outlier decreases the mean more but less change on median and we may be median doesn't change.
 
-## Spread or Variation of Data
+## Spread and Variation of Data
 The spread of data can be measured by its range, interquartile range (IQR), variance or standard deviation. 
 
-### Interquartile Range 
+**Interquartile Range**
+
 It is the difference in the middle of the first half and the middle of second half. Median divides the dataset into two different parts. We then find the median of these two different parts and find the difference. 
 
 If we have even number of data points in dataset then we include the first middle number in first set and the second middle number in second set.
@@ -47,7 +52,8 @@ Range can be misleading when we have outliers. But in this case interquartile ra
 
 $ IQR $ = md 2nd quartile - md 1st quartile
 
-### Measure of spread
+**Measure of spread**
+
 Measure of spread can be found by calculating range variance and standard deviation. 
 - Sample is part of data while population is entire dataset. 
 - We can estimate measures from sample for entire dataset. 
@@ -77,11 +83,12 @@ $ \sigma(A) = \sqrt{200} = 10\sqrt{2} $
 $ \sigma(B) = \sqrt{2} $
 
 **Result**
+
 Hence, points in A are 10 times more deviated.
 
 > Standard deviation cannot be negative standard deviation close to0 means the data points are close to average that means less deviation.
 
-### Better measures
+**Better measures**
 
 What defines dataset better, mean or median?
 - Mean can give us the standard deviation, median can you give us IQR. 
@@ -90,32 +97,23 @@ What defines dataset better, mean or median?
 
 # Probability 
 
-Possibility of event that is fundamentally random.
+Probability is how likely event is going to happen. It is possibility of event that is fundamentally random. Any experiment can have outcome. The possibility of outcome is the probability. 
 
-And experiment can have outcome the possibility of outcome is the probability. For example if we flip a coin we can get head or tail the possibility of head is 50% and prosperous ability of tales is 50% so the probability of Fed is .5 and probability of tales is also .5 if it is a biased coin.
+For example, if we flip a coin we can get either heads or tails. The possibility of heads is 50% and possibility ability of tails is 50%. So the probability of Heads is .5 and probability of tails is also .5, if it is a biased coin.
 
-Probability is how likely event is going to happen. The analysis of event governed by probability is called statistics.
+ The analysis of event governed by probability is called statistics.
 
-$ $ Probability 
+$ P(E) = \frac{ Possibilities }{ Outcomes } $
 
 Sample space is all possible outcomes.
 
-## Sets and subsides
+**Theoretical  probability** is what can be stated and seems fixed. For example flipping a coin. 
 
-Here we will discuss about sets subsets supersets universe intersection union belongs to is a member of not a member of and other set terminologies
+**Experimental probability** Finding an outcome based on past data and experience example prediction of the score. Probability gives a reasonable predictions about an outcome. It is highly likely but not hundred percent true.
 
-## theoretical  probability
+**Simulation and Randomness** We can use list of random numbers to simulate our experiment multiple times and average out to find confidence.
 
-Example flipping a coin. 
-
-# Experimental probability. 
-
-Finding an outcome based on past data and experience example prediction of the score. Probability gives a reasonable predictions about an outcome. It is highly likely but not hundred percent true.
-
-# Simulation and randomness
-We can use list of random numbers to simulate our experiment multiple multiple times and average out to find confidence.
-
-# addition rule
+**Addition Rule**
 Addition rule of probability. 
 
 $ $
@@ -124,7 +122,22 @@ Mutually exclusive events have no intersection outcomes. Multiplication rule for
 
 $ At least $
 
-# Combinators 
+## Set Theory
+
+Here we will discuss about sets, subsets, supersets, universe, intersection, union, belongs to, is a member of, not a member of and other set terminologies.
+
+\in	is member of
+{\displaystyle \notin } {\displaystyle \notin }	\notin	is not member of
+{\displaystyle \ni } {\displaystyle \ni }	\ni	owns (has member)
+{\displaystyle \subset } {\displaystyle \subset }	\subset	is proper subset of
+{\displaystyle \subseteq } {\displaystyle \subseteq }	\subseteq	is subset of
+{\displaystyle \supset } {\displaystyle \supset }	\supset	is proper superset of
+{\displaystyle \supseteq } {\displaystyle \supseteq }	\supseteq	is superset of
+
+
+## Counting Events
+
+**Combinations**
 
 Arrange N people in key positions. For such kind of operations we need to find Combinator. For example arrange six people in three different seats seats.
 
