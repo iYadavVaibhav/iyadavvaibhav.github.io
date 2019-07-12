@@ -12,6 +12,12 @@ Statistics is used to summarize data. Probability is a way to find likeliness of
 # Statistics
 Basics of statistics for Data Science.
 
+**Central tendency** measures tell us how values are grouped aroung the centre value.
+
+**Variation** tells us how disperse the data is or how much it is scattered
+
+**Shape** shows pattern of distribution of values. How the data is distributed in a frequency.
+
 ## Summarizing Quantitative Data
 Mean median and mode are three ways to summarize the data and measure the central tendency of data. These are usually calculated for quantitative data. 
 
@@ -21,28 +27,52 @@ Average or mean are one and the same thing. It is some of all the data points di
 
 $ \mu = \frac{ \sum_{i=0}^n x_i }{ n } $
 
+It gets affected by the outliers.
+
 **Median**
 
-It is the middle number. We find it by sorting the entire dataset into an ordered list. 
+It is the middle number in an ordered list. 
 
 If it's even then it is sum of two middle number by two else it's the middle one. 
 
 if $ n = even $ then: $ (a+b)/2 $ where a and b are middle numbers.
 
+It is not affected by the extreme values.
+
 **Mode**
 
-It is the most *common number* or the most frequent number in the dataset. If the values in a given set all occur the same number of times, the data set has no mode because no number is any more common than any other. 
+It is the most *common number* or the most frequent number in the dataset. 
+
+*No mode*, if the values in a given set all occur the same number of times, the data set has no mode because no number is any more common than any other. 
+
+*Several mode* if more than one number is repeated same number of times.
+
+It is not affected by extreme values.
+
+**Geometric Mean**
+
+It is used to measure rate of change of variable over time. For eg, rate of return on investment over years.
+
+$ X_G = (X_1 \ x \  X_2 \ x\ ... \ x\  X_n)^{(1/n)} $
+
+GM rate of return, here $ R_i $ is rate of retunr in time period i
+
+$ R_G = [ (1 + R_1) \ x \ (1 + R_2) \ x ... x \ (1 + R_n) ]^{(1/n)} - 1 $
 
 **Effect of Outliers**
 
 Removing a big outlier decreases the mean more but less change on median and we may be median doesn't change.
 
 ## Spread and Variation of Data
-The spread of data can be measured by its range, interquartile range (IQR), variance or standard deviation. 
+The spread of data can be measured by its range, interquartile range (IQR), variance, standard deviation. and coefficient of Variation.
+
+**Range**
+
+It is difference between largest and smallest value in data. It is not dependent on distribution of data and is sensitive to outliers.
 
 **Interquartile Range**
 
-It is the difference in the middle of the first half and the middle of second half. Median divides the dataset into two different parts. We then find the median of these two different parts and find the difference. 
+Quartiles daivide the ordered data in to 4 segments. Each have equal number of values.  Median (Q2) divides the dataset into two different parts. IQR is the difference in the middle of the first half (Q1) and the middle of second half (Q3). We then find the median of these two different parts and then find the difference. 
 
 If we have even number of data points in dataset then we include the first middle number in first set and the second middle number in second set.
 
@@ -60,9 +90,13 @@ Measure of spread can be found by calculating range variance and standard deviat
 
 **Variance**
 
+Sqaured deviation of values from the mean
+
 $ \sigma^2 = \frac{ \sum(x_i - \mu)^2 }{ n } = \frac{ \sum(x_i)^2 }{ n } - \mu^2 $
 
 **Standard Deviation**
+
+Variation about the mean. It has *same unit as the original data*.
 
 $ \sigma = \sqrt{Variance} = \sqrt{\sigma^2} = \sqrt \frac{ \sum_{1}^n(x_i - \mu)^2 }{ n }$
 
@@ -86,7 +120,30 @@ $ \sigma(B) = \sqrt{2} $
 
 Hence, points in A are 10 times more deviated.
 
-> Standard deviation cannot be negative standard deviation close to0 means the data points are close to average that means less deviation.
+**Note:**
+
+- The more the spread, the greater is range, variance and SD
+- Thr more data is contracted, the smaller these measures are.
+- If all values are same (no variation) then all these are zero.
+- None of these measures can ever be negative.
+
+**Coefficient of Variation**
+
+It measures relative variation in %. It shows variation relative to mean. Can compare data with different units.
+
+$ CV = \frac{ S }{ X } * 100 % $
+
+For example, 
+
+Stock A = $50, SD = $5
+
+CV(A) = (5/50)*100% = 10%
+
+Stock B = $100, SD = $5
+
+CV(B) = (5/100)*100% = 5%
+
+Hence, both stocks have same SD, but stock B is less variable relative to its price.
 
 **Better measures**
 
@@ -94,6 +151,51 @@ What defines dataset better, mean or median?
 - Mean can give us the standard deviation, median can you give us IQR. 
 - Mean is better for symmetric dataset, median is better for skewed dataset which has outliers. 
 - Median is better for salaries and home prices as it has outliers.
+
+## Shape of Distribution
+
+This tells us how data is distributed. It can be measure by:
+- Skewness: Extent to which data values are not symmetrical
+- Kurtosis: Affects the peakedness of the curve of the distribution. It tell the sharpness of rise of curve. Bell shaped is Mesifurtic (Kurtosis = 0).
+
+### Skewness
+
+Data can be symmetric, left or right skewed. If it is symmetric then we can work on half of the sample of data.
+
+Left: Mean < Median
+Symmetric: Mean = Median
+Right: Median < Mean
+
+### Kurtosis
+
+How sharply the curve rises. Eg:
+- High rise, Kurtosis > 0, Leptokurtic.
+- Bell shaped, Kurtosis = 0, Mesokurtic.
+- Low rise, Kurtosis < 0, Platykurtic.
+
+> Image of shape and quartiles and box plot
+
+## Frequency Distribution
+
+We can break data in to different classes, then find frequency of data in each class. It is what we see in histogram.
+
+Each class has a mid point, a frequency. We can find **Relative Frequency** which is frequency divided by total frequency (number of data points). So this give us percentage of data point is a particular class interval.
+
+For eg, class A (10 but less than 20) has frequency 3, total observations 20, so relative freq 0.15, hence, 15% data points are in class A.
+
+We can also find cumulative frequency and relative cumulative frequency or **Cumulative Percentage**. It can help us find probabily of that a data is under or less than that class interval.
+
+**Use of frequency distribution**
+
+- Raw to useful form
+- Visually see the data distribution
+- See interval in which data is contracted or clustered.
+
+**Tips:**
+
+- Play with class interval to see different picture of data.
+- In large dataset, boundaries don't make much difference.
+- When comparing different groups with sample, use relative frequency or precentage distribution.
 
 # Probability 
 
