@@ -82,6 +82,14 @@ Range can be misleading when we have outliers. But in this case interquartile ra
 
 $ IQR $ = md 2nd quartile - md 1st quartile
 
+**Quartile Measures**
+
+- Q1, is the value for which 25% of the observations are smaller and 75% are larger
+- Q2 is the same as the median (50% of the observations are smaller and 50% are larger)
+- Only 25% of the observations are greater than the Q3
+
+A *box plot* shows Min, Q1, Q2, Q3 and Max values of data.
+
 **Measure of spread**
 
 Measure of spread can be found by calculating range variance and standard deviation. 
@@ -185,7 +193,7 @@ For eg, class A (10 but less than 20) has frequency 3, total observations 20, so
 
 We can also find cumulative frequency and relative cumulative frequency or **Cumulative Percentage**. It can help us find probabily of that a data is under or less than that class interval.
 
-**Use of frequency distribution**
+**Use of Frequency Distribution**
 
 - Raw to useful form
 - Visually see the data distribution
@@ -196,6 +204,115 @@ We can also find cumulative frequency and relative cumulative frequency or **Cum
 - Play with class interval to see different picture of data.
 - In large dataset, boundaries don't make much difference.
 - When comparing different groups with sample, use relative frequency or precentage distribution.
+
+
+## Probability Distribution
+
+A frequency distribution can be a probability distribution if the area under the curve is equal to 1. The f(x) of Prob Dist gives us probability of occourance of x in the given distribution.
+
+A **Continuous** is distribution of a continuous random variable. It is the variable that can take any value on continuum.
+
+The probability distribution can be uniform or normal.
+
+### Uniform Distribution
+
+f(X) = 1 / (b - a) , where a is min and b is max
+
+mean = (a + b) / 2
+
+sd = sqrt( (b - a)^2 / 12 )
+
+Probabily that 3 <= x <= 5, are under the line between 3 and 5. As it is a rectangle, the area can be (base)(height).
+
+### The Normal Distribution
+
+It is:
+- Bell Shaped
+- Symmetrical
+- Mean, Meadia and Mode are equal
+
+The random variable has infinite range. It is defined by:
+
+$f(x) = \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}(\frac{X - \mu}{\sigma})^2}$
+
+e = 2.71828
+$\pi$ = 3.14159
+
+Mean moved ditribution left/right, sd increases/decreases spread.
+
+#### Standardized Normal or Z score
+
+Any normal distribution can be transformed to **standard normal distribution** $(Z)$ using mean and sd.
+
+Need to transform X units to Z units.
+
+It has mean of 0 and SD of 1.
+
+$ z = \frac{X - \mu}{\sigma} $
+
+Also, known as *Z distribution*.
+
+For eg, if mean=100, sd=50 then Z for X=$200, (200-100)/50 = 2
+
+This says that X = 200 is two standard deviations (2 increments of 50 units) above the mean of 100.
+
+So for X and Z distribution the shape remains the same, only scale changes.
+
+**Note:** We measure a few scores compared to the mean. Like performance in class. How far are we from the mean in terms of SD. are we 1sd far from mean or so on. One such score is Z score.
+
+## Normal Probabilities
+
+The probability is area under the curve. So P(a <= X <= b) is area under curve between x=a and x=b.
+
+**Note:** 
+- P(a <= X <= b) = P(a < X < b), as P(a) or P(any point) = 0. 
+- The total area under the probability curve is 1 and curve is symmetric so half above mean and half below.
+
+**Z Table** is cumulative probability of standardized normal. So Z(2) = 0.9772, this is P(Z < 2, till -infinity)
+
+To find a probability for normal X distribution, convert X to Z the find Z value for it.
+
+### Empirical Rules 
+
+1SD covers 68.26% of X
+
+2SD covers 95.44% of X
+
+3SD covers 99.7% of X
+
+
+## Sampling  Distributions 
+
+Population is the large group of data that we want to study. We pick a sample of people and try to compare how they perforom compared to the population. We collect different sample from the popultion for example 50 different records from a population.
+
+There will be variation in each of these different samples. So each of these sample gives us slight variation from each other. So sample A is different from sample B and so on. When we collect different samples and find their mean or sd, then this set of information makes sample distribution.
+
+if I choose **every possible** sample of size "n" from a popltn then I get "sampling distribution". Now if we collect mean of each of these possible sample then we get "Sampling distribution of Sample Means".
+
+
+
+
+### Developing a Sampling Distributions
+**Comparing the population distribution to sampling mean distribution**
+
+### Standard Error of the Mean
+
+Standard error is standard deviation of mean of means. For eg, if we take random samples from a popltn, we get mean for each sample. S(A) give mean X(A) and so on. Now all these means (X(A), X(B), X(C)..) for a distribution. The standard deviation of this distribution gives us Standard Error.
+
+### Central Limit Theorem
+
+It says that the distribution of mean of samples is mostly normal distribution. It is not dependent on shape of original population.
+
+### P Value
+
+It is same as probability but also take equally likely outcome and rare outcome. So p(two heads, HH) = 0.25. p value of HH is P(HH) + P(TT) + 0 for rare.
+
+### t Tests
+
+### Point and Interval Estimates
+### Confidence Intervals and Levels
+## Student's t Distribution
+
 
 # Probability 
 
@@ -255,3 +372,13 @@ $ $
 NPKNCK different formulas to be inserted here thank you
 
 # Summary of learning
+
+## Random Variables
+
+### Coeffiecient of Correlation
+
+Measure of relative strength between two random variables.
+
+Covariance = sum of ( Variance * Probability ), where variance is difference from mean.
+
+
