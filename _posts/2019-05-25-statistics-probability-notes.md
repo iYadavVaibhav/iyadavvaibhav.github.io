@@ -447,15 +447,15 @@ $ P(e) = \frac{events possible}{sample space} $
 
 3. At least or at most, use $ P(at least/most) = 1 - P(e) $
 
-For eg, 
+For eg, ways to arrange 1 - 10 digits in 3 places,
 
 Repetition allowed, order matters = $ 10.10.10 $
 
-Repetition not allowed, order matters = $ 10.9.8 $
+Repetition not allowed, order matters = $ 10.9.8 $ Permutation
 
 Repetition allowed, order doesn't matter = $ \frac{10.10.10}{3.2.1} $
 
-Repetition not allowed, order doesn't matter = $ \frac{10.9.8}{3.2.1} $
+Repetition not allowed, order doesn't matter = $ \frac{10.9.8}{3.2.1} $ Combination
 
 
 ## Random Variables
