@@ -134,6 +134,8 @@ Hence, points in A are 10 times more deviated.
 - Thr more data is contracted, the smaller these measures are.
 - If all values are same (no variation) then all these are zero.
 - None of these measures can ever be negative.
+- Adding a number to all values, $x_i$, makes no difference to variance.
+- Multiplying a number, k, to all values, $x_i$, makes variance  $ \sigma^2 \times k $  
 
 **Coefficient of Variation**
 
@@ -391,63 +393,69 @@ Sample space is all possible outcomes.
 
 **Simulation and Randomness** We can use list of random numbers to simulate our experiment multiple times and average out to find confidence.
 
-**Addition Rule**
+## Addition Rule
 Addition rule of probability. 
 
-$ $
+$ P(A or B) = P(A) + P(B) - P(A and B) $
 
-Mutually exclusive events have no intersection outcomes. Multiplication rule for independent event what happened if past event will happen no effect on current event.
+here P(A and B) is probability of intersection of A and B. Mutually exclusive events have no intersection outcomes.
 
-$ At least $
+## Multiplication Rule 
 
-## Set Theory
+For independent event, what happened in past event will have no effect on current event. For eg, P(HH) or P(atleast 1H in 10 flips).
 
-Here we will discuss about sets, subsets, supersets, universe, intersection, union, belongs to, is a member of, not a member of and other set terminologies.
+$ P(HH) = 0.5 x 0.5 $
 
-$ 
-\cup - Union 
+P(atleast 1H in 10 flips) = 1 - P(All T in 10 flips) 
 
-\cap -  Intersection
+$ 1 - (0.5)^10 = 1023/1024 = 99.9% $
 
-A \subset B - A is proper subset of B
+## Conditional Probability
 
-A \subseteq B - A is subset of B 
-$
+If dependent, the probability of A and B is $ P(A and B) = P(A|B) x P(B) = P(B|A) x P(A) $, where B|A is B happening after A.
 
-\in	is member of
-{\displaystyle \notin } {\displaystyle \notin }	\notin	is not member of
-{\displaystyle \ni } {\displaystyle \ni }	\ni	owns (has member)
-{\displaystyle \subset } {\displaystyle \subset }	\subset	is proper subset of
-{\displaystyle \subseteq } {\displaystyle \subseteq }	\subseteq	is subset of
-{\displaystyle \supset } {\displaystyle \supset }	\supset	is proper superset of
-{\displaystyle \supseteq } {\displaystyle \supseteq }	\supseteq	is superset of
+if independent, then $ P(A and B) = P(A) \times P(B) $
 
 
 ## Counting Events
 
-**Combinations**
+### Permutation
 
-Arrange N people in key positions. For such kind of operations we need to find Combinator. For example arrange six people in three different seats seats.
+Arrange $n$ people in $k$ seats. To count number of ways in which this can be done we use permutation.
 
-$ $
+For eg, arrange 6 people in 3 seats, 6.5.4 = 6! / 3! = 120.
 
-This is how we can arrange six people in for chair
+$ _nP_k = \frac{n!}{(n - k)!} = n(n-1)...$ (k  times)
 
-$ $
+Used when order matters and pick once (without replacement). For eg, $ _{10}P_3 = 10.9.8  $
 
-We divide bag how gay people can be arranged in key places that is the factorial because a a BCD and BCDER same Combinator us. We are counting this extra.
+### Combinations
 
-$ $
-NPKNCK different formulas to be inserted here thank you
+$ _nC_k = \binom{n}{k} = \frac{_nP_k}{k!} = \frac{n!}{k!(n - k)!} = \frac{n(n-1)...[k \space times]}{k!} $
 
-# Summary of learning
+We divide by number by how k people can be arranged in k places, i.e, k! because ABCD and BCDA same combinations. We are counting this extra.
+
+Order doesn't matter, 123 = 312. For eg, $ _{10}C_3 = \frac{10.9.8}{3.2.1} $
+
+## Approach to solve a problem
+
+1. use simple definition,
+
+$ P(e) = \frac{events possible}{sample space} $
+
+2. Make a tree, use when question has **after**.
+
+3. At least or at most, use $ P(at least/most) = 1 - P(e) $
+
+For eg, 
+
+Repetition allowed, order matters = $ 10.10.10 $
+
+Repetition not allowed, order matters = $ 10.9.8 $
+
+Repetition allowed, order doesn't matter = $ \frac{10.10.10}{3.2.1} $
+
+Repetition not allowed, order doesn't matter = $ \frac{10.9.8}{3.2.1} $
+
 
 ## Random Variables
-
-### Coeffiecient of Correlation
-
-Measure of relative strength between two random variables.
-
-Covariance = sum of ( Variance * Probability ), where variance is difference from mean.
-
-
