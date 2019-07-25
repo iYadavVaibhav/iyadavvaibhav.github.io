@@ -4,7 +4,7 @@ layout: post
 categories: notes maths
 ---
 
-Statistics is used to summarize data. Probability is a way to find likeliness of an event to happen. Permutation and combination are ways to count events and possibilities. All these learning are from [Khan Academy](https://www.khanacademy.org/math/statistics-probability).
+Statistics is used to summarize data. Probability is a way to find likeliness of an event to happen. Permutation and combination are ways to count events and possibilities. All these learning are from [Khan Academy](https://www.khanacademy.org/math/statistics-probability) and [AMPBA - ISB](https://www.isb.edu/advanced-management-programme-in-business-analytics).
 
 * Do not remove this line (it will not be displayed)
 {:toc}
@@ -381,7 +381,7 @@ Probability is how likely event is going to happen. It is possibility of event t
 
 For example, if we flip a coin we can get either heads or tails. The possibility of heads is 50% and possibility ability of tails is 50%. So the probability of Heads is .5 and probability of tails is also .5, if it is a biased coin.
 
- The analysis of event governed by probability is called statistics.
+The analysis of event governed by probability is called statistics.
 
 $ P(e) = \frac{ Possibilities }{ Outcomes } $
 
@@ -389,16 +389,44 @@ Sample space is all possible outcomes.
 
 **Theoretical  probability** is what can be stated and seems fixed. For example flipping a coin. 
 
-**Experimental probability** Finding an outcome based on past data and experience example prediction of the score. Probability gives a reasonable predictions about an outcome. It is highly likely but not hundred percent true.
+**Experimental probability** Finding an outcome based on past data and experience example prediction of the score. Probability gives a reasonable predictions about an outcome. It is highly likely but not hundred percent true. Also known as **subjective probability**.
 
 **Simulation and Randomness** We can use list of random numbers to simulate our experiment multiple times and average out to find confidence.
+
+
+
+## Events
+
+Every possible outcome of a variable is an event.
+
+**Simple event** is an event described by a single characteristic. For eg, a day in January from all days in 2018.
+
+**Joint event** is an event described by two or more characteristics. For eg, a day in January that is also a Wednesday from all days in 2018.
+
+**Complement of an event** A (denoted A’). All events that are not part of event A. For eg, all days from 2018 that are not in January.
+
+**Mutually Exclusive** have no intersection outcomes. They cannot occur simultaneously. For eg, A = day in Jan, B = day in Feb. A and B cannot occur simultaneously.
+
+**Collectively Exhaustive Events** are those in which:
+
+- One of the event must occur
+- The set of events covers the entire sample space
+
+For eg, A = Weekday; B = Weekend; C = January; D = Spring;
+
+Events A, B, C and D are collectively exhaustive (but not mutually exclusive – a weekday can be in January or in Spring).
+
+Events A and B are collectively exhaustive and also mutually exclusive.
+
 
 ## Addition Rule
 Addition rule of probability. 
 
 P(A or B) = P(A) + P(B) - P(A and B) 
 
-here P(A and B) is probability of intersection of A and B. Mutually exclusive events have no intersection outcomes.
+here P(A and B) is probability of intersection of A and B. If A and B are mutually exclusive, then P(A and B) = 0.
+
+For eg, P(Jan or Wed) = P(Jan) + P(Wed) - P(Jan and Wed) = 31/365 + 52/365 - 5/365 = 78/365
 
 ## Multiplication Rule 
 
@@ -410,11 +438,11 @@ P(atleast 1H in 10 flips) = 1 - P(All T in 10 flips)
 
 $ 1 - (0.5)^{10} = 1023 \div 1024 = 99.9% $
 
-## Conditional Probability
+**Conditional Probability**
 
 If dependent, the probability of A and B is:
 
-P(A and B) = P(A\|B) X P(B) = P(B\|A) X P(A) , where B\|A is B happening after A.
+P(A and B) = P(A) X  P(B\|A) , where B\|A is 'B happening after A' or 'conditional prob of B given that A has occured'.
 
 if independent, then  P(A and B) = P(A) X P(B) 
 
@@ -447,13 +475,16 @@ For eg, $ _{10}C_3 = \frac{10.9.8}{3.2.1} $
 
 We can take following approaches to solve a probability problem
 
-1. use simple definition, $ P(e) = \frac{events possible}{sample space} $
+1 use simple definition, $ P(e) = \frac{events possible}{sample space} $
 
-2. Make a tree, use when question has **after**.
+2 Make a contingency table with possibilities.
 
-3. At least or at most, use $ P(at least/most) = 1 - P(e) $
+3 Make a decision tree, use when question has **after**.
+
+4 At least or at most, use $ P(at least/most) = 1 - P(e) $
 
 **Example**
+
 Find number of ways to arrange 1 - 10 digits in 3 places,
 
 Repetition allowed, order matters = $ 10.10.10 $
@@ -464,5 +495,3 @@ Repetition allowed, order doesn't matter = $ \frac{10.10.10}{3.2.1} $
 
 Repetition not allowed, order doesn't matter = $ \frac{10.9.8}{3.2.1} $ Combination
 
-
-## Random Variables
