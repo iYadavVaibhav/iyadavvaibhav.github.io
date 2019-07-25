@@ -414,9 +414,9 @@ $ 1 - (0.5)^{10} = 1023 \div 1024 = 99.9% $
 
 If dependent, the probability of A and B is:
 
-P(A and B) = P(A\|B) x P(B) = P(B\|A) x P(A) , where B\|A is B happening after A.
+P(A and B) = P(A\|B) X P(B) = P(B\|A) X P(A) , where B\|A is B happening after A.
 
-if independent, then $ P(A and B) = P(A) \times P(B) $
+if independent, then  P(A and B) = P(A) X P(B) 
 
 
 ## Counting Events
@@ -429,27 +429,32 @@ For eg, arrange 6 people in 3 seats, 6.5.4 = 6! / 3! = 120.
 
 $ _nP_k = \frac{n!}{(n - k)!} = n(n-1)...$ (k  times)
 
-Used when order matters and pick once (without replacement). For eg, $ _{10}P_3 = 10.9.8  $
+Used when order matters and pick once (without replacement). 
+
+For eg, $ _{10}P_3 = 10.9.8  $
 
 ### Combinations
 
 $ _nC_k = \binom{n}{k} = \frac{_nP_k}{k!} = \frac{n!}{k!(n - k)!} = \frac{n(n-1)...[k \space times]}{k!} $
 
-We divide by number by how k people can be arranged in k places, i.e, k! because ABCD and BCDA same combinations. We are counting this extra.
+We divide it by the number of ways in which k people can be arranged in k places, i.e, k! because ABCD and BCDA are same and we are counting this extra.
 
-Order doesn't matter, 123 = 312. For eg, $ _{10}C_3 = \frac{10.9.8}{3.2.1} $
+Order doesn't matter, 123 = 312. 
+
+For eg, $ _{10}C_3 = \frac{10.9.8}{3.2.1} $
 
 ## Approach to solve a problem
 
-1. use simple definition,
+We can take following approaches to solve a probability problem
 
-$ P(e) = \frac{events possible}{sample space} $
+1. use simple definition, $ P(e) = \frac{events possible}{sample space} $
 
 2. Make a tree, use when question has **after**.
 
 3. At least or at most, use $ P(at least/most) = 1 - P(e) $
 
-For eg, ways to arrange 1 - 10 digits in 3 places,
+**Example**
+Find number of ways to arrange 1 - 10 digits in 3 places,
 
 Repetition allowed, order matters = $ 10.10.10 $
 
