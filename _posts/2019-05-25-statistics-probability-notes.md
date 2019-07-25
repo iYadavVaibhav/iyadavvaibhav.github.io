@@ -383,7 +383,7 @@ For example, if we flip a coin we can get either heads or tails. The possibility
 
  The analysis of event governed by probability is called statistics.
 
-$ P(E) = \frac{ Possibilities }{ Outcomes } $
+$ P(e) = \frac{ Possibilities }{ Outcomes } $
 
 Sample space is all possible outcomes.
 
@@ -396,7 +396,7 @@ Sample space is all possible outcomes.
 ## Addition Rule
 Addition rule of probability. 
 
-$ P(A or B) = P(A) + P(B) - P(A and B) $
+P(A or B) = P(A) + P(B) - P(A and B) 
 
 here P(A and B) is probability of intersection of A and B. Mutually exclusive events have no intersection outcomes.
 
@@ -404,15 +404,17 @@ here P(A and B) is probability of intersection of A and B. Mutually exclusive ev
 
 For independent event, what happened in past event will have no effect on current event. For eg, P(HH) or P(atleast 1H in 10 flips).
 
-$ P(HH) = 0.5 x 0.5 $
+$ P(HH) = 0.5 \times 0.5 $
 
 P(atleast 1H in 10 flips) = 1 - P(All T in 10 flips) 
 
-$ 1 - (0.5)^10 = 1023/1024 = 99.9% $
+$ 1 - (0.5)^{10} = 1023 \div 1024 = 99.9% $
 
 ## Conditional Probability
 
-If dependent, the probability of A and B is $ P(A and B) = P(A|B) x P(B) = P(B|A) x P(A) $, where B|A is B happening after A.
+If dependent, the probability of A and B is:
+
+P(A and B) = P(A\|B) x P(B) = P(B\|A) x P(A) , where B\|A is B happening after A.
 
 if independent, then $ P(A and B) = P(A) \times P(B) $
 
