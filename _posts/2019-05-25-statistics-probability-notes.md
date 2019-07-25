@@ -216,11 +216,11 @@ The probability distribution can be uniform or normal.
 
 ### Uniform Distribution
 
-f(X) = 1 / (b - a) , where a is min and b is max
+$ f(X) = \frac{1}{(b - a)} $ , where a is min and b is max
 
-mean = (a + b) / 2
+$ \mu = \frac{a + b}{2} $
 
-sd = sqrt( (b - a)^2 / 12 )
+$ \sigma = \sqrt{  \frac{(b - a)^2}{ 12 }  } $
 
 Probabily that 3 <= x <= 5, are under the line between 3 and 5. As it is a rectangle, the area can be (base)(height).
 
@@ -287,21 +287,30 @@ Population is the large group of data that we want to study. We pick a sample of
 
 There will be variation in each of these different samples. So each of these sample gives us slight variation from each other. So sample A is different from sample B and so on. When we collect different samples and find their mean or sd, then this set of information makes sample distribution.
 
-if I choose **every possible** sample of size "n" from a popltn then I get "sampling distribution". Now if we collect mean of each of these possible sample then we get "Sampling distribution of Sample Means".
-
-
-
-
 ### Developing a Sampling Distributions
-**Comparing the population distribution to sampling mean distribution**
+
+If I choose **every possible** sample of size "n" from a popltn then I get "sampling distribution". Now if we collect mean of each of these possible sample then we get "Sampling distribution of Sample Means".
+
+When we make probability distribution of a population that is unbiased, there are equally likely chance to pick a number. So it is a uniform distribution.
+
+Next, we take all possible sample and find mean of each. The prob distn of the mean of sample will be a normal distribution.
+
+So we find $ \mu_\bar{X} $ and $ \sigma_\bar{X} $ and n, here n is number of items in each sample.
+
 
 ### Standard Error of the Mean
 
 Standard error is standard deviation of mean of means. For eg, if we take random samples from a popltn, we get mean for each sample. S(A) give mean X(A) and so on. Now all these means (X(A), X(B), X(C)..) for a distribution. The standard deviation of this distribution gives us Standard Error.
 
+It is variablity in the mean from sample to sample of same size.
+
 ### Central Limit Theorem
 
 It says that the distribution of mean of samples is mostly normal distribution. It is not dependent on shape of original population.
+
+$ \sigma_\bar{X} = \frac{\sigma}{\sqrt{n}}$
+
+**Note:** The standard error of the mean decreases as the sample size increases.
 
 ### P Value
 
@@ -310,7 +319,35 @@ It is same as probability but also take equally likely outcome and rare outcome.
 ### t Tests
 
 ### Point and Interval Estimates
+
+Point is a single number and we can find confidence interval for that number. Interval estimate tells us more information about the population than a point estimate tells us.
+
+Point estimate $\pm$ (Critical Value)(Standard Error)
+
+Point is the sample statistic estimating population parameter of interest.
+
+Critical Value is table value, based on confidence interval
+
+Standard error is SD of point estimate.
+
 ### Confidence Intervals and Levels
+
+95% confidence interval = (1 - α) = 0.95 
+
+=> α    = 0.05
+=> α/2  = 0.025
+
+We are interested in points where the probability left out is 0.025. So point till -infinity the probability is 0.025.
+
+Hence, in Z table, the score 0.025 can be found for Z value 1.96.
+
+Here, $ Z_{\alpha/2} = \pm1.96 $
+
+CI, when σ is known:
+
+$ \bar{X} \pm Z_{\alpha/2} \frac{\sigma}{\sqrt{n}} $
+
+
 ## Student's t Distribution
 
 
