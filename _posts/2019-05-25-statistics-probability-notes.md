@@ -274,11 +274,11 @@ To find a probability for normal X distribution, convert X to Z the find Z value
 
 ### Empirical Rules 
 
-1SD covers 68.26% of X
+1σ covers 68.26% of X
 
-2SD covers 95.44% of X
+2σ covers 95.44% of X
 
-3SD covers 99.7% of X
+3σ covers 99.7% of X
 
 
 ## Sampling  Distributions 
@@ -316,8 +316,6 @@ $ \sigma_\bar{X} = \frac{\sigma}{\sqrt{n}}$
 
 It is same as probability but also take equally likely outcome and rare outcome. So p(two heads, HH) = 0.25. p value of HH is P(HH) + P(TT) + 0 for rare.
 
-### t Tests
-
 ### Point and Interval Estimates
 
 Point is a single number and we can find confidence interval for that number. Interval estimate tells us more information about the population than a point estimate tells us.
@@ -335,20 +333,44 @@ Standard error is SD of point estimate.
 95% confidence interval = (1 - α) = 0.95 
 
 => α    = 0.05
+
 => α/2  = 0.025
 
 We are interested in points where the probability left out is 0.025. So point till -infinity the probability is 0.025.
 
 Hence, in Z table, the score 0.025 can be found for Z value 1.96.
 
-Here, $ Z_{\alpha/2} = \pm1.96 $
+Here, $ Z_{\alpha/2} = \pm1.96 $, this is the normal distribution critical value for a probability of α/2 in each tail.
 
-CI, when σ is known:
+90% = 1.645
+
+95% = 1.96
+
+99% = 2.58
+
+This tells us that 95% of intervals contains μ.
+
+**CI, when σ is known:**
 
 $ \bar{X} \pm Z_{\alpha/2} \frac{\sigma}{\sqrt{n}} $
 
+If σ is unknown, then we can substitute the sample standard deviation, S.This introduces extra uncertainty, since S is variable from sample to sample
+n. So we use the t distribution instead of the normal distribution.
 
-## Student's t Distribution
+
+### Student's t Distribution
+
+It is a family of distributions. Its value depends on degrees of freedom (d.f) = n - 1.
+
+t -> Z as n increases.
+
+### Sampling Error
+
+There is an error associated with mean of a sample. We can find a sample size to get desired *margin of error (e)* with (1 - α) level of confidence.
+
+$ e = Z_{\alpha/2}\frac{\sigma}{\sqrt{n}} $
+
+$ n = \frac{Z_{\alpha/2}^2 \sigma^2}{e^2} $
 
 
 # Probability 
@@ -381,6 +403,16 @@ $ At least $
 ## Set Theory
 
 Here we will discuss about sets, subsets, supersets, universe, intersection, union, belongs to, is a member of, not a member of and other set terminologies.
+
+$ 
+\cup - Union 
+
+\cap -  Intersection
+
+A \subset B - A is proper subset of B
+
+A \subseteq B - A is subset of B 
+$
 
 \in	is member of
 {\displaystyle \notin } {\displaystyle \notin }	\notin	is not member of
