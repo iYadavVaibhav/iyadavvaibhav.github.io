@@ -495,3 +495,8 @@ Repetition allowed, order doesn't matter = $ \frac{10.10.10}{3.2.1} $
 
 Repetition not allowed, order doesn't matter = $ \frac{10.9.8}{3.2.1} $ Combination
 
+## Binomial Probability Distribution
+
+When we have to make $k$ success in $n$ attempts, then we can following formula:
+
+$ P = _nC_k . π^k . (1-π)^{(n-k)} $
