@@ -80,7 +80,7 @@ IQR is useful to find out how much the data is varying.
 
 Range can be misleading when we have outliers. But in this case interquartile range can give us much better measure of spread of data.
 
-$ IQR $ = md 2nd quartile - md 1st quartile
+$IQR$ = md 2nd quartile - md 1st quartile
 
 **Quartile Measures**
 
@@ -134,8 +134,8 @@ Hence, points in A are 10 times more deviated.
 - Thr more data is contracted, the smaller these measures are.
 - If all values are same (no variation) then all these are zero.
 - None of these measures can ever be negative.
-- Adding a number to all values, $$ x_i $$, makes no difference to variance.
-- Multiplying a number, k, to all values, $$ x_i $$, makes variance  $$ \sigma^2 \times k $$  
+- Adding a number to all values, $x_i$, makes no difference to variance.
+- Multiplying a number, k, to all values, $x_i$, makes variance  $\sigma^2 \times k$  
 
 **Coefficient of Variation**
 
@@ -218,7 +218,8 @@ The probability distribution can be uniform or normal.
 
 ### Uniform Distribution
 
-$$ f(X) = \frac{1}{(b - a)} $$ , where a is min and b is max
+$$ f(X) = \frac{1}{(b - a)} $$ 
+where a is min and b is max
 
 $$ \mu = \frac{a + b}{2} $$
 
@@ -235,16 +236,16 @@ It is:
 
 The random variable has infinite range. It is defined by:
 
-$$ f(x) = \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}(\frac{X - \mu}{\sigma})^2}$$
+$$ f(x) = \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}(\frac{X - \mu}{\sigma})^2} $$
 
 e = 2.71828
-$$\pi$$ = 3.14159
+$\pi$ = 3.14159
 
 Mean moved distribution left/right, sd increases/decreases spread.
 
 #### Standardized Normal or Z score
 
-Any normal distribution can be transformed to **standard normal distribution** $$(Z)$$ using mean and sd.
+Any normal distribution can be transformed to **standard normal distribution** $(Z)$ using mean and sd.
 
 Need to transform X units to Z units.
 
@@ -285,7 +286,7 @@ To find a probability for normal X distribution, convert X to Z the find Z value
 
 ## Sampling  Distributions 
 
-Population is the large group of data that we want to study. We pick a sample of people and try to compare how they perforom compared to the population. We collect different sample from the popultion for example 50 different records from a population.
+Population is the large group of data that we want to study. We pick a sample of people and try to compare how they perform compared to the population. We collect different sample from the population for example 50 different records from a population.
 
 There will be variation in each of these different samples. So each of these sample gives us slight variation from each other. So sample A is different from sample B and so on. When we collect different samples and find their mean or sd, then this set of information makes sample distribution.
 
@@ -297,20 +298,20 @@ When we make probability distribution of a population that is unbiased, there ar
 
 Next, we take all possible sample and find mean of each. The prob distn of the mean of sample will be a normal distribution.
 
-So we find $$ \mu_\bar{X} $$ and $$ \sigma_\bar{X} $$ and n, here n is number of items in each sample.
+So we find $\mu_\bar{X}$ and $\sigma_\bar{X}$ and n, here n is number of items in each sample.
 
 
 ### Standard Error of the Mean
 
 Standard error is standard deviation of mean of means. For eg, if we take random samples from a popltn, we get mean for each sample. S(A) give mean X(A) and so on. Now all these means (X(A), X(B), X(C)..) for a distribution. The standard deviation of this distribution gives us Standard Error.
 
-It is variablity in the mean from sample to sample of same size.
+It is variability in the mean from sample to sample of same size.
 
 ### Central Limit Theorem
 
 It says that the distribution of mean of samples is mostly normal distribution. It is not dependent on shape of original population.
 
-$$ \sigma_\bar{X} = \frac{\sigma}{\sqrt{n}}$$
+$$ \sigma_\bar{X} = \frac{\sigma}{\sqrt{n}} $$
 
 **Note:** The standard error of the mean decreases as the sample size increases.
 
@@ -430,11 +431,11 @@ For eg, P(Jan or Wed) = P(Jan) + P(Wed) - P(Jan and Wed) = 31/365 + 52/365 - 5/3
 
 ## Multiplication Rule 
 
-For independent event, what happened in past event will have no effect on current event. For eg, P(HH) or P(atleast 1H in 10 flips).
+For independent event, what happened in past event will have no effect on current event. For eg, P(HH) or P(at least 1H in 10 flips).
 
 $$ P(HH) = 0.5 \times 0.5 $$
 
-P(atleast 1H in 10 flips) = 1 - P(All T in 10 flips) 
+P(at least 1H in 10 flips) = 1 - P(All T in 10 flips) 
 
 $$ 1 - (0.5)^{10} = 1023 \div 1024 = 99.9% $$
 
@@ -442,7 +443,7 @@ $$ 1 - (0.5)^{10} = 1023 \div 1024 = 99.9% $$
 
 If dependent, the probability of A and B is:
 
-P(A and B) = P(A) X  P(B\|A) , where B\|A is 'B happening after A' or 'conditional prob of B given that A has occured'.
+P(A and B) = P(A) X  P(B\|A) , where B\|A is 'B happening after A' or 'conditional prob of B given that A has occurred'.
 
 if independent, then  P(A and B) = P(A) X P(B) 
 
@@ -451,15 +452,17 @@ if independent, then  P(A and B) = P(A) X P(B)
 
 ### Permutation
 
-Arrange $$n$$ people in $$k$$ seats. To count number of ways in which this can be done we use permutation.
+Arrange $n$ people in $k$ seats. To count number of ways in which this can be done we use permutation.
 
 For eg, arrange 6 people in 3 seats, 6.5.4 = 6! / 3! = 120.
 
-$$ _nP_k = \frac{n!}{(n - k)!} = n(n-1)...$$ (k  times)
+$$ _nP_k = \frac{n!}{(n - k)!} = n(n-1)... (k  times) $$
 
 Used when order matters and pick once (without replacement). 
 
-For eg, $$ _{10}P_3 = 10.9.8  $$
+For eg,
+
+$$ _{10}P_3 = 10.9.8 $$
 
 ### Combinations
 
@@ -469,38 +472,50 @@ We divide it by the number of ways in which k people can be arranged in k places
 
 Order doesn't matter, 123 = 312. 
 
-For eg, $$ _{10}C_3 = \frac{10.9.8}{3.2.1} $$
+For eg, 
+
+$$ _{10}C_3 = \frac{10.9.8}{3.2.1} $$
 
 ## Approach to solve a problem
 
 We can take following approaches to solve a probability problem
 
-1 use simple definition, $$ P(e) = \frac{events possible}{sample space} $$
+1. use simple definition, 
+$$ P(e) = \frac{events possible}{sample space} $$
 
-2 Make a contingency table with possibilities.
+2. Make a contingency table with possibilities.
 
-3 Make a decision tree, use when question has **after**.
+3. Make a decision tree, use when question has **after**.
 
-4 At least or at most, use $$ P(at least/most) = 1 - P(e) $$
+4. At least or at most, use 
+$$ P(at least/most) = 1 - P(e) $$
 
 **Example**
 
 Find number of ways to arrange 1 - 10 digits in 3 places,
 
-Repetition allowed, order matters = $$ 10.10.10 $$
+Repetition allowed, order matters = 10.10.10
 
-Repetition not allowed, order matters = $$ 10.9.8 $$ Permutation
+Repetition not allowed, order matters = Permutation = 10.9.8 
 
-Repetition allowed, order doesn't matter = $$ \frac{10.10.10}{3.2.1} $$
+Repetition allowed, order doesn't matter = 
 
-Repetition not allowed, order doesn't matter = $$ \frac{10.9.8}{3.2.1} $$ Combination
+$$ \frac{10.10.10}{3.2.1} $$
+
+Repetition not allowed, order doesn't matter = Combination = 
+
+$$ \frac{10.9.8}{3.2.1} $$ 
+
 
 ## Binomial Probability Distribution
 
-When we have to make $$k$$ success in $$n$$ attempts, then we can following formula:
+When we have to make $k$ success in $n$ attempts, then we can following formula:
 
 $$ P = _nC_k . π^k . (1-π)^{(n-k)} $$
 
 Here π is probability to get success. eg, throwing a basket ball.
 
 Now if we move k from 0 to n, we get different values of P. This can make a distribution. We call this binomial distribution.
+
+## Poisson Probability Distribution
+
