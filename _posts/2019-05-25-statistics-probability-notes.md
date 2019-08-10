@@ -12,7 +12,7 @@ Statistics is used to summarize data. Probability is a way to find likeliness of
 # Statistics
 Basics of statistics for Data Science.
 
-**Central tendency** measures tell us how values are grouped aroung the centre value.
+**Central tendency** measures tell us how values are grouped around the centre value.
 
 **Variation** tells us how disperse the data is or how much it is scattered
 
@@ -25,7 +25,7 @@ Mean median and mode are three ways to summarize the data and measure the centra
 
 Average or mean are one and the same thing. It is some of all the data points divided by number of data points. 
 
-$ \mu = \frac{ \sum_{i=0}^n x_i }{ n } $
+$$ \mu = \frac{ \sum_{i=0}^n x_i }{ n } $$
 
 It gets affected by the outliers.
 
@@ -35,7 +35,7 @@ It is the middle number in an ordered list.
 
 If it's even then it is sum of two middle number by two else it's the middle one. 
 
-if $ n = even $ then: $ (a+b)/2 $ where a and b are middle numbers.
+if $$ n = even $$ then: $$ (a+b)/2 $$ where a and b are middle numbers.
 
 It is not affected by the extreme values.
 
@@ -53,11 +53,11 @@ It is not affected by extreme values.
 
 It is used to measure rate of change of variable over time. For eg, rate of return on investment over years.
 
-$ X_G = (X_1 \ x \  X_2 \ x\ ... \ x\  X_n)^{(1/n)} $
+$$ X_G = (X_1 \ x \  X_2 \ x\ ... \ x\  X_n)^{(1/n)} $$
 
-GM rate of return, here $ R_i $ is rate of retunr in time period i
+GM rate of return, here $$ R_i $$ is rate of retunr in time period i
 
-$ R_G = [ (1 + R_1) \ x \ (1 + R_2) \ x ... x \ (1 + R_n) ]^{(1/n)} - 1 $
+$$ R_G = [ (1 + R_1) \ x \ (1 + R_2) \ x ... x \ (1 + R_n) ]^{(1/n)} - 1 $$
 
 **Effect of Outliers**
 
@@ -500,3 +500,7 @@ Repetition not allowed, order doesn't matter = $ \frac{10.9.8}{3.2.1} $ Combinat
 When we have to make $k$ success in $n$ attempts, then we can following formula:
 
 $ P = _nC_k . π^k . (1-π)^{(n-k)} $
+
+Here π is probability to get success. eg, throwing a basket ball.
+
+Now if we move k from 0 to n, we get different values of P. This can make a distribution. We call this binomial distribution.
