@@ -27,7 +27,7 @@ Average or mean are one and the same thing. It is some of all the data points di
 
 $$ \mu = \frac{ \sum_{i=0}^n x_i }{ n } $$
 
-It gets affected by the outliers.
+It gets affected by the outliers .
 
 **Median**
 
@@ -35,7 +35,7 @@ It is the middle number in an ordered list.
 
 If it's even then it is sum of two middle number by two else it's the middle one. 
 
-if $$ n = even $$ then: $$ (a+b)/2 $$ where a and b are middle numbers.
+if $n = even$ then: $(a+b)/2$ where a and b are middle numbers.
 
 It is not affected by the extreme values.
 
@@ -55,7 +55,7 @@ It is used to measure rate of change of variable over time. For eg, rate of retu
 
 $$ X_G = (X_1 \ x \  X_2 \ x\ ... \ x\  X_n)^{(1/n)} $$
 
-GM rate of return, here $$ R_i $$ is rate of retunr in time period i
+GM rate of return, here $$ R_i $$ is rate of return in time period i
 
 $$ R_G = [ (1 + R_1) \ x \ (1 + R_2) \ x ... x \ (1 + R_n) ]^{(1/n)} - 1 $$
 
@@ -72,7 +72,7 @@ It is difference between largest and smallest value in data. It is not dependent
 
 **Interquartile Range**
 
-Quartiles daivide the ordered data in to 4 segments. Each have equal number of values.  Median (Q2) divides the dataset into two different parts. IQR is the difference in the middle of the first half (Q1) and the middle of second half (Q3). We then find the median of these two different parts and then find the difference. 
+Quartiles divide the ordered data in to 4 segments. Each have equal number of values.  Median (Q2) divides the dataset into two different parts. IQR is the difference in the middle of the first half (Q1) and the middle of second half (Q3). We then find the median of these two different parts and then find the difference. 
 
 If we have even number of data points in dataset then we include the first middle number in first set and the second middle number in second set.
 
@@ -98,15 +98,15 @@ Measure of spread can be found by calculating range variance and standard deviat
 
 **Variance**
 
-Sqaured deviation of values from the mean
+Squared deviation of values from the mean
 
-$ \sigma^2 = \frac{ \sum(x_i - \mu)^2 }{ n } = \frac{ \sum(x_i)^2 }{ n } - \mu^2 $
+$$ \sigma^2 = \frac{ \sum(x_i - \mu)^2 }{ n } = \frac{ \sum(x_i)^2 }{ n } - \mu^2 $$
 
 **Standard Deviation**
 
 Variation about the mean. It has *same unit as the original data*.
 
-$ \sigma = \sqrt{Variance} = \sqrt{\sigma^2} = \sqrt \frac{ \sum_{1}^n(x_i - \mu)^2 }{ n }$
+$$ \sigma = \sqrt{Variance} = \sqrt{\sigma^2} = \sqrt \frac{ \sum_{1}^n(x_i - \mu)^2 }{ n }$$
 
 **For example:**
 
@@ -116,13 +116,13 @@ B = [8, 9, 10, 11, 12]
 
 Mean of two data set is same (10) but range varies. So we calculate variance to show difference between datasets.
 
-$ \sigma^2(A) = 200 $
+$$ \sigma^2(A) = 200 $$
 
-$ \sigma^2(B) = 2 $
+$$ \sigma^2(B) = 2 $$
 
-$ \sigma(A) = \sqrt{200} = 10\sqrt{2} $
+$$ \sigma(A) = \sqrt{200} = 10\sqrt{2} $$
 
-$ \sigma(B) = \sqrt{2} $
+$$ \sigma(B) = \sqrt{2} $$
 
 **Result**
 
@@ -134,14 +134,14 @@ Hence, points in A are 10 times more deviated.
 - Thr more data is contracted, the smaller these measures are.
 - If all values are same (no variation) then all these are zero.
 - None of these measures can ever be negative.
-- Adding a number to all values, $x_i$, makes no difference to variance.
-- Multiplying a number, k, to all values, $x_i$, makes variance  $ \sigma^2 \times k $  
+- Adding a number to all values, $$ x_i $$, makes no difference to variance.
+- Multiplying a number, k, to all values, $$ x_i $$, makes variance  $$ \sigma^2 \times k $$  
 
 **Coefficient of Variation**
 
 It measures relative variation in %. It shows variation relative to mean. Can compare data with different units.
 
-$ CV = \frac{ S }{ X } * 100 % $
+$$ CV = \frac{ S }{ X } * 100 % $$
 
 For example, 
 
@@ -218,39 +218,39 @@ The probability distribution can be uniform or normal.
 
 ### Uniform Distribution
 
-$ f(X) = \frac{1}{(b - a)} $ , where a is min and b is max
+$$ f(X) = \frac{1}{(b - a)} $$ , where a is min and b is max
 
-$ \mu = \frac{a + b}{2} $
+$$ \mu = \frac{a + b}{2} $$
 
-$ \sigma = \sqrt{  \frac{(b - a)^2}{ 12 }  } $
+$$ \sigma = \sqrt{  \frac{(b - a)^2}{ 12 }  } $$
 
-Probabily that 3 <= x <= 5, are under the line between 3 and 5. As it is a rectangle, the area can be (base)(height).
+Probability that 3 <= x <= 5, are under the line between 3 and 5. As it is a rectangle, the area can be (base)(height).
 
 ### The Normal Distribution
 
 It is:
 - Bell Shaped
 - Symmetrical
-- Mean, Meadia and Mode are equal
+- Mean, Median and Mode are equal
 
 The random variable has infinite range. It is defined by:
 
-$f(x) = \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}(\frac{X - \mu}{\sigma})^2}$
+$$ f(x) = \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}(\frac{X - \mu}{\sigma})^2}$$
 
 e = 2.71828
-$\pi$ = 3.14159
+$$\pi$$ = 3.14159
 
-Mean moved ditribution left/right, sd increases/decreases spread.
+Mean moved distribution left/right, sd increases/decreases spread.
 
 #### Standardized Normal or Z score
 
-Any normal distribution can be transformed to **standard normal distribution** $(Z)$ using mean and sd.
+Any normal distribution can be transformed to **standard normal distribution** $$(Z)$$ using mean and sd.
 
 Need to transform X units to Z units.
 
 It has mean of 0 and SD of 1.
 
-$ z = \frac{X - \mu}{\sigma} $
+$$ z = \frac{X - \mu}{\sigma} $$
 
 Also, known as *Z distribution*.
 
@@ -297,7 +297,7 @@ When we make probability distribution of a population that is unbiased, there ar
 
 Next, we take all possible sample and find mean of each. The prob distn of the mean of sample will be a normal distribution.
 
-So we find $ \mu_\bar{X} $ and $ \sigma_\bar{X} $ and n, here n is number of items in each sample.
+So we find $$ \mu_\bar{X} $$ and $$ \sigma_\bar{X} $$ and n, here n is number of items in each sample.
 
 
 ### Standard Error of the Mean
@@ -310,7 +310,7 @@ It is variablity in the mean from sample to sample of same size.
 
 It says that the distribution of mean of samples is mostly normal distribution. It is not dependent on shape of original population.
 
-$ \sigma_\bar{X} = \frac{\sigma}{\sqrt{n}}$
+$$ \sigma_\bar{X} = \frac{\sigma}{\sqrt{n}}$$
 
 **Note:** The standard error of the mean decreases as the sample size increases.
 
@@ -322,7 +322,7 @@ It is same as probability but also take equally likely outcome and rare outcome.
 
 Point is a single number and we can find confidence interval for that number. Interval estimate tells us more information about the population than a point estimate tells us.
 
-Point estimate $\pm$ (Critical Value)(Standard Error)
+Point estimate $$\pm$$ (Critical Value)(Standard Error)
 
 Point is the sample statistic estimating population parameter of interest.
 
@@ -342,7 +342,7 @@ We are interested in points where the probability left out is 0.025. So point ti
 
 Hence, in Z table, the score 0.025 can be found for Z value 1.96.
 
-Here, $ Z_{\alpha/2} = \pm1.96 $, this is the normal distribution critical value for a probability of α/2 in each tail.
+Here, $$ Z_{\alpha/2} = \pm1.96 $$, this is the normal distribution critical value for a probability of α/2 in each tail.
 
 90% = 1.645
 
@@ -354,7 +354,7 @@ This tells us that 95% of intervals contains μ.
 
 **CI, when σ is known:**
 
-$ \bar{X} \pm Z_{\alpha/2} \frac{\sigma}{\sqrt{n}} $
+$$ \bar{X} \pm Z_{\alpha/2} \frac{\sigma}{\sqrt{n}} $$
 
 If σ is unknown, then we can substitute the sample standard deviation, S.This introduces extra uncertainty, since S is variable from sample to sample
 n. So we use the t distribution instead of the normal distribution.
@@ -370,9 +370,9 @@ t -> Z as n increases.
 
 There is an error associated with mean of a sample. We can find a sample size to get desired *margin of error (e)* with (1 - α) level of confidence.
 
-$ e = Z_{\alpha/2}\frac{\sigma}{\sqrt{n}} $
+$$ e = Z_{\alpha/2}\frac{\sigma}{\sqrt{n}} $$
 
-$ n = \frac{Z_{\alpha/2}^2 \sigma^2}{e^2} $
+$$ n = \frac{Z_{\alpha/2}^2 \sigma^2}{e^2} $$
 
 
 # Probability 
@@ -383,7 +383,7 @@ For example, if we flip a coin we can get either heads or tails. The possibility
 
 The analysis of event governed by probability is called statistics.
 
-$ P(e) = \frac{ Possibilities }{ Outcomes } $
+$$ P(e) = \frac{ Possibilities }{ Outcomes } $$
 
 Sample space is all possible outcomes.
 
@@ -432,11 +432,11 @@ For eg, P(Jan or Wed) = P(Jan) + P(Wed) - P(Jan and Wed) = 31/365 + 52/365 - 5/3
 
 For independent event, what happened in past event will have no effect on current event. For eg, P(HH) or P(atleast 1H in 10 flips).
 
-$ P(HH) = 0.5 \times 0.5 $
+$$ P(HH) = 0.5 \times 0.5 $$
 
 P(atleast 1H in 10 flips) = 1 - P(All T in 10 flips) 
 
-$ 1 - (0.5)^{10} = 1023 \div 1024 = 99.9% $
+$$ 1 - (0.5)^{10} = 1023 \div 1024 = 99.9% $$
 
 **Conditional Probability**
 
@@ -451,55 +451,55 @@ if independent, then  P(A and B) = P(A) X P(B)
 
 ### Permutation
 
-Arrange $n$ people in $k$ seats. To count number of ways in which this can be done we use permutation.
+Arrange $$n$$ people in $$k$$ seats. To count number of ways in which this can be done we use permutation.
 
 For eg, arrange 6 people in 3 seats, 6.5.4 = 6! / 3! = 120.
 
-$ _nP_k = \frac{n!}{(n - k)!} = n(n-1)...$ (k  times)
+$$ _nP_k = \frac{n!}{(n - k)!} = n(n-1)...$$ (k  times)
 
 Used when order matters and pick once (without replacement). 
 
-For eg, $ _{10}P_3 = 10.9.8  $
+For eg, $$ _{10}P_3 = 10.9.8  $$
 
 ### Combinations
 
-$ _nC_k = \binom{n}{k} = \frac{_nP_k}{k!} = \frac{n!}{k!(n - k)!} = \frac{n(n-1)...[k \space times]}{k!} $
+$$ _nC_k = \binom{n}{k} = \frac{_nP_k}{k!} = \frac{n!}{k!(n - k)!} = \frac{n(n-1)...[k \space times]}{k!} $$
 
 We divide it by the number of ways in which k people can be arranged in k places, i.e, k! because ABCD and BCDA are same and we are counting this extra.
 
 Order doesn't matter, 123 = 312. 
 
-For eg, $ _{10}C_3 = \frac{10.9.8}{3.2.1} $
+For eg, $$ _{10}C_3 = \frac{10.9.8}{3.2.1} $$
 
 ## Approach to solve a problem
 
 We can take following approaches to solve a probability problem
 
-1 use simple definition, $ P(e) = \frac{events possible}{sample space} $
+1 use simple definition, $$ P(e) = \frac{events possible}{sample space} $$
 
 2 Make a contingency table with possibilities.
 
 3 Make a decision tree, use when question has **after**.
 
-4 At least or at most, use $ P(at least/most) = 1 - P(e) $
+4 At least or at most, use $$ P(at least/most) = 1 - P(e) $$
 
 **Example**
 
 Find number of ways to arrange 1 - 10 digits in 3 places,
 
-Repetition allowed, order matters = $ 10.10.10 $
+Repetition allowed, order matters = $$ 10.10.10 $$
 
-Repetition not allowed, order matters = $ 10.9.8 $ Permutation
+Repetition not allowed, order matters = $$ 10.9.8 $$ Permutation
 
-Repetition allowed, order doesn't matter = $ \frac{10.10.10}{3.2.1} $
+Repetition allowed, order doesn't matter = $$ \frac{10.10.10}{3.2.1} $$
 
-Repetition not allowed, order doesn't matter = $ \frac{10.9.8}{3.2.1} $ Combination
+Repetition not allowed, order doesn't matter = $$ \frac{10.9.8}{3.2.1} $$ Combination
 
 ## Binomial Probability Distribution
 
-When we have to make $k$ success in $n$ attempts, then we can following formula:
+When we have to make $$k$$ success in $$n$$ attempts, then we can following formula:
 
-$ P = _nC_k . π^k . (1-π)^{(n-k)} $
+$$ P = _nC_k . π^k . (1-π)^{(n-k)} $$
 
 Here π is probability to get success. eg, throwing a basket ball.
 
