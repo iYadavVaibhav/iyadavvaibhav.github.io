@@ -166,7 +166,7 @@ What defines dataset better, mean or median?
 
 This tells us how data is distributed. It can be measure by:
 - Skewness: Extent to which data values are not symmetrical
-- Kurtosis: Affects the peakedness of the curve of the distribution. It tell the sharpness of rise of curve. Bell shaped is Mesifurtic (Kurtosis = 0).
+- Kurtosis: Affects the peakedness of the curve of the distribution. It tell the sharpness of rise of curve. Bell shaped is Mesokurtic (Kurtosis = 0).
 
 ### Skewness
 
@@ -193,7 +193,7 @@ Each class has a mid point, a frequency. We can find **Relative Frequency** whic
 
 For eg, class A (10 but less than 20) has frequency 3, total observations 20, so relative freq 0.15, hence, 15% data points are in class A.
 
-We can also find cumulative frequency and relative cumulative frequency or **Cumulative Percentage**. It can help us find probabily of that a data is under or less than that class interval.
+We can also find cumulative frequency and relative cumulative frequency or **Cumulative Percentage**. It can help us find probability of that a data is under or less than that class interval.
 
 **Use of Frequency Distribution**
 
@@ -205,12 +205,12 @@ We can also find cumulative frequency and relative cumulative frequency or **Cum
 
 - Play with class interval to see different picture of data.
 - In large dataset, boundaries don't make much difference.
-- When comparing different groups with sample, use relative frequency or precentage distribution.
+- When comparing different groups with sample, use relative frequency or percentage distribution.
 
 
 ## Probability Distribution
 
-A frequency distribution can be a probability distribution if the area under the curve is equal to 1. The f(x) of Prob Dist gives us probability of occourance of x in the given distribution.
+A frequency distribution can be a probability distribution if the area under the curve is equal to 1. The f(x) of Prob Dist gives us probability of occurrence of x in the given distribution.
 
 A **Continuous** is distribution of a continuous random variable. It is the variable that can take any value on continuum.
 
@@ -292,18 +292,18 @@ There will be variation in each of these different samples. So each of these sam
 
 ### Developing a Sampling Distributions
 
-If I choose **every possible** sample of size "n" from a popltn then I get "sampling distribution". Now if we collect mean of each of these possible sample then we get "Sampling distribution of Sample Means".
+If I choose **every possible** sample of size "n" from a population then I get "sampling distribution". Now if we collect mean of each of these possible sample then we get "Sampling distribution of Sample Means".
 
 When we make probability distribution of a population that is unbiased, there are equally likely chance to pick a number. So it is a uniform distribution.
 
-Next, we take all possible sample and find mean of each. The prob distn of the mean of sample will be a normal distribution.
+Next, we take all possible sample and find mean of each. The prob distribution of the mean of sample will be a normal distribution.
 
 So we find $\mu_\bar{X}$ and $\sigma_\bar{X}$ and n, here n is number of items in each sample.
 
 
 ### Standard Error of the Mean
 
-Standard error is standard deviation of mean of means. For eg, if we take random samples from a popltn, we get mean for each sample. S(A) give mean X(A) and so on. Now all these means (X(A), X(B), X(C)..) for a distribution. The standard deviation of this distribution gives us Standard Error.
+Standard error is standard deviation of mean of means. For eg, if we take random samples from a population, we get mean for each sample. S(A) give mean X(A) and so on. Now all these means (X(A), X(B), X(C)..) for a distribution. The standard deviation of this distribution gives us Standard Error.
 
 It is variability in the mean from sample to sample of same size.
 
