@@ -40,7 +40,11 @@ Every possible outcome of a variable is an event.
 
 **Complement of an event** A (denoted A’). All events that are not part of event A. For eg, all days from 2018 that are not in January.
 
-**Mutually Exclusive** events cannot occur simultaneously. They have no intersection outcomes. Also called **Disjoint Sets**. For eg, A = day in Jan, B = day in Feb. A and B cannot occur simultaneously. In this, P(A1 U A2 U A3...) = P(A1) + P(A2) + P(A3)...
+**Mutually Exclusive** events cannot occur simultaneously. They have no intersection outcomes. Also called **Disjoint Sets**. For eg, A = day in Jan, B = day in Feb. A and B cannot occur simultaneously. 
+
+In this, P(A1 U A2 U A3...) = P(A1) + P(A2) + P(A3)...
+
+Also, P(A & B) = 0.
 
 **Collectively Exhaustive Events** are those in which:
 - One of the event must occur
@@ -56,9 +60,11 @@ Events A and B are collectively exhaustive and also mutually exclusive.
 ## Addition Rule
 Addition rule of probability. 
 
-P(A or B) = P(A) + P(B) - P(A and B) 
+$$ P(A \cup B ) = P(A) + P(B) -P(A \cap B) $$
 
-here P(A and B) is probability of intersection of A and B. If A and B are mutually exclusive, then P(A and B) = 0.
+if mutually exclusive, then $P(A \cap B) = 0$.
+
+And is intersection, or is union.
 
 For eg, P(Jan or Wed) = P(Jan) + P(Wed) - P(Jan and Wed) = 31/365 + 52/365 - 5/365 = 78/365
 
@@ -81,7 +87,7 @@ When we have to find a probability under a **give**n condition.
 
 If dependent, the probability of A and B is:
 
-$$ P(A \& B) = P(A) \times P(B|A) = P(B) \times P(A|B) $$ 
+$$ P(A\cap B) = P(A \& B) = P(A) \times P(B|A) = P(B) \times P(A|B) $$ 
 
 where A\|B is 'A happening after B' or 'conditional prob of A given that B has occurred'. 
 
@@ -94,7 +100,9 @@ $$ P(A|B) = \frac{P(A\cap B)}{P(B)} $$
 
 if independent (does not affect each other), then  
 
-$$ P(A \& B) = P(A) X P(B) $$
+$$ P(A \& B) = P(A) \times P(B) $$
+
+$$ P(A|B) = P(A) $$
 
 $$ P(A \space or \space B) = P(A) + P(B) - P (A \& B) $$
 
@@ -298,11 +306,38 @@ What defines dataset better, mean or median?
 - Mean is better for symmetric dataset, median is better for skewed dataset which has outliers. 
 - Median is better for salaries and home prices as it has outliers.
 
+## Measure of Discrete Variables
+
+Discrete Variable has a finite outcome. It has a fixed values. The events are **mutually exclusive**.
+
+### Expected Value
+
+This is measure of center. Also called **weighted average**.
+
+$$ \mu = E(X) = \sum_{i=1}^N X_i P(X=X_i) $$
+
+This is sum of each (value x probability)
+
+### Expected Variance
+
+Difference from mean, squared times probability, then sum:
+
+$$ \sigma^2 = \sum_{i=1}^N [X_i - E(X)]^2 P(X=X_i) $$
+
+
+### Expected Standard Deviation
+
+Difference from mean, squared times probability, then sum:
+
+$$ \sigma = \sqrt{\sigma^2} = \sqrt{ \sum_{i=1}^N [X_i - E(X)]^2 P(X=X_i) } $$
+
 ## Measures of Relations
 
 ### Coefficient of Variation
 
-Coefficient is the multiplicative factor. That is how many times a variable is of another variable. Here we compare variation and mean. So it **variation relative to mean**. Always in percentage, and can compare data with different units.
+Coefficient is the multiplicative factor. That is how many times a variable is of another variable. 
+
+Here we compare variation and mean. So it **variation relative to mean**. Always in percentage, and can compare data with different units.
 
 $$ CV = \frac{ S }{ X } \times 100\% $$
 
@@ -320,11 +355,27 @@ Hence, both stocks have same SD, but stock B is less variable relative to its pr
 
 ### Covariance
 
-### Correlation
+Measure of strength of linear relationship between two discrete random variables X and Y.
 
-The linear relation between two variables is called correlation. It is between -1 and 1.
+$$ \sigma_{XY} = \sum_{i=1}^N [X_i - E(X)][Y_i - E(Y)] P(X=X_i,Y=Y_i)  $$
+
+where, $P(X=X_i,Y=Y_i)$ is probability of occurrence of the i outcome of X and the i outcome of Y.
+
+### Coefficient of Correlation
+
+The relative strength of linear relation between two variables is called correlation. It is between -1 and 1.
+
+$$ r = \frac{cov(X,Y)}{S_XS_Y} $$
+
+This is covariance relative to standard deviation. In above,
+
+$$ cov(X,Y) =  \frac{\sum_{i=1}^N [X_i - \overline{X}][Y_i - \overline{Y}]}{n-1} $$
+$$ S_X =  \sqrt{ \frac{\sum_{i=1}^N [X_i - \overline{X}]^2}{n-1} } $$
+$$ S_Y =  \sqrt{ \frac{\sum_{i=1}^N [Y_i - \overline{Y}]^2}{n-1} } $$
 
 Cor = 0, means no linear relation, but may has non-linear relation.
+
+In investment portfolio, expected return and standard deviation of two funds together can be calculated.
 
 ## Shape of Distribution
 
@@ -387,7 +438,7 @@ $F(x)$ = PDF
 $E(x)$ is expected value = weighted average
 
 RV can be of two types:
-- Discreet, fixed values, finite outcome
+- Discreet, fixed values, finite outcome, mutually exclusive events.
 - Continuous, any value in range, data points are approx values.
 
 Discreet variables PDF:
