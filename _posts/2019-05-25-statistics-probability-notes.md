@@ -651,7 +651,7 @@ $$ e = Z_{\alpha/2}\frac{\sigma}{\sqrt{n}} $$
 
 $$ n = \frac{Z_{\alpha/2}^2 \sigma^2}{e^2} $$
 
-For eg, what can be the sample size if we want error of $\plusmn$ 5 with 95% confidence interval when σ=20.
+For eg, what can be the sample size if we want error of $\pm$ 5 with 95% confidence interval when σ=20.
 
 ### P Value (needs elaboration)
 
