@@ -562,7 +562,7 @@ When we make probability distribution of a population that is unbiased, there ar
 
 Next, we take all possible sample and find mean of each. The prob distribution of the mean of sample will be a normal distribution.
 
-So we find $\mu_\bar{X}$ and $\sigma_\bar{X}$ and n, here n is number of items in each sample.
+So we find $\mu_{\overline{X}}$ and $\sigma_{\overline{X}}$ and n, here n is number of items in each sample.
 
 
 ### Standard Error of the Mean
@@ -573,7 +573,7 @@ It is variability in the mean from sample to sample of same size.
 
 It is standard deviation of means of samples.
 
-$$ \sigma_\bar{X} = \frac{\sigma}{\sqrt{n}} $$
+$$ \sigma_{\overline{X}} = \frac{\sigma}{\sqrt{n}} $$
 
 **Note:** The standard error of the mean decreases as the sample size increases.
 
@@ -623,7 +623,7 @@ This also tells us that 95% of intervals contains μ.
 
 **CI, when σ is known:**
 
-$$ \bar{X} \pm Z_{\alpha/2} \frac{\sigma}{\sqrt{n}} $$
+$$ \overline{X} \pm Z_{\alpha/2} \frac{\sigma}{\sqrt{n}} $$
 
 **CI when σ is unknown**
 
@@ -637,7 +637,7 @@ Degree of freedom is a number of observation that can take any value after we ha
 
 t -> Z as n increases.
 
-$$ \bar{X} \pm t_{\alpha/2} \frac{S}{\sqrt{n}} $$
+$$ \overline{X} \pm t_{\alpha/2} \frac{S}{\sqrt{n}} $$
 
 where $t_{α/2}$ is the critical value of the t distribution with $n-1$ degrees
 of freedom and an area of α/2 in each tail
