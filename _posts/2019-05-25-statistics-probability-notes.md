@@ -12,7 +12,11 @@ Statistics is used to summarize data. Probability is a way to find likeliness of
 
 # Probability 
 
-Probability is how likely event is going to happen. It is possibility of event that is fundamentally random. Any experiment can have outcome. The possibility of outcome is the probability. 
+Probability is how likely event is going to happen. It is possibility of event that is fundamentally random. Any experiment can have outcome for an event. The possibility of outcome is the probability. 
+
+Experiment -> many events -> outcomes
+
+Events make sample space, that is, all possible outcomes.
 
 For example, if we flip a coin we can get either heads or tails. The possibility of heads is 50% and possibility ability of tails is 50%. So the probability of Heads is .5 and probability of tails is also .5, if it is a biased coin.
 
@@ -20,15 +24,11 @@ The analysis of event governed by probability is called statistics.
 
 $$ P(e) = \frac{ Possibilities }{ Outcomes } $$
 
-Sample space is all possible outcomes.
-
 **Theoretical  probability** is what can be stated and seems fixed. For example flipping a coin. 
 
 **Experimental probability** Finding an outcome based on past data and experience example prediction of the score. Probability gives a reasonable predictions about an outcome. It is highly likely but not hundred percent true. Also known as **subjective probability**.
 
 **Simulation and Randomness** We can use list of random numbers to simulate our experiment multiple times and average out to find confidence.
-
-
 
 ## Events
 
@@ -40,19 +40,18 @@ Every possible outcome of a variable is an event.
 
 **Complement of an event** A (denoted A’). All events that are not part of event A. For eg, all days from 2018 that are not in January.
 
-**Mutually Exclusive** have no intersection outcomes. They cannot occur simultaneously. For eg, A = day in Jan, B = day in Feb. A and B cannot occur simultaneously.
+**Mutually Exclusive** events cannot occur simultaneously. They have no intersection outcomes. Also called **Disjoint Sets**. For eg, A = day in Jan, B = day in Feb. A and B cannot occur simultaneously. In this, P(A1 U A2 U A3...) = P(A1) + P(A2) + P(A3)...
 
 **Collectively Exhaustive Events** are those in which:
-
 - One of the event must occur
 - The set of events covers the entire sample space
-
-For eg, A = Weekday; B = Weekend; C = January; D = Spring;
-
-Events A, B, C and D are collectively exhaustive (but not mutually exclusive – a weekday can be in January or in Spring).
+- For eg, A = Weekday; B = Weekend; C = January; D = Spring; Events A, B, C and D are collectively exhaustive (but not mutually exclusive – a weekday can be in January or in Spring).
 
 Events A and B are collectively exhaustive and also mutually exclusive.
 
+**Independent Events** are those which are not dependent on each other. That is, occurrence of one does not affect occurrence of another event.
+
+**Note:** All mutually exclusive events are dependent but not all dependent events are mutually exclusive.
 
 ## Addition Rule
 Addition rule of probability. 
@@ -73,14 +72,33 @@ P(at least 1H in 10 flips) = 1 - P(All T in 10 flips)
 
 $$ 1 - (0.5)^{10} = 1023 \div 1024 = 99.9% $$
 
-**Conditional Probability**
+## Conditional Probability
+
+When we have to find a probability under a **give**n condition. 
+
+
+### Dependent Events
 
 If dependent, the probability of A and B is:
 
-P(A and B) = P(A) X  P(B\|A) , where B\|A is 'B happening after A' or 'conditional prob of B given that A has occurred'.
+$$ P(A \& B) = P(A) \times P(B|A) = P(B) \times P(A|B) $$ 
 
-if independent, then  P(A and B) = P(A) X P(B) 
+where A\|B is 'A happening after B' or 'conditional prob of A given that B has occurred'. 
 
+Here, B becomes the new sample space, because it's A **given B**. Hence,
+
+$$ P(A|B) = \frac{P(A\cap B)}{P(B)} $$
+
+
+### Independent Events
+
+if independent (does not affect each other), then  
+
+$$ P(A \& B) = P(A) X P(B) $$
+
+$$ P(A \space or \space B) = P(A) + P(B) - P (A \& B) $$
+
+because P(B\|A) = P(B), occurrence of A has no effect on B.
 
 ## Counting Events
 
@@ -273,11 +291,20 @@ Hence, points in A are 10 times more deviated.
 - Adding a number to all values, $x_i$, makes no difference to variance.
 - Multiplying a number, k, to all values, $x_i$, makes variance  $\sigma^2 \times k$  
 
-**Coefficient of Variation**
+**Better measures**
 
-It measures relative variation in %. It shows variation relative to mean. Can compare data with different units.
+What defines dataset better, mean or median?
+- Mean can give us the standard deviation, median can you give us IQR. 
+- Mean is better for symmetric dataset, median is better for skewed dataset which has outliers. 
+- Median is better for salaries and home prices as it has outliers.
 
-$$ CV = \frac{ S }{ X } * 100 % $$
+## Measures of Relations
+
+### Coefficient of Variation
+
+Coefficient is the multiplicative factor. That is how many times a variable is of another variable. Here we compare variation and mean. So it **variation relative to mean**. Always in percentage, and can compare data with different units.
+
+$$ CV = \frac{ S }{ X } \times 100\% $$
 
 For example, 
 
@@ -291,14 +318,9 @@ CV(B) = (5/100)*100% = 5%
 
 Hence, both stocks have same SD, but stock B is less variable relative to its price.
 
-**Better measures**
+### Covariance
 
-What defines dataset better, mean or median?
-- Mean can give us the standard deviation, median can you give us IQR. 
-- Mean is better for symmetric dataset, median is better for skewed dataset which has outliers. 
-- Median is better for salaries and home prices as it has outliers.
-
-## Correlation and Covariance
+### Correlation
 
 The linear relation between two variables is called correlation. It is between -1 and 1.
 
@@ -396,8 +418,12 @@ Continuous RV can have PDF:
 
 ### Uniform Distribution
 
+Here, probability of each outcome is equal. Hence, funcition is 1/range:
+
 $$ f(X) = \frac{1}{(b - a)} $$ 
-where a is min and b is max
+where a is min and b is max.
+
+Measures:
 
 $$ \mu = \frac{a + b}{2} $$
 
@@ -412,7 +438,9 @@ It is:
 - Symmetrical
 - Mean, Median and Mode are equal
 
-The random variable has infinite range. It is defined by:
+The random variable has theoretically infinite range. 
+
+It is defined by:
 
 $$ f(x) = \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}(\frac{X - \mu}{\sigma})^2} $$
 
@@ -420,6 +448,9 @@ e = 2.71828
 $\pi$ = 3.14159
 
 Mean moves distribution left/right, sd increases/decreases spread.
+
+P(-∞ < X < μ) = 0.5 and P(μ < X < ∞) = 0.5
+
 
 #### Standardized Normal or Z score
 
@@ -448,6 +479,8 @@ The probability is area under the curve. So P(a <= X <= b) is area under curve b
 **Note:** 
 - P(a <= X <= b) = P(a < X < b), as P(a) or P(any point) = 0. 
 - The total area under the probability curve is 1 and curve is symmetric so half above mean and half below.
+
+To calculate probability of any RV in a range we need to find area under the curve in that range. So easily find the answers we convert every normal distribution to standard Z distribution. Then from Z Table we look up values for that value of Z. The score at a value gives area from -$\infty$ till that value.
 
 **Z Table** is cumulative probability of standardized normal. 
 
@@ -487,29 +520,31 @@ Standard error is standard deviation of mean of means. For eg, if we take random
 
 It is variability in the mean from sample to sample of same size.
 
-### Central Limit Theorem
-
-It says that the distribution of mean of samples is mostly normal distribution. It is not dependent on shape of original population.
+It is standard deviation of means of samples.
 
 $$ \sigma_\bar{X} = \frac{\sigma}{\sqrt{n}} $$
 
 **Note:** The standard error of the mean decreases as the sample size increases.
 
-### P Value
+### Central Limit Theorem
 
-It is same as probability but also take equally likely outcome and rare outcome. So p(two heads, HH) = 0.25. p value of HH is P(HH) + P(TT) + 0 for rare.
+It says that the distribution of mean of samples is mostly normal distribution. It is not dependent on shape of original population.
 
 ### Point and Interval Estimates
 
-Point is a single number and we can find confidence interval for that number. Interval estimate tells us more information about the population than a point estimate tells us.
+Point is a single number, X, in population. We can find confidence interval for that number. Interval estimate tells us more information about the population than a point estimate tells us.
+
+So for eg, 5kg rice packet has SD of 50gm in population. So 3SD would contain 99% of rice packets. Now if we take samples and find mean of samples it would give us a distribution. We can take one Point near 5kg, then we can find the confidence interval in which this mean will lie with a percentage confidence. Like, 95% confidence that x=49.94 is mean and lies between found interval. 
 
 **Point estimate $\pm$ (Critical Value)(Standard Error)**
 
 Point is the sample statistic estimating population parameter of interest.
 
-Critical Value is table value, based on confidence interval
+Critical Value is z table value, based on confidence interval
 
 Standard error is SD of point estimate.
+
+100% is close to infinity, 100% sure that mean will lie between infinities. 95% is also large interval. 0% confidence would be a very small interval.
 
 ### Confidence Intervals and Levels
 
@@ -519,11 +554,13 @@ Standard error is SD of point estimate.
 
 => α/2  = 0.025
 
-We are interested in points where the probability left out is 0.025. So point till -infinity the probability is 0.025.
+We are interested in points where the probability left out is 0.025. So from point unto -infinity the probability is 0.025.
 
 Hence, in Z table, the score 0.025 can be found for Z value 1.96.
 
 Here, $Z_{\alpha/2}=\pm1.96$, this is the normal distribution critical value for a probability of α/2 in each tail.
+
+This tells us that on a standard curve, sd=1 and mean=0, the 95% confidence interval is +- 1.96. To find actual values of actual normal curve, we use the formula Point estimate $\pm$ (Critical Value)(Standard Error).
 
 90% = 1.645
 
@@ -531,21 +568,29 @@ Here, $Z_{\alpha/2}=\pm1.96$, this is the normal distribution critical value for
 
 99% = 2.58
 
-This tells us that 95% of intervals contains μ.
+This also tells us that 95% of intervals contains μ.
 
 **CI, when σ is known:**
 
 $$ \bar{X} \pm Z_{\alpha/2} \frac{\sigma}{\sqrt{n}} $$
 
-If σ is unknown, then we can substitute the sample standard deviation, S.This introduces extra uncertainty, since S is variable from sample to sample
-n. So we use the t distribution instead of the normal distribution.
+**CI when σ is unknown**
 
+We can substitute the sample standard deviation, S.This introduces extra uncertainty, since S is variable from sample to sample. So we use the t distribution instead of the normal distribution.
 
 ### Student's t Distribution
 
 It is a family of distributions. Its value depends on degrees of freedom (d.f) = n - 1.
 
+Degree of freedom is a number of observation that can take any value after we have mean calculated.
+
 t -> Z as n increases.
+
+$$ \bar{X} \pm t_{\alpha/2} \frac{S}{\sqrt{n}} $$
+
+where $t_{α/2}$ is the critical value of the t distribution with $n-1$ degrees
+of freedom and an area of α/2 in each tail
+
 
 ### Sampling Error
 
@@ -555,5 +600,10 @@ $$ e = Z_{\alpha/2}\frac{\sigma}{\sqrt{n}} $$
 
 $$ n = \frac{Z_{\alpha/2}^2 \sigma^2}{e^2} $$
 
+For eg, what can be the sample size if we want error of $\plusmn$ 5 with 95% confidence interval when σ=20.
+
+### P Value (needs elaboration)
+
+It is same as probability but also take equally likely outcome and rare outcome. So p(two heads, HH) = 0.25. p value of HH is P(HH) + P(TT) + 0 for rare.
 
 
