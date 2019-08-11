@@ -141,11 +141,19 @@ $$ _{10}C_3 = \frac{10.9.8}{3.2.1} $$
 We can take following approaches to solve a probability problem
 
 1. use simple definition, 
-$$ P(e) = \frac{events possible}{sample space} $$
+$$ P(e) = \frac{events \space possible}{sample \space space} $$
 
-2. Make a contingency table with possibilities.
+1. Make a **Contingency Table** with possibilities.
+   1. To find P(A or B), use P(A)+ P(B) - P(A and B)
+   2. To find P(A and B), simply use (joint event)/total.
+   3. To find P(A|B), P(A and B) / P(B) 
 
-3. Make a decision tree, use when question has **after**.
+2. Make a **Decision Tree**, use when question has "after".
+   1. Find branches and outcomes
+   2. Find effective value by multiplying with probabilities
+   3. Roll back to find effective value at each branch.
+
+3. Use **Venn Diagram** when and/or is combined with not of a event.
 
 4. At least or at most, use 
 $$ P(at least/most) = 1 - P(e) $$
