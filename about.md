@@ -10,7 +10,7 @@ I currently work as Data Analyst with Barclays India. My job is to understand bu
 
 You can see my recent work around data analytics by visiting following links:
  - Data Analytics on [Kaggle](https://www.kaggle.com/iyadavvaibhav)
- - Data Visualization on [Tableau Public](https://public.tableau.com/profile/vaibhavyadav)
+ - Data Visualization on [Tableau Public](https://public.tableau.com/profile/iyadavvaibhav)
 
 ### More Information
 
