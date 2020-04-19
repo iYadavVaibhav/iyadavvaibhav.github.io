@@ -13,10 +13,14 @@ Any String is by default a list of characters.
 
 ##Data Structures
 
+Python's in built data sets are list, dict and sets.
+
+
 ```python
 
 list = [1,2,3,'hi',[2,3,4]]
 # mix data type list
+# list is collection of objects
 
 dictionary = {'k1':'v1' , 'k2':'v2'}
 # Key value pair
@@ -86,11 +90,3 @@ Filter is used to filter items in seq based on function/lambda
 eg: to get even values
 
 `filter(lambda num: num%2 == 0,seq)`
-
-#### Methods
-
-These are call to object property. Like a string object has property length.
-
-`str.lower()`
-
-
