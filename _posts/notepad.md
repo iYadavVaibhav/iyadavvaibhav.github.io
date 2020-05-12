@@ -7,6 +7,8 @@ To do:
 - Python Flask REST API GCP Firebase
 - Starred Repos
 - Tabs app using BloC.
+- flask app with data models integrated, and hosted
+- flutter app with data models integrated, and hosted
 
 Intro to:
 - Tensorflow +1
@@ -107,12 +109,42 @@ Structure:
   - widgets - component on pages, like progress bar
 
 Architectures (State Management):
-- Flutter allows to use many kind of state management architectures like:
-  - Redux
-  - Bloc
-  - MobX
-  - and many more, 
+- Flutter allows to use many kind of state management architectures like Redux, BLoC, MobX and many more.
 - These all are commonly used architecture to layer out UI from Database/WebAPIs.
+
+Basic Workflow:
+- make product class, init constructor, add factory, the get and set functions
+- link this to sqflite
+  - have a db_provider
+  - and an init function
+  - crud functions
+- or firebase
+  - get reference of a collection in instance.
+  - from ref get the snapshots and build.
+
+BLoC - Business Logic Component
+- separates UI from Business logic (Database and Network).
+- `Sink<data>` - data in - events
+- `Stream<data>` - data out - state
+
+![BLoC diagram](https://www.mobindustry.net/wp-content/uploads/bloc-architecture.jpg "BLoC image")
+
+- BLoC component converts a stream of incoming events into a stream of outgoing states. 
+- Close bloc references in despose() methods.
+- It has:
+  - Bloc
+  - BlocBuilder
+  - BlocProvider
+
+
+Redux:
+- provides routing as well
+- works with store reducer concept
+
+ScopedModel
+- Updates only model in scope, not the whole widget tree
+- Have to notifyListeners() on each state change
+
 - Links:
   - [Flutter Architecture Samples to build ToDo apps](http://fluttersamples.com/)
   - [The Essential Guide to UI Engineering](https://www.youtube.com/playlist?list=PLS2-V7v1NhNQB66bFNIXlQ_83chw0TgK6)

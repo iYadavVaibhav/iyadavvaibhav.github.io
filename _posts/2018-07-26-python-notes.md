@@ -90,3 +90,32 @@ Filter is used to filter items in seq based on function/lambda
 eg: to get even values
 
 `filter(lambda num: num%2 == 0,seq)`
+
+## Web Dev Libs
+Flask
+- light weight web framework
+- FlaskRESTful - extention for REST framework
+
+sqlite3
+- store to local db
+
+Shelve
+- Persistant object storage library
+
+Pickle
+- Dump objects to file and load back
+
+Pandas
+- Data maipulation
+- Pandas vs Dask vs Spark
+  - less than a gb, use pandas
+  - upto 100 gb, use pandas with chunk or dask or pyspark
+  - more than 100gb, pyspark for sure, upto peta bytes
+  - [Pandas, Dask or PySpark - Medium](https://medium.com/datadriveninvestor/pandas-dask-or-pyspark-what-should-you-choose-for-your-dataset-c0f67e1b1d36)
+- Superfast Pandas, make data transformation in pandas upto 7237 times faster:
+  - use iterrow
+  - use apply(lambda)
+  - use pandas vectorization, loc(filters here)
+  - use numpy vectorization, pass as numpy.array, converts to C code.
+  - [Making pandas loop faster](https://towardsdatascience.com/how-to-make-your-pandas-loop-71-803-times-faster-805030df4f06)
+
