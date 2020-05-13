@@ -6,22 +6,6 @@ Welcome to my blog! I'm a software engineer turned data analyst learning data sc
 
 ---
 
-### Articles
-
-Some of the very basic how to guides as I learn through:
-{% for post in site.posts %}
-{% unless post.categories contains 'notes' %}
-- [{{ post.title }}]({{ post.url }})
-{% endunless %}
-{% endfor %}
-
-### Notes
-
-Reference docs I prepared for personal learning:
-{% for post in site.categories.notes %}
-- [{{ post.title }}]({{ post.url }})
-{% endfor %}
-
 ### Kaggle
 
 Amazing place for data science enthusiasts. If you are learning data science you can find kernels and data sets on [Kaggle](https://www.kaggle.com). Some of my work are:
@@ -39,6 +23,21 @@ Data Visualization has been my passion since I started my journey in Data and An
 
 Or click here to browse my [Tableau Public Profile](https://public.tableau.com/profile/iyadavvaibhav).
 
+### Articles
+
+Some of the very basic how to guides as I learn through:
+{% for post in site.posts %}
+{% unless post.categories contains 'notes' %}
+- [{{ post.title }}]({{ post.url }})
+{% endunless %}
+{% endfor %}
+
+### Notes
+
+Reference docs I prepared for personal learning:
+{% for post in site.categories.notes %}
+- [{{ post.title }}]({{ post.url }})
+{% endfor %}
 
 ### Old Work
 - [Easy Soft Sys](http://www.easysoftsys.com) - College days start up.
