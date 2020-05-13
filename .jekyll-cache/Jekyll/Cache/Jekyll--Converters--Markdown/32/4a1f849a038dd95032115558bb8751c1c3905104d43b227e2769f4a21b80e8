@@ -1,0 +1,14 @@
+I"Ù<p>GitHub can be used for personal site and blog.</p>
+
+<p>It can further be used to project sites. This is kind of a sub-site/sub-domain of main site.</p>
+
+<p>My site:
+<code class="highlighter-rouge">myname.github.io/</code></p>
+
+<p>Project Site:
+<code class="highlighter-rouge">myname.github.io/abc_project/</code></p>
+
+<p>All projects repository come under <strong>gh-pages</strong> branch and not master.</p>
+
+<p>Creating a sub site is same as creating a main site.</p>
+:ET

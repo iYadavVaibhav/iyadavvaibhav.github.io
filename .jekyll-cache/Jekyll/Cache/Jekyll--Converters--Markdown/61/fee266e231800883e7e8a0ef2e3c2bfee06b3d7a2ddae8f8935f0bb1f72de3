@@ -1,0 +1,15 @@
+I"I<p>Notes on angular</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>We can define a resource in app folder eg: hero.ts to include the class with it’s members.</p>
+
+<p>We can make components for various behaviors of our app.</p>
+
+<p>eg:</p>
+
+<p>heroes - to list all heroes</p>
+
+<p>hero-detail - to keep functionality for one hero</p>
+
+:ET

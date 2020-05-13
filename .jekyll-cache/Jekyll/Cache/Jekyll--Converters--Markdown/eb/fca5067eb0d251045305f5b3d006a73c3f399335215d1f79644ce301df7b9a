@@ -1,0 +1,10 @@
+I"<h1 id="sqlite">SQLite</h1>
+
+<p>It is a micro database that can work in memory or a file.</p>
+
+<p>Queries are same as any other SQL.</p>
+
+<p>sqlite3 opens a shell in command line.</p>
+
+<p><code class="highlighter-rouge">.open FILENAME</code> opens an existing database.</p>
+:ET

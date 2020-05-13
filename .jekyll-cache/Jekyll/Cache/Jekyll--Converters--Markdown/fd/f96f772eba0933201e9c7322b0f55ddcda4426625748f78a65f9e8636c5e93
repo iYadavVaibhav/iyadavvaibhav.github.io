@@ -1,0 +1,105 @@
+I"C
+<p>My notes on NativeScript (tns Telerik NativeScript). It is used to make native iOS and Android apps using Angular/TypeScript or JavaScript.</p>
+
+<h2 id="setting-up-the-environment">Setting up the environment</h2>
+
+<p>Required</p>
+
+<ul>
+  <li>node</li>
+  <li>nativescript cli</li>
+</ul>
+
+<p>npm install script and add package</p>
+
+<p>nscli uses npm</p>
+
+<p><code class="highlighter-rouge">$ sudo npm install nativescript -g</code> to install globally</p>
+
+<p><code class="highlighter-rouge">nativescript --version</code> to confirm installation</p>
+
+<p>tns is alias to nativescript</p>
+
+<h2 id="ios-prerequisites">iOS prerequisites</h2>
+
+<ul>
+  <li>Xcode</li>
+  <li>Xcode CLT</li>
+</ul>
+
+<h2 id="ns-cli">NS CLI</h2>
+
+<ul>
+  <li>component</li>
+  <li>module</li>
+  <li>html</li>
+</ul>
+
+<h2 id="application-architecture">Application Architecture</h2>
+
+<h3 id="javascript">JavaScript</h3>
+
+<p><strong>app.ts</strong> is the entry point of application. We can do app level initialization here. But this is basically used to pass control to first module.</p>
+
+<p>we can have <strong>app.css</strong> to keep our global css rules.</p>
+
+<p>A folder for each module/view</p>
+
+<p>eg: home</p>
+
+<p>home folder can have three files.</p>
+
+<ul>
+  <li>home-page.xml having xml for UI</li>
+  <li>home-page.ts code behind file for xml above. Can call functions</li>
+  <li>home-view-model.ts having data, binding and other logics.</li>
+</ul>
+
+<h3 id="angular-script">Angular Script</h3>
+
+<p>for each module we need:</p>
+<ul>
+  <li>home.component.html it has all html ui defined</li>
+  <li>home.component.css has css rules related to this module</li>
+  <li>home.component.ts has code behind the html ui</li>
+  <li>home.module.ts imports everything to one place</li>
+  <li>home-routing.module.ts routing for module ui</li>
+</ul>
+
+<p>Component is building block of all angular nativescript
+Component defines UI elem and screens</p>
+
+<p>root - app.component
+child - pt_backlog
+backlog module</p>
+
+<p>behavior</p>
+
+<p>iteration
+renders
+dependency injection
+defines io
+life cycle</p>
+
+<p>connect together</p>
+
+<h2 id="modules">Modules</h2>
+
+<ul>
+  <li>use one module per file as an ES15 standard</li>
+</ul>
+
+<h2 id="barrel">Barrel</h2>
+
+<h2 id="notes">Notes</h2>
+<ul>
+  <li>Every UI element should be inside a layout, else only last UI element takes whole screen.</li>
+</ul>
+
+<p>Refer: https://docs.nativescript.org/angular/start/tutorial/ng-chapter-1#11-what-youre-building</p>
+
+<h2 id="making-angular-groceries-app">Making Angular Groceries App</h2>
+
+<p>All UI elements come in stack layout in app.component.ts and add their css to css files</p>
+
+:ET

@@ -1,0 +1,127 @@
+I"[<p>Notes on Python as I learn and improve my understanding.</p>
+
+<h2 id="differences">Differences</h2>
+
+<p>Any String is by default a list of characters.</p>
+
+<p>##Data Structures</p>
+
+<p>Python’s in built data sets are list, dict and sets.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="s">'hi'</span><span class="p">,[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]]</span>
+<span class="c1"># mix data type list
+# list is collection of objects
+</span>
+<span class="n">dictionary</span> <span class="o">=</span> <span class="p">{</span><span class="s">'k1'</span><span class="p">:</span><span class="s">'v1'</span> <span class="p">,</span> <span class="s">'k2'</span><span class="p">:</span><span class="s">'v2'</span><span class="p">}</span>
+<span class="c1"># Key value pair
+</span>
+<span class="nb">tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="c1"># tuples are fixed values and cannot be assigned
+</span>
+<span class="nb">set</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">}</span>
+<span class="c1"># set can have only unique values
+# for above result is only 1,2,3
+</span>
+</code></pre></div></div>
+
+<p>All above can be accessed using [] and index.
+index from 0 and end not included
+[0:3] gives 0,1,2 and not 3</p>
+
+<p>[0:-2] all but last two.</p>
+
+<p><strong>List Comprehension</strong></p>
+
+<p>Defines list in one line, for eg, to find squares</p>
+
+<p><code class="highlighter-rouge">sqr = [x**2 for x in range(5)]</code></p>
+
+<p>This gives list with squares of numbers 0 to 4</p>
+
+<h2 id="functions">Functions</h2>
+
+<p>Can have defaults</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">my_square</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+  <span class="s">"""
+  This is DocString
+  Can be multiline
+  THis func squares a number
+  """</span>
+  <span class="k">return</span> <span class="n">num</span><span class="o">**</span><span class="mi">2</span>
+</code></pre></div></div>
+
+<h3 id="map-and-filter">Map and Filter</h3>
+
+<p>Map is used to apply a function to a list.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">seq</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="nb">map</span><span class="p">(</span><span class="n">my_square</span><span class="p">,</span><span class="n">seq</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>It computes my_square for all items in seq.</p>
+
+<p><strong>Lambda</strong></p>
+
+<p>This is used to define a function in a line.</p>
+
+<p><code class="highlighter-rouge">lambda num: num*2</code></p>
+
+<p>That means passing variable : return statement.</p>
+
+<p>Useful for use in map.</p>
+
+<h4 id="filters">Filters</h4>
+
+<p>Filter is used to filter items in seq based on function/lambda</p>
+
+<p>eg: to get even values</p>
+
+<p><code class="highlighter-rouge">filter(lambda num: num%2 == 0,seq)</code></p>
+
+<h2 id="web-dev-libs">Web Dev Libs</h2>
+<p>Flask</p>
+<ul>
+  <li>light weight web framework</li>
+  <li>FlaskRESTful - extention for REST framework</li>
+</ul>
+
+<p>sqlite3</p>
+<ul>
+  <li>store to local db</li>
+</ul>
+
+<p>Shelve</p>
+<ul>
+  <li>Persistant object storage library</li>
+</ul>
+
+<p>Pickle</p>
+<ul>
+  <li>Dump objects to file and load back</li>
+</ul>
+
+<p>Pandas</p>
+<ul>
+  <li>Data maipulation</li>
+  <li>Pandas vs Dask vs Spark
+    <ul>
+      <li>less than a gb, use pandas</li>
+      <li>upto 100 gb, use pandas with chunk or dask or pyspark</li>
+      <li>more than 100gb, pyspark for sure, upto peta bytes</li>
+      <li><a href="https://medium.com/datadriveninvestor/pandas-dask-or-pyspark-what-should-you-choose-for-your-dataset-c0f67e1b1d36">Pandas, Dask or PySpark - Medium</a></li>
+    </ul>
+  </li>
+  <li>Superfast Pandas, make data transformation in pandas upto 7237 times faster:
+    <ul>
+      <li>use iterrow</li>
+      <li>use apply(lambda)</li>
+      <li>use pandas vectorization, loc(filters here)</li>
+      <li>use numpy vectorization, pass as numpy.array, converts to C code.</li>
+      <li><a href="https://towardsdatascience.com/how-to-make-your-pandas-loop-71-803-times-faster-805030df4f06">Making pandas loop faster</a></li>
+    </ul>
+  </li>
+</ul>
+
+:ET

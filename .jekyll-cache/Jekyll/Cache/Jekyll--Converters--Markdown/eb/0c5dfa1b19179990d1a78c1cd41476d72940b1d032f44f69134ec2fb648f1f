@@ -1,0 +1,30 @@
+I"p<p>Notes on my understanding of Git and GitHub</p>
+
+<p>Now that we have all set up, <a href="/setting-git-and-github-on-mac">local Git and it connects to GitHub</a>.</p>
+
+<p>On any folder, do this <strong>once</strong></p>
+
+<p><code class="highlighter-rouge">git init</code> this will create git repository.</p>
+
+<p><code class="highlighter-rouge">cat .gitignore</code> add files that you want git to ignore</p>
+
+<p>For every other <strong>updates</strong>, do this:</p>
+
+<p><code class="highlighter-rouge">git add .</code> adds files to git or pass . to add all</p>
+
+<p><code class="highlighter-rouge">git diff</code> shows changes made to files</p>
+
+<p><code class="highlighter-rouge">git commit -m "New changes"</code> commits to git with message</p>
+
+<p>This will create a local git repository on your local drive. Now if you need to add this to a remote git repository, for example, a repository github.com then you need to add remote to this folder.</p>
+
+<p><code class="highlighter-rouge">git remote add  [name] [url]</code> will add remote. Here, <code class="highlighter-rouge">name</code> can be origin and <code class="highlighter-rouge">url</code> is url of git repo created online on GitHub.com</p>
+
+<p>Once remote is added to your local git then you can push or pull the files based on the commands below.</p>
+
+<p><code class="highlighter-rouge">git pull</code> if changed online or pushed another git then can pull updates to local</p>
+
+<p><code class="highlighter-rouge">git push</code> push the changes to GitHub. We can also specify name and branch here. eg:
+<code class="highlighter-rouge">git push -u origin master</code>.</p>
+
+:ET

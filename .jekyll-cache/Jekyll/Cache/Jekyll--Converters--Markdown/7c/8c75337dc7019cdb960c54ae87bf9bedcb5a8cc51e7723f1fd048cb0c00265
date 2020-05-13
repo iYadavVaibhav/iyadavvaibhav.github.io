@@ -1,0 +1,138 @@
+I"%<p>Jekyll is a Ruby library to make blog and pages site.</p>
+
+<p><strong>_config.yml</strong> has all configuration variables.</p>
+
+<p><strong>Posts</strong> are markdown files store under _posts folder</p>
+
+<p><strong>Pages</strong> are markdown files in root location.</p>
+
+<p><strong>_layouts</strong> have different .html files that define the layout for example: default, pages or posts. These can include other templates from <strong>_includes</strong> folder. They have `&lt;article class="post"&gt;</p>
+<h1>Understanding SQLite</h1>
+
+<div class="entry">
+    <h1 id="sqlite">SQLite</h1>
+
+<p>It is a micro database that can work in memory or a file.</p>
+
+<p>Queries are same as any other SQL.</p>
+
+<p>sqlite3 opens a shell in command line.</p>
+
+<p><code class="highlighter-rouge">.open FILENAME</code> opens an existing database.</p>
+
+  </div>
+
+<div class="date">
+    Written on June  5, 2019
+  </div>
+
+<div class="comments">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+
+	    var disqus_shortname = 'iyadavvaibhav';
+
+	    (function() {
+	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+<p>&lt;/article&gt;
+` which gets populated by file that uses this layout.</p>
+
+<p>For eg. ‘default.html’ can include ‘meta.html’.</p>
+
+<p>‘post.html’ can use ‘default.html’ as layout. So all code in ‘post.html’ will populate `&lt;article class="post"&gt;</p>
+<h1>Understanding SQLite</h1>
+
+<div class="entry">
+    <h1 id="sqlite">SQLite</h1>
+
+<p>It is a micro database that can work in memory or a file.</p>
+
+<p>Queries are same as any other SQL.</p>
+
+<p>sqlite3 opens a shell in command line.</p>
+
+<p><code class="highlighter-rouge">.open FILENAME</code> opens an existing database.</p>
+
+  </div>
+
+<div class="date">
+    Written on June  5, 2019
+  </div>
+
+<div class="comments">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+
+	    var disqus_shortname = 'iyadavvaibhav';
+
+	    (function() {
+	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+<p>&lt;/article&gt;
+` in default.html</p>
+
+<p><strong>some_post.md</strong> can use <code class="highlighter-rouge">post.html</code> as layout. So all markdown from this file will be populated to `&lt;article class="post"&gt;</p>
+<h1>Understanding SQLite</h1>
+
+<div class="entry">
+    <h1 id="sqlite">SQLite</h1>
+
+<p>It is a micro database that can work in memory or a file.</p>
+
+<p>Queries are same as any other SQL.</p>
+
+<p>sqlite3 opens a shell in command line.</p>
+
+<p><code class="highlighter-rouge">.open FILENAME</code> opens an existing database.</p>
+
+  </div>
+
+<div class="date">
+    Written on June  5, 2019
+  </div>
+
+<div class="comments">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+
+	    var disqus_shortname = 'iyadavvaibhav';
+
+	    (function() {
+	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+<p>&lt;/article&gt;
+` of ‘post.html’.</p>
+
+<p><strong>To list all categories in site</strong></p>
+
+<p>Category returns two array items, first is category name and second is another array of posts.</p>
+
+<p>Categories in site:</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{\</span><span class="sx">% for </span><span class="n">category</span> <span class="k">in</span> <span class="n">site</span><span class="p">.</span><span class="nf">categories</span> <span class="p">\</span><span class="sx">%}
+- 
+{\% endfor \%}</span>
+</code></pre></div></div>
+
+:ET
