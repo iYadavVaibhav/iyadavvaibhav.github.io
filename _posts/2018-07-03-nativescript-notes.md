@@ -1,5 +1,5 @@
 ---
-title: Notes on NativeScript
+title: NativeScript Notes
 layout: post
 categories: notes
 ---

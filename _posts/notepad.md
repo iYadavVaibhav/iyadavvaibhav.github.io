@@ -79,14 +79,6 @@ Instagram page earning:
 - original images
 - regular posting
 
-
-# Node JS Notes
-- node js is like asp/php/flask
-- you can run .js files outside browser
-- give ability to use js in backend
-- npm is package manager like pip for node js
-- pakages are nothing but js libraries.
-
 # Flutter Notes
 - Framework to develop mobile/web apps
 - Everything is a widget
@@ -228,8 +220,6 @@ Triggers:
   - `firebase deploy --only functions` - deploy functions to firebase cloud.
 
 # Mac OS (Linux) Notes
-- everything global is installed in /usr/local/bin/
-- use PostMan for http requests to REST routes
 
 # Google Cloud Platform Notes
 - GCP is cloud service from Google just like AWS and Azure.

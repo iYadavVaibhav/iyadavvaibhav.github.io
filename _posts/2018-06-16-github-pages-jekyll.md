@@ -37,7 +37,8 @@ You can install Jekyll locally on your machine. This will require you to install
 - `jekyll new my_blog` creates scaffold for a new site. This is all you need to do.
 - `jekyll build` builds
 - `jekyll serve` serves the site to localhost:4000.
-- Detailed article can be found [here](https://jekyllrb.com/docs/installation/).
+- Detailed article on installing jekyll, [here](https://jekyllrb.com/docs/installation/).
+- Tutorial with all steps, [KBRoman](https://kbroman.org/simple_site/pages/local_test.html).
 - Advanced features: If you need to extend the functionality of Jekyll posts then advanced tutorial can be found at [here](https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/).
 
 Issues:

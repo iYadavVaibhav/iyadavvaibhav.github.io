@@ -1,5 +1,5 @@
 ---
-title: Understanding Flask
+title: Flask - WebFramework in Python 
 layout: post
 categories: notes python
 ---
