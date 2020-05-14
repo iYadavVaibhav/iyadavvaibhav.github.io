@@ -7,8 +7,10 @@ To do:
 - Python Flask REST API GCP Firebase
 - Starred Repos
 - Tabs app using BloC.
+- todo app in flask RESTful completed, decide backend to be sqlite or firebase?
+- flutter ui for todo [app](https://github.com/devinsays/laravel-react-bootstrap)
 - flask app with data models integrated, and hosted
-- flutter app with data models integrated, and hosted
+- flutter [app](https://wptheming.com/2019/11/flutter-todo-app/) with data models integrated, and hosted
 
 Intro to:
 - Tensorflow +1
@@ -169,13 +171,59 @@ External Links:
 
 
 # Firebase Notes
-- Cloud app backend which helps in:
-  - authentication
-  - database, firestore_cloud
-  - file storage
+
+Firebase is cloud based, app-backend service that is scalable and it helps in authentication, database, file storage, hosting, crashlytics, messeging, adMob, analytics, campaigns etc. 
+
+It has following components:
+
+- ML Kit
+  - Has in build ML models for text analytics, image recongnition etc.
+  - Works on device or on cloud
+  - Can add Tensor flow functions/models to firebase functions and it will be hosted and serverd.
+
+- Firebase Authentication
+  - Google, fb, twitter etc
+  - Account based
+  - Gives back user information, unique_id, name, photo,
+  - manages sessions
+
+- Cloud functions
+  - responses to event, like welcome email on sign in
+  - triggers on database events
+  - modify files uploaded
+  - send cloud messaging messages to other users.
+  - build API from database
+  - All written in JS using node and then deployed using CLI
+
+- Firebase Hosting
+  - Static files hosting
+  - on SSD, serves SSL, 
+  - can host PWA
+
+- Firebase Storage
+  - Store files, secure them, reliable.
+
+- Firebase Realtime Database
+  - Store and sync data in realtime, even offline
+  - It is NoSql database.
+
+GCP
+- SaaS, PaaS
+- compute engine VMs, app engine(dockers and containers)
+- Cloud ML
+  - Offers pretrained models with biggest library.
+  - Cloud Vision API, Video Intelligence
+  - Identify ojects, landmarks, celebrities, colors, million other entities
+  - NLP API, Translations,  Text2Speech, Seech2Text API
+  - Auto ML trains on your data using expertise from already trained neurals
+  - Provides interface to train, evaluate and proof onjects on your own data.
+  - SaaS with latest TensorFlow, PyTorch and SKLearn on VMs with TPU and GPU support
+
 
 ## Firestore Notes
 - It is NoSQL database storage engine in firebase
+- Works online and offline
+- Sotores data in collections
 
 Initialization:
 - create database
