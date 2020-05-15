@@ -26,7 +26,7 @@ Watch
 - wordpress -> JAM Stack
 
 on-going:
-- Flutter architecture samples
+- Flutter architecture samples - [BloC](https://medium.com/flutterpub/architecting-your-flutter-project-bd04e144a8f1)
 - flask restful
 - flask todo miguel
 - whatsapp analytics
@@ -101,6 +101,7 @@ Structure:
   - models - hold class for data in the app like users.dart, deserialize json
   - pages - hold screens, each .php page or route
   - widgets - component on pages, like progress bar
+- all folders are packages, eg, lib package, src package, models package.
 
 Architectures (State Management):
 - Flutter allows to use many kind of state management architectures like Redux, BLoC, MobX and many more.
@@ -123,6 +124,10 @@ BLoC - Business Logic Component
 
 ![BLoC diagram](https://www.mobindustry.net/wp-content/uploads/bloc-architecture.jpg "BLoC image")
 
+![BLoc Flutter](https://raw.githubusercontent.com/felangel/bloc/master/docs/assets/bloc_architecture.png "BLoC Flutter")
+
+![BLoC Pattern](https://miro.medium.com/max/1400/1*MqYPYKdNBiID0mZ-zyE-mA.png "Bloc Pattern")
+
 - BLoC component converts a stream of incoming events into a stream of outgoing states. 
 - Close bloc references in despose() methods.
 - It has:
@@ -130,6 +135,12 @@ BLoC - Business Logic Component
   - BlocBuilder
   - BlocProvider
 
+- Reactive Programming, whenever there is new data coming from the server. We have to update the UI screen
+
+- **KeyNote:** *never make any network or db call inside the build method and always make sure you dispose or close the open streams.*
+
+- Single Instance - all screens have access to bloc, there is one instance in the app
+- Scoped Instance - only widget to which the bloc is exposed has access
 
 Redux:
 - provides routing as well
@@ -169,6 +180,14 @@ External Links:
 - vecteezy.com - icons
 - canva.com - create own design
 
+# Regex Notes:
+
+Remove single line comments // from code:
+- `\/\/.*$\n` - Finds all single line comments starting with //.
+  - `\/\/` - string has //
+  - `.*` - then has anything after that
+  - `$\n` - then matches next line as well.
+- Check and Validate on [Regex101](https://regex101.com/)
 
 # Firebase Notes
 
