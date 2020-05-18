@@ -6,6 +6,7 @@ Partnerships:
 - add same filters on single merch p&L.
 - wed morning.
 
+
 To do:
 - Plotly Dash +1, Eric Kleppen
 - Post to github your flutter finished apps. eg: starred repos
