@@ -1,5 +1,11 @@
 # Mind Dump
 
+Partnerships:
+- change filter label, grp = partner type, and partner name.
+- on all pages.
+- add same filters on single merch p&L.
+- wed morning.
+
 To do:
 - Plotly Dash +1, Eric Kleppen
 - Post to github your flutter finished apps. eg: starred repos
@@ -40,6 +46,7 @@ on-going:
 - Medium articles to be published
 
 Clean up Mac:
+- Used GrandPerspective.dmg
 - Win 10 image
 - ISB Cludera clarify backup folder
 - Files in documents
@@ -141,6 +148,13 @@ BLoC - Business Logic Component
 
 - Single Instance - all screens have access to bloc, there is one instance in the app
 - Scoped Instance - only widget to which the bloc is exposed has access
+
+- PublishSubject: Starts empty and only emits new elements to subscribers. There is a possibility that one or more items may be lost between the time the Subject is created and the observer subscribes to it because PublishSubject starts emitting elements immediately upon creation.
+- BehaviorSubject: It needs an initial value and replays it or the latest element to new subscribers. As BehaviorSubject always emits the latest element, you can’t create one without giving a default initial value. BehaviorSubject is helpful for depicting "values over time". For example, an event stream of birthdays is a Subject, but the stream of a person's age would be a BehaviorSubject.
+
+- We pass the blocProvider to MaterialRoute and then it houses all the variables to be passed. This acts as inheritedWidget.
+
+
 
 Redux:
 - provides routing as well
