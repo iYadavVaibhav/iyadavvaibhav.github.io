@@ -154,6 +154,7 @@ BLoC - Business Logic Component
 - BehaviorSubject: It needs an initial value and replays it or the latest element to new subscribers. As BehaviorSubject always emits the latest element, you can’t create one without giving a default initial value. BehaviorSubject is helpful for depicting "values over time". For example, an event stream of birthdays is a Subject, but the stream of a person's age would be a BehaviorSubject.
 
 - We pass the blocProvider to MaterialRoute and then it houses all the variables to be passed. This acts as inheritedWidget.
+- [MovieApp - Part 2](https://github.com/SAGARSURI/MyMovies)
 
 
 
