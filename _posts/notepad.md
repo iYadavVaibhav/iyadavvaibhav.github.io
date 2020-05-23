@@ -156,7 +156,11 @@ BLoC - Business Logic Component
 - We pass the blocProvider to MaterialRoute and then it houses all the variables to be passed. This acts as inheritedWidget.
 - [MovieApp - Part 2](https://github.com/SAGARSURI/MyMovies)
 
-
+Apps Creation using BLoC (from [tutorial](https://bloclibrary.dev/#/fluttercountertutorial)):
+- Counter App:
+  - add packages
+  - create events
+  - create state - here no class but integer
 
 Redux:
 - provides routing as well
