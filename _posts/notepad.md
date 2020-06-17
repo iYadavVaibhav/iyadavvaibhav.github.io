@@ -1,3 +1,53 @@
+# ML Classes:
+
+ML in practise:
+- most of the time goes in ML model building
+- Auto ML does not works always
+- data -> model -> predict
+- Learning - 
+- p-value tell if the model is correct. it is confidence
+- missing values and outliers k liye seek domain guy/customer
+- touch more on inference side.
+- number has no value, inference has value in corp.
+
+K-means algorithm, hands on:
+1. decide number of cluster, k=2
+2. initialize random data points as c1(x1, y1), c2(x2, y2).
+3. now find eucladian distance (ED) between between all the points and all the centroids.
+4. ED = [x1-x2)^2 + (y1-y2)^2]^0.5
+5. now the point belongs to centroid to which they have minimum distance.
+6. now calculate new c1, c2 by finding average of all new points belonging to the cluster.
+7. repeat step 3 to 6, until you get same c1,c2 as in last iteration.
+
+K-Means Variations:
+- logic and flow remains same, but we can change the way we calculate the distance, hamming, manhattan etc. This changes the centroid and the point belonging to it.
+
+Business Scenario 💼 :
+- Client may say that no, point A belongs to other cluster
+- Change clustering method/k value/etc
+- so no clustering is best, it can only be acceptable, by client.
+
+Hierarchical Clustering:
+- Find dist of each point with everyother point. 5C2.
+- create a 5X5 matrix with values as distance bw points
+- in dendogram, y-axis is ED between points and x-axis is points.
+- This is agglomerative clustering.
+- Now any cut on Y axis gives us the clusters.
+![Hierarchical Clustering](../images/hierarchical_clustering.png "Hierarchical Clustering")
+
+Uber Case Study:
+- Kmeans clustering to find centroid as place from where all rides can be catered. 
+
+# Knowledge Graphs
+
+Patters:
+- How different subjects are related, find the connections, eg, Trump Boeing, Binny Bansal and Infosys.
+- if business prob requires connections then build graphs
+- Subject is node, edge is relationship.
+- we can analyse customer care text data, and get insights
+- 
+
+
 # Mind Dump
 
 Partnerships:
@@ -8,8 +58,9 @@ Partnerships:
 
 
 To do:
-- Plotly Dash +1, Eric Kleppen
-- Post to github your flutter finished apps. eg: starred repos
+- [ ] Plotly Dash +1, Eric Kleppen
+- [x] Post to github your flutter finished apps. eg: starred repos
+- speed up terminal startup time.
 - Flutter ORM
 - Python Flask REST API GCP Firebase
 - Starred Repos
@@ -95,7 +146,7 @@ Instagram page earning:
 - uses DART as a programming language
 - code gets compiled to java/javascript/swift for native performance.
 
-Initial steps:
+Quickstart:
 - `flutter create --org com.codeo myapp` create a basic app
 - `flutter pub get` gets all packages
 - `flutter run -d Chrome` runs flutter app on device chrome
@@ -111,10 +162,6 @@ Structure:
   - widgets - component on pages, like progress bar
 - all folders are packages, eg, lib package, src package, models package.
 
-Architectures (State Management):
-- Flutter allows to use many kind of state management architectures like Redux, BLoC, MobX and many more.
-- These all are commonly used architecture to layer out UI from Database/WebAPIs.
-
 Basic Workflow:
 - make product class, init constructor, add factory, the get and set functions
 - link this to sqflite
@@ -124,6 +171,36 @@ Basic Workflow:
 - or firebase
   - get reference of a collection in instance.
   - from ref get the snapshots and build.
+
+Development:
+- `add(a,b) => a + b` creates function inline and returns valuel, can be without name.
+- `setState(){}` - rebuilds the app. usually used in onTap(){}.
+- wrapping parameters in {} make them named params and we have to specify the name when passing them in call. eg: `emp({String name, Int age})`, when called, `emp(name: 'Jon', age: 34)`.
+- `initState() {}` function gets executed in every State ful widget. can be used to call all what we want to initialize, like db fetch etc.
+- `<Future>` needs to be handled. Either we can use `.then((data) {...})` or we can add keywords `async...await` to the functions.
+- `factory` before a func declaration makes it accessible outside class just like static.
+- To preserve state of app, use mixin keep alive.
+- await and async are good to wait for a process to finish and the execute the rest.
+- [Null-aware Operators in Dart](https://medium.com/@thinkdigitalsoftware/null-aware-operators-in-dart-53ffb8ae80bb)
+
+Navigation:
+- We can generate route on the go with Navigator.pop or push.
+
+Function calling:
+- When work needs to be done on call, then pass refrence.
+- When function builds/returns then call with ()s.
+- Here is the difference:
+  - onPressed: \_incrementCounter is a reference to an existing function is passed. This only works if the parameters of the callback expected by onPressed and \_incrementCounter are compatible.
+  - onPressed: \_incrementCounter() \_incrementCounter() is executed and the returned result is passed to onPressed. This is a common mistake when done unintentionally when actually the intention was to pass a reference to \_incrementCounter instead of calling it.
+
+External Links:
+- appicon.co - app icons
+- icons8.com - use icons for free
+- vecteezy.com - icons
+- canva.com - create own design
+
+## Flutter State Management:
+Flutter allows to use many kind of state management architectures like Redux, BLoC, MobX and many more. These all are commonly used architecture to layer out UI from Database/WebAPIs.
 
 BLoC - Business Logic Component
 - separates UI from Business logic (Database and Network).
@@ -156,11 +233,24 @@ BLoC - Business Logic Component
 - We pass the blocProvider to MaterialRoute and then it houses all the variables to be passed. This acts as inheritedWidget.
 - [MovieApp - Part 2](https://github.com/SAGARSURI/MyMovies)
 
-Apps Creation using BLoC (from [tutorial](https://bloclibrary.dev/#/fluttercountertutorial)):
-- Counter App:
-  - add packages
-  - create events
-  - create state - here no class but integer
+The workflow of the Counter App:
+- add packages
+- create events as enum.
+- create state - in this app, state is `int` so we don't create state class.
+- create bloc to take events, map it, and return state, 
+  - `class CounterBloc extends Bloc<CounterEvent, int> {...}`
+  - here override init state
+  - and override mapEventsToState
+- instantiate bloc in main using `BlocProvider<Bloc>{}`. 
+- create Page, get bloc, 
+- get bloc, `final CounterBloc counterBloc = BlocProvider.of<CounterBloc>(context);`
+- body will be `BlocBuilder<CounterBloc, int>();` to build UI based on state.
+- action event, `onPressed: () {counterBloc.add(CounterEvent.increment);}`
+- based on [Flutter Counter App tutorial](https://bloclibrary.dev/#/fluttercountertutorial?id=counter-app) by @felangel.
+
+
+
+
 
 Redux:
 - provides routing as well
@@ -170,35 +260,9 @@ ScopedModel
 - Updates only model in scope, not the whole widget tree
 - Have to notifyListeners() on each state change
 
-- Links:
-  - [Flutter Architecture Samples to build ToDo apps](http://fluttersamples.com/)
-  - [The Essential Guide to UI Engineering](https://www.youtube.com/playlist?list=PLS2-V7v1NhNQB66bFNIXlQ_83chw0TgK6)
-
-Development:
-- `add(a,b) => a + b` creates function inline and returns valuel, can be without name.
-- `setState(){}` - rebuilds the app. usually used in onTap(){}.
-- wrapping parameters in {} make them named params and we have to specify the name when passing them in call. eg: `emp({String name, Int age})`, when called, `emp(name: 'Jon', age: 34)`.
-- `initState() {}` function gets executed in every State ful widget. can be used to call all what we want to initialize, like db fetch etc.
-- `<Future>` needs to be handled. Either we can use `.then((data) {...})` or we can add keywords `async...await` to the functions.
-- `factory` before a func declaration makes it accessible outside class just like static.
-- To preserve state of app, use mixin keep alive.
-- await and async are good to wait for a process to finish and the execute the rest.
-
-Navigation:
-- We can generate route on the go with Navigator.pop or push.
-
-Function calling:
-- When work needs to be done on call, then pass refrence.
-- When function builds/returns then call with ()s.
-- Here is the difference:
-  - onPressed: \_incrementCounter is a reference to an existing function is passed. This only works if the parameters of the callback expected by onPressed and \_incrementCounter are compatible.
-  - onPressed: \_incrementCounter() \_incrementCounter() is executed and the returned result is passed to onPressed. This is a common mistake when done unintentionally when actually the intention was to pass a reference to \_incrementCounter instead of calling it.
-
-External Links:
-- appicon.co - app icons
-- icons8.com - use icons for free
-- vecteezy.com - icons
-- canva.com - create own design
+Links:
+- [Flutter Architecture Samples to build ToDo apps](http://fluttersamples.com/)
+- [The Essential Guide to UI Engineering](https://www.youtube.com/playlist?list=PLS2-V7v1NhNQB66bFNIXlQ_83chw0TgK6)
 
 # Regex Notes:
 
@@ -209,7 +273,7 @@ Remove single line comments // from code:
   - `$\n` - then matches next line as well.
 - Check and Validate on [Regex101](https://regex101.com/)
 
-# Firebase Notes
+# GCP Firebase Notes
 
 Firebase is cloud based, app-backend service that is scalable and it helps in authentication, database, file storage, hosting, crashlytics, messeging, adMob, analytics, campaigns etc. 
 
@@ -245,18 +309,6 @@ It has following components:
 - Firebase Realtime Database
   - Store and sync data in realtime, even offline
   - It is NoSql database.
-
-GCP
-- SaaS, PaaS
-- compute engine VMs, app engine(dockers and containers)
-- Cloud ML
-  - Offers pretrained models with biggest library.
-  - Cloud Vision API, Video Intelligence
-  - Identify ojects, landmarks, celebrities, colors, million other entities
-  - NLP API, Translations,  Text2Speech, Seech2Text API
-  - Auto ML trains on your data using expertise from already trained neurals
-  - Provides interface to train, evaluate and proof onjects on your own data.
-  - SaaS with latest TensorFlow, PyTorch and SKLearn on VMs with TPU and GPU support
 
 
 ## Firestore Notes
@@ -309,13 +361,169 @@ Triggers:
 # Mac OS (Linux) Notes
 
 # Google Cloud Platform Notes
-- GCP is cloud service from Google just like AWS and Azure.
-- It provies [Firebase](#Firebase-notes) as datastoage engine.
-- Hands on: https://codelabs.developers.google.com/codelabs/cloud-vision-app-engine/index.html
-- Greate and app engine
-- App Engine is PaaS for deploying web apps on GCP.
-- create storage bucket
 
+- GCP is cloud service from Google just like AWS and Azure. It provides SaaS, PaaS and IaaS.
+- GCP Firebase as datastoage engine.
+- GCP App Engine is PaaS for deploying web apps on cloud:
+  - App Engine also helps us deploy dockers and containers
+  - [hands on colab](https://codelabs.developers.google.com/codelabs/cloud-vision-app-engine/index.html).
+- GCP Compute Engine provides VMs, which is like IaaS.
+- GCP Cloud Machine Learning:
+  - Offers pretrained models with biggest library.
+  - Cloud Vision API, Video Intelligence
+  - Identify ojects, landmarks, celebrities, colors, million other entities
+  - NLP API, Translations,  Text2Speech, Seech2Text API
+  - Auto ML trains on your data using expertise from already trained neurals
+  - Provides interface to train, evaluate and proof onjects on your own data.
+  - SaaS with latest TensorFlow, PyTorch and SKLearn on VMs with TPU and GPU support
+
+## GCP Compute Engine
+Start a VM, Ubuntu 20gb, machine 'f1-micro', region 'us-central', allow traffic 'http and https'. This is free for lifetime.
+
+Install gcloud on mac:
+- Follow [this](https://cloud.google.com/sdk/docs/quickstart-macos) guide.
+- Install `gcloud` on workstation machine, mac, `wget > tar -xf > install.sh > gcloud init`
+- Connect to the VM machine using ssh gcloud command, get it from the SSH dropdown on GCP console near VM.
+- Command: `gcloud beta compute ssh --zone "us-central1-a" "vm_name" --project "project_name"` this adds to known hosts.
+
+Configuring WebServer:
+- Now that you are connected to host VM via SSH, let's start with:
+- Update Ubuntu: `sudo apt update && sudo apt upgrade`
+- Check ram and CPU usage `htop` , we see that we do not have swap memory, this helps in low ram system when on high load.
+
+Add swap memory:
+- Lets allocate 1GB swap memory: `sudo fallocate -l 1G /swapfile`
+- `sudo dd if=/dev/zero of=/swapfile bs=1024 count=1048576`
+- Assign the correct permission to swapfile: `sudo chmod 600 /swapfile `
+- make the swap: `sudo mkswap /swapfile `
+- Turn on the swapfile: `sudo swapon /swapfile`
+- edit the fstab file: `sudo nano /etc/fstab`
+- add this line to the end of file: `/swapfile swap swap defaults 0 0`
+- mount the files: `sudo mount -a`
+- Check ram and cpu again to verify swap: `htop`
+
+Install Apache2 webserver, PHP and MySQL database:
+- `sudo apt install tasksel`
+- `sudo tasksel install lamp-server`
+- `sudo apt install php-curl php-gd php-mbstring php-xml php-xmlrpc`
+- Get the external IP address: `curl ifconfig.me`
+
+Only if you do not have a domain to point to server and want to use vhost:
+- Modify the host file to add virtual hosts: `sudo nano /etc/hosts`
+- To map 'example123.com' tp IP address add this line: `35.111.00.111 example123.com`
+
+If you have a domain, 
+- edit DNS records and add 'A-record' with the external IP address, for eg:
+- host: gcp
+- IP: 35.111.00.111
+- then, `gcp.yourdomain.com` will open the page from GCP VM machine.
+- You may also reserve static external IP address of VM on GCP:
+  - From your GCP dashboard find 'Networking > External IP addresses'.
+  - Now click the down arrow under the 'Type' column and select 'Static' for the External IP address which is connected to your instance of GCP Compute Engine.
+  - By reserving a Static IP Address you will not loose your access to website after server outages or restarts.
+
+Add site to Apache Server:
+- `cd /etc/apache2/sites-available/`
+- `ls -l`
+- Copy configuration file for new domain to be added: `sudo cp 000-default.conf example123.com.conf`
+- Let us switch to root user: `sudo su`
+- edit: `nano codeolab.gcp.conf ` and add following content to file:
+```Bash
+<Directory /var/www/html/example123.com>
+  Require all granted
+</Directory>
+<VirtualHost *:80>
+  ServerName example123.com
+  ServerAlias www.example123.com
+  ServerAdmin webmaster@localhost
+  DocumentRoot /var/www/html/codeolab.gcp
+
+  ErrorLog ${APACHE_LOG_DIR}/error.log
+  CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+```
+- disable default site: `a2dissite 000-default.conf `
+- enable new site: `a2ensite example123.com.conf `
+- restart apache service: `systemctl reload apache2`
+- go to web documents location: `cd /var/www/html`
+- create directory for new site: `mkdir example123.com`
+- `cd codeolab.gcp/`
+- `nano index.html`
+- Now open browser and goto 'example123.com' you should see the contents of index.html.
+
+Configure MySQL Database:
+- `mysql -u root`
+```sql
+> CREATE DATABASE db123;  
+> GRANT ALL ON db123.* TO 'db123_user' IDENTIFIED BY 'db123_pwd!';  
+> quit;  
+```
+- Secure the installation `mysql_secure_installation `, select Y for all or as per your need.
+
+Congigure PHP:
+- `nano /etc/php/7.2/apache2/php.ini `
+- update:
+```ini
+upload\_max\_filesize = 20M  
+post\_max\_size = 21M
+```
+
+Install Wordpress:
+- `cd /var/www/html/example123.com/`
+- download wordpress: `wget https://wordpress.org/latest.tar.gz`
+- `tar -xvf latest.tar.gz `
+- `mv wp-config-sample.php wp-config.php`
+- `nano wp-config.php `
+
+Configure MPM_Prefork.conf to manage apache load performance:
+- `nano /etc/apache2/mods-enabled/mpm_prefork.conf `
+- Update to below:
+```Bash
+<IfModule mpm_prefork_module>
+  StartServers    1
+  MinSpareServers   2
+  MaxSpareServers   5
+  MaxRequestWorkers 10
+  MaxConnectionsPerChild  1000
+</IfModule>
+```
+
+Tune the new Apache install:
+- `cd ~`
+- `wget https://raw.githubusercontent.com/richardforth/apache2buddy/master/apache2buddy.pl`
+- `chmod +x apache2buddy.pl `
+- `./apache2buddy.pl `
+- This perl script tells the health of Apache server.
+
+User guides:
+- video used: https://youtu.be/vIJdypOqlL4
+
+### Adding multiple domains:
+- create conf file `cd /etc/apache2/sites-available/` then `sudo cp 000-default.conf addonDomain.com.conf`
+- open conf file using nano, then edit
+```Bash
+<Directory /var/www/html/addonDomain.com>
+  Require all granted  
+</Directory>
+<VirtualHost *:80>
+  ServerName example.com
+  ServerAlias www.example.com
+  ServerAdmin admin@example.com
+  DocumentRoot /var/www/example.com/html
+</VirtualHost>
+```
+- make folders `mkdir var/www/html/addonDomain.com/`
+- enable site:
+```Bash
+$ a2ensite example.com.conf
+$ systemctl reload apache2
+```
+- More details [here](https://www.hiyansoft.com/blog/cloud/google/hosting-multiple-websites-on-single-google-cloud-compute-engine/index.html).
+
+### Serve Python files over web
+- cgi scripts
+- `a2dismod mpm_event`
+- `a2enmod mpm_prefork cgi`
 
 
 # Python Notes
