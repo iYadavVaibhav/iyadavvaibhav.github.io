@@ -460,7 +460,7 @@ Configure MySQL Database:
 ```
 - Secure the installation `mysql_secure_installation `, select Y for all or as per your need.
 
-Congigure PHP:
+Configure PHP:
 - `nano /etc/php/7.2/apache2/php.ini `
 - update:
 ```ini
@@ -521,9 +521,163 @@ $ systemctl reload apache2
 - More details [here](https://www.hiyansoft.com/blog/cloud/google/hosting-multiple-websites-on-single-google-cloud-compute-engine/index.html).
 
 ### Serve Python files over web
-- cgi scripts
-- `a2dismod mpm_event`
-- `a2enmod mpm_prefork cgi`
+- Apache virtualhost is only for domain/sub-domain, to add more apps with different directories, add directory tags to configuration file. If the two Flask apps are running on the same domain just as subfolders, then you only need one VirtualHost but you’ll need multiple WSGIScriptAlias directives.
+- Python is language, Apache2 is webServer, CGI and WSGI are protocol to help web server and language talk to each other.
+- Web Server Gateway Interface or WSGI is a simple calling convention for web servers to forward requests to web applications.
+- mod_wsgi is an Apache HTTP Server module that provides a WSGI compliant interface for hosting Python based web applications. It is an alternative to CGI.
+
+CGI Scripts:
+- Common Gateway Interface or CGI provides interface for web server to serve HTML from console programs like Python.
+- By CGI we can directly open `index.py` in browser and it works like PHP file. It outputs the result of the script file.
+- default directory is `/usr/lib/cgi-bin/`, you can add, `hello.cgi` here and open in browser.
+- enable in apache: `a2dismod mpm_event`
+- enable cgi module: `a2enmod mpm_prefork cgi`
+- to make new dir for cgi files, add following to site conf file:
+```bash
+<VirtualHost *:80>
+  ...
+  <Directory /var/www/html/cgi_dir>
+    Options +ExecCGI
+    AddHandler cgi-script .py .cgi
+    # DirectoryIndex index.py
+  </Directory>
+  ...
+</VirtualHost>
+```
+- CGI runs script when requested, where as WSGI runs script with start of WebServer.
+
+WSGI:
+- Along with flask app, create a `flaskApp.wsgi` file and add:
+```python
+import sys
+sys.path.insert(0, '/var/www/html/flaskapp')
+from flaskapp import app as application
+```
+- Add following to site conf, add following after `var/www/html`,
+```bash
+WSGIDaemonProcess flaskapp threads=5
+WSGIScriptAlias /var/www/html/flaskapp/flaskapp.wsgi
+<Directory flaskapp>
+    WSGIProcessGroup flaskapp
+    WSGIApplicationGroup %{GLOBAL}
+    Order deny,allow
+    Allow from all
+</Directory>
+<VirtualHost *>
+    ServerName example.com
+
+    WSGIDaemonProcess yourapplication user=user1 group=group1 threads=5
+    WSGIScriptAlias / /var/www/yourapplication/yourapplication.wsgi
+
+    <Directory /var/www/yourapplication>
+        WSGIProcessGroup yourapplication
+        WSGIApplicationGroup %{GLOBAL}
+        Order deny,allow
+        Allow from all
+    </Directory>
+</VirtualHost>
+```
+
+
+## Hands on WSGI and Apache2
+
+Assuming you have a working apache2 server and you have python installed. Next we need to install pip and WSGI module.
+
+Python 3:
+- `sudo apt-get install libapache2-mod-wsgi-py3`
+- `sudo apt-get install python3-pip`
+
+Python 2:
+- `sudo apt-get install libapache2-mod-wsgi`
+- `sudo apt-get install python-pip`
+
+Enable WSGI and install flask:
+- `a2enmod wsgi ` enable the WSGI module in apache.
+- `pip3 install flask`
+
+Set up directory and flask files:
+- `mkdir /var/www/apps` this contains all flask apps.
+- `mkdir /var/www/apps/blog` this is our first app.
+- `mkdir /var/www/apps/blog/lib` this contains code for our blog app.
+- `mkdir /var/www/apps/blog/lib/static` this will serve static files for our blog app.
+
+Make flask app:
+- `sudo nano /var/www/apps/blog/lib/main.py`
+```bash
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+  return 'Hello from Flask blog app!'
+
+if __name__ == '__main__':
+  app.run()
+```
+
+Make this folder as python module, (important):
+- `touch /var/www/apps/blog/lib/__init__.py`
+- We created `__init__.py` as a blank file. This is important and is required to import our lib folder as a python module. Now we can import `lib.main` in wsgi file.
+
+Add the wsgi file:
+- `sudo nano /var/www/apps/blog/app.wsgi`
+```bash
+import sys
+sys.path.insert(0, '/var/www/apps/blog')
+
+from lib.main import app as application
+```
+
+Configuring virtual hosts conf file to make it work:
+- `cd /etc/apache2/sites-available/`
+- add a site file `cp 000-default.conf myapps.com.conf`
+- `nano myapps.com.conf`
+```bash
+<VirtualHost *:80>
+  ServerName myapps.com
+  ServerAdmin webmaster@localhost
+
+  # App: blog, URL: http://myapps.com/myblog
+  WSGIScriptAlias /myblog /var/www/apps/blog/app.wsgi
+  <Directory /var/www/apps/blog>
+    Order deny,allow
+    Allow from all
+  </Directory>
+  Alias /myblog/static /var/www/apps/blog/lib/static
+
+  # logs configuration
+  ErrorLog ${APACHE_LOG_DIR}/error.log
+  CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+</VirtualHost>
+```
+
+- `a2ensite myapps.com.conf`
+- `service apache2 restart`
+
+- Now visit http://myapps.com/myblog/
+
+Links:
+- [Muiltiple flask apps usgin Apache2 and Ubuntu](https://stackoverflow.com/questions/29882579/run-multiple-independent-flask-apps-in-ubuntu).
+
+# Vagrant Notes
+It is a CLI to create virtual box with all configurations in a file. 
+- Install vagrant by downloading from site. It installs package with CLI.
+- Create following file in a folder `~/vagrant/vagrantfile`:
+```py
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/xenial64"
+  config.vm.network "private_network", ip: "192.168.33.10"
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = "1024"
+  end
+end
+```
+- Then run `vagrant up`. This will download and install ubuntu 16.04, 1GB, at 192.168.33.10
+- do, `vagrant ssh` to ssh to new vm.
+- 
+
+
 
 
 # Python Notes
