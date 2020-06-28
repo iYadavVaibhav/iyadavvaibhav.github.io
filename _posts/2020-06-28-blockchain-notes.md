@@ -1,5 +1,5 @@
 ---
-title: Blockchain 101 and its use in Healthcare and Banking Industry
+title: Blockchain and its use in Healthcare and Banking Industry
 layout: post
 categories: notes blockchain
 ---
