@@ -224,20 +224,17 @@ tr:hover {
 
 // Adding 'Contents' headline to the TOC
 #markdown-toc::before {
-  content: "Contents";
-  font-weight: bold;
-}
-
-// Using numbers instead of bullets for listing
-#markdown-toc ul {
-  list-style: decimal;
+  content: "Contents:";
 }
 
 #markdown-toc {
-  border: 1px solid #aaa;
-  padding: 1.5em;
-  list-style: decimal;
-  display: inline-block;
+    border: 1px solid #eee;
+    padding: 10px 10px 10px 25px;
+    list-style: inherit;
+    display: inline-block;
+    margin: 10px 0 10px 0;
+    line-height: 20px;
+    width: 100%;
 }
 
 nav {
