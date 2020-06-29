@@ -1,10 +1,13 @@
 ---
 layout: post
-title: How to setup Github Pages and Jekyll Sites
+title: Github Pages and Jekyll Sites - Complete Setup
 categories: howtos
 ---
 
 Github Pages are static sites that can be hosted on GitHub for free. Github Pages use Jekyll (a Ruby Gem) to build static site from markdown files.
+
+* Do not remove this line (it will not be displayed)
+{:toc}
 
 ## Quickest way to get started
 
@@ -18,7 +21,7 @@ With this you can use your time on writing post rather than other geeky stuff, b
 
 Now that blog is working, we need to write posts.
 
-## Publishing Posts
+## Publishing Posts to the Site
 Posts can be published in 3 ways:
 
 1. Directly write on GitHub.com:
@@ -30,7 +33,7 @@ You can use Sublime, atom or any other text editor on your local machine and the
 3. Local Jekyll setup
 You can install Jekyll locally on your machine. This will require you to install Ruby as well. Then on localhost you can render your entire website (blog) and see changes. Then you can push it to GitHub.
 
-## Setting up Jekyll locally:
+## Setting up Jekyll to run locally
 - You need to have ruby, gem, gcc and g++ installed. else do `brew install gem` and all.
 - Then you need to install `gem install bundler jekyll`
 - Next, `gem install github-pages` installs all gems required by github pages, all of the dependancies you’ll need, like: kramdown, jemoji, and jekyll-sitemap
@@ -61,18 +64,51 @@ Removing a package from Sublime Text:
 
 Recently VS Code turned out to be best editor for Markdown however it is bit heavy. Also 'Markdown Preview' extension on Chrome makes it handy to preview markdown files.
 
-## Github Site for Projects
+## Github Site for your Projects
 Github can further be used to host your projects site. This is kind of a sub-site/sub-domain of main site.
 
 My site:
-```myname.github.io/```
+`myname.github.io/`
 
 Project Site:
-```myname.github.io/abc_project/```
+`myname.github.io/abc_project/`
 
 All projects repository come under **gh-pages** branch and not master.
 
 Creating a sub site is same as creating a main site.
 
-## Related post:
+## Jekyll Notes
+
+Jekyll is a Ruby library to make blog and pages site.
+
+**_config.yml** has all configuration variables.
+
+**Posts** are markdown files store under \_posts folder
+
+**Pages** are markdown files in root location.
+
+**_layouts** have different .html files that define the layout for example: default, pages or posts. These can include other templates from **_includes** folder. They have \{\{ content \}\} which gets populated by file that uses this layout. 
+
+For eg. 'default.html' can include 'meta.html'.
+
+'post.html' can use 'default.html' as layout. So all code in 'post.html' will populate \{\{ content \}\} in default.html
+
+**some_post.md** can use `post.html` as layout. So all markdown from this file will be populated to \{\{ content \}\} of 'post.html'.
+
+**To list all categories in site**
+
+Category returns two array items, first is category name and second is another array of posts.
+
+Categories in site:
+```ruby
+{\% for category in site.categories \%}
+- {{ category[0] }}
+{\% endfor \%}
+```
+
+<br/>
+
+---
+
+**Related post:**
 - [How to add syntax highlighting to Jekyll Sites](../syntax-highlight-jekyll)

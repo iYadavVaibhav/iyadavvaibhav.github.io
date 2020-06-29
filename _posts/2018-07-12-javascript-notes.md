@@ -1,6 +1,6 @@
 ---
 layout: post
-title: JavaScript Libs and Frameworks Notes
+title: JavaScript Libraries and Frameworks Notes
 categories: notes javascript
 ---
 

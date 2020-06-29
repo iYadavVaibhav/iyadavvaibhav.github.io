@@ -1,5 +1,5 @@
 ---
-title: Understanding Statistics and Probability
+title: Statistics and Probability Notes
 layout: post
 categories: notes maths
 ---
@@ -477,7 +477,7 @@ Continuous RV can have PDF:
 
 ### Uniform Distribution
 
-Here, probability of each outcome is equal. Hence, funcition is 1/range:
+Here, probability of each outcome is equal. Hence, function is 1/range:
 
 $$ f(X) = \frac{1}{(b - a)} $$ 
 where a is min and b is max.
