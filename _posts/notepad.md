@@ -1,3 +1,11 @@
+vy tk
+- beer mug viz
+- payments getting back in sector
+- kiran flask following on conv .2 for ds plz let me know
+- gone down the storm
+- send link
+- 
+
 ------------------------------------
 
 # Focused Session on Big Data Analytics
@@ -662,7 +670,7 @@ Set up directory and flask files:
 
 Make flask app:
 - `sudo nano /var/www/apps/blog/lib/main.py`
-```bash
+```py
 from flask import Flask
 app = Flask(__name__)
 
@@ -680,7 +688,7 @@ Make this folder as python module, (important):
 
 Add the wsgi file:
 - `sudo nano /var/www/apps/blog/app.wsgi`
-```bash
+```py
 import sys
 sys.path.insert(0, '/var/www/apps/blog')
 
@@ -692,10 +700,13 @@ Configuring virtual hosts conf file to make it work:
 - `cd /etc/apache2/sites-available/`
 - add a site file `cp 000-default.conf myapps.com.conf`
 - `nano myapps.com.conf`
-```bash
+```py
 <VirtualHost *:80>
   ServerName myapps.com
   ServerAdmin webmaster@localhost
+
+  # This is path for homepage of myapps.com
+  DocumentRoot /var/www/html/myapps.com
 
   # App: blog, URL: http://myapps.com/myblog
   WSGIScriptAlias /myblog /var/www/apps/blog/app.wsgi
@@ -717,6 +728,9 @@ Configuring virtual hosts conf file to make it work:
 
 - Now visit `http://myapps.com/myblog/` to access app.
 
+If you see errors:
+- `tail -30 /var/log/apache2/error.log ` shows you error logs from apache server.
+
 To Do:
 - WSGIDaemonProcess helloworldapp user=www-data group=www-data threads=5
 - WSGIProcessGroup
@@ -726,7 +740,50 @@ To Do:
 Links:
 - [Muiltiple flask apps usgin Apache2 and Ubuntu](https://stackoverflow.com/questions/29882579/run-multiple-independent-flask-apps-in-ubuntu).
 
-## Access VM flask app on localhost from host machine:
+------------------------------------------------
+
+# Flask Notes
+
+## Virtual Environments:
+
+What is Python Virtual Environment?  
+- They are isolated environments where you can install packages as required.
+- This creates a folder which contains all the necessary executables to use the packages that a Python project would need
+
+Why? - It gives different apps isolation and personal environment so that modules don't interfere and it is easy when we have to productionize the app.
+
+How to use Virtual Environments in Python3?
+- `python3 -m venv venv_app` - created folder venv_app
+- `source venv_app/bin/activate` - activates this environment, for use
+- now do `pip3 install flask` - this installs the package only in this environment.
+- add `#!venv_app/bin/python3` on top of main.py file to make it use this python.
+
+Creating simple flask app:
+```py
+#!venv_app/bin/python3
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return "Hello from Flask App!"
+
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+
+Running a flask app:
+- `chmod a+x main.py ` to make app executable.
+- `./main.py` runs app on localhost in debug mode.
+- to access type `http://localhost:5000` in browser.
+
+
+
+Using Databases in Flask App:
+- Provide full path to db file, so that apache can locate it.
+
+## Access flask app on Virtual Machine localhost from host machine:
 - Run flask app with `app.run(host='0.0.0.0', debug=True)`
 - then access `192.168.10.33:5000` from host machine.
 - 
@@ -751,7 +808,7 @@ end
 - Then run `vagrant up`. This will download and install ubuntu 16.04, 1GB, at 192.168.33.10
 - do, `vagrant ssh` to ssh to new vm.
 - `vagrant halt` to stop a VM
-- `vagrant destroy` to delete a VM
+- DANGER ZONE: `vagrant destroy` to delete a VM
 
 
 
