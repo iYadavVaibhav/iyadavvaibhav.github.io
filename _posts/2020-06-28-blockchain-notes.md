@@ -1,5 +1,5 @@
 ---
-title: Blockchain and its use in Healthcare and Banking Industry
+title: Blockchain and its use in Banking Industry
 layout: post
 categories: notes blockchain
 ---
@@ -65,10 +65,10 @@ Blockchain is a digital, immutable, distributed ledger that chronologically reco
 
 **Power vs Distribution**
 
-Power/Distribution | Localized | Distributed
+Power/Distribution | Local Setup | Distributed over Network
 -:|:-:|:-:
-Decentralized | Bank safe deposit boxes|Public Blockchain / Bitcoin / Global Ecosystems
-Centralized| Personal Corporate | Corporate Ecosystems / Consortiums/ Permissioned
+Decentralized Power| Bank Lockers | - Bitcoin <br> - Public Blockchain <br> - Global chains
+Centralized Power| Corportions e.g. SBI | - Permissioned Blockchains <br> - Corporate Blockchains <br> - Consortiums
 
 **Blockchain Trilemma**
 - Scalability, security and Decentralization.
@@ -110,19 +110,6 @@ Blockchain can be used to enhance:
 ## Blockchain in Healthcare
 - it includes r&d, pharma, chemists, doctors, they are part of eco system.
 - drug verifications, ownerships, contracts, product verifications, 
-
-**Healthcare Problem Matrix**
-
-Areas | Problem | Blockchain Solution | Characteristic
--|-|-|-
-Medical Research | ~50% of clinical trials are unreported/not shared |Centralized time-stamped data with wide dispersion | - Global clock <br> - Distribution
-Drug Development | Counterfeit drugs result in ~$200b annual losses | Traceability and transparency with Proof of authentication |  - Immutability <br> - Cryptographic verification
-Claims, Billing | ~10% healthcare costs are fraudulent | - Information-tracking <br> - Compliance with billing codes | - Immutability <br> - Smart contracts <br> - 360-degree view
-Medical Data Sharing | - Patient data is scattered <br> - No integration or sharing <br> - Medical error is 3rd leading cause of death | - Transfers data securely between parties <br> - Maintains ownership stamps <br> - Any time automated access <br> - Data is immutable | - 360-degree view <br> - Cryptographic Verification 
-Medical Supply Chain| Adulterated, illicit drugs, drug trafficking | Chain-of-custody | - Immutable chain <br> - Cryptographic verification
-Genomics | Track demographic and ancestry data and DNA data to determine health & disease patterns | Eliminate unnecessary expense and middlemen in genomic testing | - Ownership <br> - Eliminate friction
-
-_* data as of May 2020_
 
 ## Blockchain in Banking Industry
 

@@ -1,10 +1,135 @@
+# SA4
+
+## Linear Regression 
+
+Relation in Y and X such that X variables explain Y
+
+Why do LR:
+- Relation: Understand relation between X and Y, e.g.
+  - Relation of sales on profit
+- Prediction: To make predictions about Y variable
+
+**Problem:** Anita wants to predict the number of toys she can sell in coming half year.
+
+Step 1: Modeling: Develop a regression model
+- identify the variables: proce/advertising cost/promotion costs
+- Variables are not exhaustive
+- SalesUnits = $\beta_0 + \beta_1 Price + \beta_2AdExp + \beta_3PromExp$
+- Beta_s are coefficients,
+- signs expected are: b1 -ve, b2 +ve, b3 +ve
+
+Step 2: Estimation: Using software to estimate the model
+- prior data, collected over time
+- use excel/r/python and get refgression output
+- this gives coeffiecients, the betas
+- get expected signs of betas
+
+Step 3: Inference: Interpreting the estimated regression model
+- $SalesUnits = -25096.83 - 5055.27Price + 648.61AdExp + 1802.61PromExp$
+- beta means when X increase by **one unit** y increases by beta times, keeping others constant.
+- beta0 is Y when all X are 0.
+- beta0 is fixed cost of production, without making any unit.
+
+Step 4: Prediction: Making predictions about Y variable
+- put value of Xs and betaS and get Y value.
+- create 3 scenarios, how much to set price, how much to send on ad and promotions, based on these scenarios we get Y that can help us decide.
+
+Results:
+95% time on Modeling, 5% on rest steps.
+
+Assumptions:
+- Hypothesis testing on the regressions:
+- $Y = \beta_0 + \beta_1X_1 + \epsilon$
+- here e is the error.
+- these errors are normally distributed around avg value 
+- avg of errors is 0, $\epsilon_i ~ N(0,\sigma)$
+
+- in regression output we do have result of hypothesis test, as p-values
+
+Why is p-value imp:
+- tells significance of X in explaining Y,
+- *when p is low, null has to go*
+
+
+# Session 2
+
+Problem a): Test the Hypothesis that price has no effect on sales
+
+Answer: Check hypothesis on beta1 ehich is coefficient of Price.
+
+$H_0: \beta_1=0$
+$H_1: \beta_1 \neq 0$
+
+- Check this using confidence interval from refression output.
+- lower 95% = -6153.32 and upper 95% = -3957.22
+- hecne, beta1 != 0
+- also, p value = 6.2E.09, which is low, null has to go.
+- We reject the NULL Hypothesis, Ho, so sales is dependent on price.
+
+Problem b): Company would agree to proposal of 25 cents drop in toy price if there is evidence that price reduction would lead to *at least* an increse of 1500 unit sales.
+
+Answer:
+- When price inc by 1 then Sales inc by $\beta_1$ units.
+- when price dec by 1 then Sales inc $-\beta_1$ units.
+- when price dec by .25 then => Sales inc $-\beta_1/4$ units.
+
+$=> H_0: -\beta_1/4 \geq 1500$ and $H_1: H_0$ not true
+
+$=> H_0: -\beta_1 \geq 6000$ and $H_1: \beta_1 < 6000$
+
+$=> H_0: \beta_1 \leq -6000$ and $H_1: \beta_1 > -6000$
+
+- This single tail test, solve using CI in summary table.
+
+- to do
+
+Problem: Car
+
+Answer: 
+- Y variable is gasoline required for 100 miles.
+- Y column = 100/MPG
+- Run regression, from output,
+
+- Weight - for every 1000 lb increase in weight of car, the gasoline required to travel a 100 miles increases by 1.56 gallons, all other varibales kept at the same level.
+- Horsepower 
+  - since p-value is more than alpha hence it is not significant in explaining Y. 
+  - This seems wrong and is a pitfall of regression, will be covered in multi-co-linearity.
+  - this should be checked as, from common sense, horsepower effects mileage.
+- R square 
+  - the variance explained by residuals is 92%, 
+  - there is variation in Y variable because some have high efficiency some low.
+  -  It can explain 92% of this variablility in fuel efficiency, 
+  - how much variation gets explained is R-square. 
+  - 92% is high, hence, model will make good predictions.
+- What impacts fuel efficiency the most?
+  - we cannot depend on coefficient as it is unit dependent.
+  - p-value are used as cut-offs to rule out the coefficient.
+  - 1sd change in weight, has coeff sd change in Y, 1sd change in weight is 1.01 sd change in Y. hence weight has more impact.
+
+
+------------------------------------
+
+Handover
+- [x] api is working via domain and wsgi
+- [x] add basic auth, followed by user auth
+- [ ] create tasks rest
+
+
+------------------------------------
+
 vy tk
 - beer mug viz
 - payments getting back in sector
 - kiran flask following on conv .2 for ds plz let me know
 - gone down the storm
 - send link
-- 
+
+Partnerships:
+- change filter label, grp = partner type, and partner name.
+- on all pages.
+- add same filters on single merch p&L.
+- wed morning.
+
 
 ------------------------------------
 
@@ -39,7 +164,7 @@ Find a polar bear in images from cameras in forest.
 - start SAJ
 - SAJ sends filtered data to clout function which at the moment logs to console.
 
-Custom Vision 
+## Custom Vision 
 - Create resource 'polar bear r1'
 - kind: CognitiveServices
 - the upload training images with tags.
@@ -51,6 +176,8 @@ Custom Vision
 - update the function with js code to read preds from web-api and store results in db.
 
 For counting, use regression model.
+
+------------------------------------
 
 # ML Classes:
 
@@ -92,7 +219,7 @@ Hierarchical Clustering:
 Uber Case Study:
 - Kmeans clustering to find centroid as place from where all rides can be catered. 
 
-# Knowledge Graphs
+## Knowledge Graphs
 
 Patters:
 - How different subjects are related, find the connections, eg, Trump Boeing, Binny Bansal and Infosys.
@@ -105,20 +232,13 @@ Patters:
 
 # Mind Dump
 
-Partnerships:
-- change filter label, grp = partner type, and partner name.
-- on all pages.
-- add same filters on single merch p&L.
-- wed morning.
-
-
 To do:
 - [ ] Plotly Dash +1, Eric Kleppen
 - [x] Post to github your flutter finished apps. eg: starred repos
 - Finder is slower
 - speed up terminal startup time.
 - Flutter ORM
-- Python Flask REST API GCP Firebase
+- [x] Python Flask REST API GCP Firebase
 - Starred Repos
 - Tabs app using BloC.
 - todo app in flask RESTful completed, decide backend to be sqlite or firebase?
@@ -126,9 +246,8 @@ To do:
 - flask app with data models integrated, and hosted
 - flutter [app](https://wptheming.com/2019/11/flutter-todo-app/) with data models integrated, and hosted
 
-Intro to:
-- Tensorflow +1
-- Digital Marketing
+- Intro to- Tensorflow +1
+- intro to Digital Marketing
 
 Watch
 - Startup stories
@@ -148,9 +267,9 @@ on-going:
 - doodh hisab, notification daily
 - medi tracker
 - firbase ML in Flutter
-- Python ETL
+- Python ETL notebook
 - Tableau publish favourites
-- Tableau LM tutorial article/git
+- Tableau Live Monitor tutorial article/git
 - Medium articles to be published
 
 Clean up Mac:
@@ -495,7 +614,7 @@ Add site to Apache Server:
 - Copy configuration file for new domain to be added: `sudo cp 000-default.conf example123.com.conf`
 - Let us switch to root user: `sudo su`
 - edit: `nano codeolab.gcp.conf ` and add following content to file:
-```Bash
+```py
 <Directory /var/www/html/example123.com>
   Require all granted
 </Directory>
@@ -530,7 +649,7 @@ Configure MySQL Database:
 Configure PHP:
 - `nano /etc/php/7.2/apache2/php.ini `
 - update:
-```ini
+```py
 upload\_max\_filesize = 20M  
 post\_max\_size = 21M
 ```
@@ -621,7 +740,7 @@ sys.path.insert(0, '/var/www/html/flaskapp')
 from flaskapp import app as application
 ```
 - Add following to site conf, add following after `var/www/html`,
-```bash
+```py
 WSGIDaemonProcess flaskapp threads=5
 WSGIScriptAlias /var/www/html/flaskapp/flaskapp.wsgi
 <Directory flaskapp>
@@ -742,13 +861,50 @@ Links:
 
 ------------------------------------------------
 
+# REST API and RESTful Web Services - The Basics
+
+What is REST?
+- Client and Server are separate
+- **Stateless:** No information from a request is stored on client to be used in other requests, eg, no session can be started, if authentication is required, username and password need to be sent with every request.
+
+What is RESTful API:
+- There is a resource, eg, tasks
+- It has endpoints for CRUD operations
+- HTTP methods, GET PUT POST DELETE, are used for these operations.
+- Data is provided with these requests in no particular format but usually as:
+  - JSON blob in request body, or
+  - Query String arguments as portion of URL.
+
+
+HTTP Method | URI | Action
+-|-|-
+GET | http://[hostname]/todo/api/v1.0/tasks | Retrieve list of tasks
+GET | http://[hostname]/todo/api/v1.0/tasks/[task_id]| Retrieve a task
+POST |  http://[hostname]/todo/api/v1.0/tasks | Create a new task
+PUT | http://[hostname]/todo/api/v1.0/tasks/[task_id] | Update an existing task
+DELETE |  http://[hostname]/todo/api/v1.0/tasks/[task_id] | Delete a task
+
+Data of a task can be, JSON blob, as:
+```json
+{
+  'id': 1,
+  'title': 'Title of a to do task',
+  'description': 'Description of to do task', 
+  'done': False
+}
+```
+
+- This API can be consumed by client side app which can be single page HTML.
+
+------------------------------------------------
+
 # Flask Notes
 
 ## Virtual Environments:
 
 What is Python Virtual Environment?  
 - They are isolated environments where you can install packages as required.
-- This creates a folder which contains all the necessary executables to use the packages that a Python project would need
+- This creates a folder which contains all the necessary **executables** to use the packages that a Python project would need
 
 Why? - It gives different apps isolation and personal environment so that modules don't interfere and it is easy when we have to productionize the app.
 
@@ -762,7 +918,6 @@ Creating simple flask app:
 ```py
 #!venv_app/bin/python3
 from flask import Flask
-
 app = Flask(__name__)
 
 @app.route('/')
@@ -785,8 +940,10 @@ Using Databases in Flask App:
 
 ## Access flask app on Virtual Machine localhost from host machine:
 - Run flask app with `app.run(host='0.0.0.0', debug=True)`
+- This tells your operating system to listen on all public IPs.
 - then access `192.168.10.33:5000` from host machine.
-- 
+
+
 
 
 ------------------------------------------------
