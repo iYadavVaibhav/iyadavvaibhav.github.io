@@ -66,9 +66,9 @@ Blockchain is a digital, immutable, distributed ledger that chronologically reco
 **Power vs Distribution**
 
 Power/Distribution | Local Setup | Distributed over Network
--:|:-:|:-:
+-:|:-:|:-
 Decentralized Power| Bank Lockers | - Bitcoin <br> - Public Blockchain <br> - Global chains
-Centralized Power| Corportions e.g. SBI | - Permissioned Blockchains <br> - Corporate Blockchains <br> - Consortiums
+Centralized Power| Corportions <br> - e.g. SBI | - Permissioned Blockchains <br> - Corporate Blockchains <br> - Consortiums
 
 **Blockchain Trilemma**
 - Scalability, security and Decentralization.
