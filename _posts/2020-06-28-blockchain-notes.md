@@ -80,9 +80,9 @@ Centralized Power| Corportions e.g. SBI | - Permissioned Blockchains <br> - Corp
 ## Blockchain implementations
 
 ### Bitcoin BTC
-- it is digital currency, transactions are stored in ledger called blockchain.
+- It is digital currency, transactions are stored in ledger called blockchain.
 - Bitcoin mining is adding transaction records to public ledger.
-- [x] Why 21m BTC? - so that when demand is high the value can go up. they are to be mined by 2140.
+- Why 21m BTC? - so that when demand is high the value can go up. they are to be mined by 2140.
 
 ### Hyperledger Fabric
 - open source project by linux, IBM, SAP to use blockchain technology for distributed ledger.
