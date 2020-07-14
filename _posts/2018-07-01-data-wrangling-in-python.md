@@ -2,6 +2,7 @@
 layout: post
 title: Data Wrangling in Python using Pandas
 categories: howtos
+last_modified_at: 2019-07-14 11:19:55
 ---
 
 [Pandas](https://pandas.pydata.org/) is a package in Python that can be used for data manipulation.

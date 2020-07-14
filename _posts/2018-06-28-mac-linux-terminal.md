@@ -2,6 +2,7 @@
 layout: post
 title: Mac and Linux Ways
 categories: notes snippets
+last_modified_at: 2020-07-14 11:19:55
 ---
 
 Here are some basic understandings and commands that can be used on UNIX terminal and eventually on Mac. 

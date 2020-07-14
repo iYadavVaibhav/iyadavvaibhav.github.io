@@ -2,6 +2,7 @@
 layout: post
 title: Python Notes
 categories: notes python
+last_modified_at: 2019-07-14 11:19:55
 ---
 
 Notes on Python as I learn and improve my understanding.

@@ -2,6 +2,7 @@
 title: SQLite and SQLAlchemy Notes
 layout: post
 categories: notes database
+last_modified_at: 2020-07-14 11:19:55
 ---
 
 ## SQLite

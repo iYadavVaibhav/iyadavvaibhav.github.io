@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I currently work as Data Analyst with Barclays India. My job is to understand business analyst's requirement. Mine data, do some ETL (Teradata, Impala, R) and deliver polished reports in popular BI tools like Tableau, Shiny and D3JS.
+I currently work as Data Analyst with Barclays. My job is to understand business analyst's requirement. Mine data, do some ETL (Teradata, Impala, R) and deliver polished reports in popular BI tools like Tableau, Shiny and D3JS.
 
 ### My Work
 

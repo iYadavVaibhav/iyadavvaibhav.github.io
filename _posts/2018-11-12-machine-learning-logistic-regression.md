@@ -2,6 +2,7 @@
 layout: post
 title: Machine Learning - Logistic Regression Theory
 categories: notes machineLearning
+last_modified_at: 2019-07-14 11:19:55
 ---
 
 Logistic Regression is mainly used when we have to work on probability. It outputs values between 0 and 1. So 0.5 is cutoff point and anything below 0.5 goes to class 0 and rest to class 1.

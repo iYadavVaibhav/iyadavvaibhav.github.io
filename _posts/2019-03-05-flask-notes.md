@@ -2,6 +2,7 @@
 title: Flask - WebFramework in Python 
 layout: post
 categories: notes python
+last_modified_at: 2020-07-14 11:19:55
 ---
 
 Flask is a microframework in Python. It is used to create a webapp. It can start a python web server. It can handle HTTP requests. It can also be used to make a webapp API.

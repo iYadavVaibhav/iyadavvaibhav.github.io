@@ -2,6 +2,7 @@
 layout: post
 title: How to add syntax highlighting to Jekyll Sites
 categories: howtos
+last_modified_at: 2019-12-14 11:19:55
 ---
 
 Jekyll supports syntax highlighting by default using gem `rouge`. It can highlight 100 different language.

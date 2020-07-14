@@ -2,6 +2,7 @@
 layout: post
 title: Github Pages and Jekyll Sites - Complete Setup
 categories: howtos
+last_modified_at: 2020-07-14 11:22:23
 ---
 
 Github Pages are static sites that can be hosted on GitHub for free. Github Pages use Jekyll (a Ruby Gem) to build static site from markdown files.
@@ -47,22 +48,6 @@ You can install Jekyll locally on your machine. This will require you to install
 Issues:
 - If you see permission issue on Mac, run using `sudo`. This may occur as gem and ruby are already installed on mac but in Library folder which is not writable.
 - If you want to run locally already **existing site**, then create a new temp blog then copy 'Gemfile' and 'Gemfile.lock'. The site root should have these files. They are required to provide all gems that Jekyll requires for proper functionality.
-
-## Extending Sublime Text for Markdown Support:
-If you want more syntax highlighting and better preview of what you write then you can extend Sublime Text by installing  package, follow steps below:
-- Type: ``Cmd + Shift + P`` to open package manager.
-- Then type ``install package`` and hit enter. This will provide you list of available packages from packagecontrol.io
-- Next when you get dropdown type ``Markdown`` and this will list you all markdown related packages.
-- You can select ``Markdown Editing`` to install the package. This provides much better highlighting and preview.
-
-I, personally, didn't like it much and was a bit distracting for me. So I removed this package. But you may like it. 
-
-Removing a package from Sublime Text:
-- press ``Cmd + Shift + P`` and 
-- then type ``remove package``. This will give you list of packages installed and 
-- next select ``Markdown Editing`` to remove it.
-
-Recently VS Code turned out to be best editor for Markdown however it is bit heavy. Also 'Markdown Preview' extension on Chrome makes it handy to preview markdown files.
 
 ## Github Site for your Projects
 Github can further be used to host your projects site. This is kind of a sub-site/sub-domain of main site.

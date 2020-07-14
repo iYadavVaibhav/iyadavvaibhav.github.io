@@ -2,6 +2,7 @@
 title: NativeScript Notes
 layout: post
 categories: notes
+last_modified_at: 2019-07-14 11:19:55
 ---
 
 My notes on NativeScript (tns Telerik NativeScript). It is used to make native iOS and Android apps using Angular/TypeScript or JavaScript.

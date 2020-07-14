@@ -2,6 +2,7 @@
 title: Statistics and Probability Notes
 layout: post
 categories: notes maths
+last_modified_at: 2019-12-14 11:19:55
 ---
 
 Statistics is used to summarize data. Probability is a way to find likeliness of an event to happen. Permutation and combination are ways to count events and possibilities. All these learning are from [Khan Academy](https://www.khanacademy.org/math/statistics-probability) and [AMPBA - ISB](https://www.isb.edu/advanced-management-programme-in-business-analytics).

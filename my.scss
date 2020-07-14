@@ -119,17 +119,42 @@ tr:hover {
   background-color: #f5f5f5;
 }
 
+/* Base Rules END */
+
+/* Custom CSS by VY */
+
 // Fixes images in popup boxes from Google Translate
 .gmnoprint img {
   max-width: none;
 }
 
 .date {
-  color: #aaaaaa;
+  color: #808080;
   align-items: center;
   text-align: center;
   font-size: 10px;
   padding-top: 20px;
+}
+
+.post > h1 {
+  margin-bottom: 0;
+}
+
+/*Last modified*/
+.post h1 span {
+  font-size: 10px;
+  line-height: 40px;
+  float: right;
+  vertical-align: middle;
+  font-style: italic;
+  color: #808080;
+}
+
+.post > hr {
+  border: none;
+  border-top: 1px solid #dddddd;
+  margin-top: 5px;
+  margin-bottom: 30px;
 }
 
 // Specify the color of the selection

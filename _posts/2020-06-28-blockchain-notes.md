@@ -2,6 +2,7 @@
 title: Blockchain and its use in Banking Industry
 layout: post
 categories: notes blockchain
+last_modified_at: 2020-07-14 11:19:41
 ---
 
 Blockchain is a digital, immutable, distributed ledger that chronologically records transactions in near real time. The prerequisite for each subsequent transaction to be added to the ledger is the respective consensus of the network participants (called nodes), thereby creating a continuous mechanism of control regarding manipulation, errors, and data quality - _Deloitte_
@@ -66,7 +67,7 @@ Blockchain is a digital, immutable, distributed ledger that chronologically reco
 **Power vs Distribution**
 
 Power/Distribution | Local Setup | Distributed over Network
--:|:-:|:-
+-:|:-|:-
 Decentralized Power| Bank Lockers | - Bitcoin <br> - Public Blockchain <br> - Global chains
 Centralized Power| Corportions <br> - e.g. SBI | - Permissioned Blockchains <br> - Corporate Blockchains <br> - Consortiums
 
