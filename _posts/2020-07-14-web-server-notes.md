@@ -278,6 +278,9 @@ Configuring virtual hosts conf file to make it work:
   </Directory>
   Alias /myblog/static /var/www/apps/blog/lib/static
 
+  # Enables passing of authorization headers
+  WSGIPassAuthorization On
+
   # logs configuration
   ErrorLog ${APACHE_LOG_DIR}/error.log
   CustomLog ${APACHE_LOG_DIR}/access.log combined
@@ -291,6 +294,93 @@ Configuring virtual hosts conf file to make it work:
 
 If you see errors:
 - `tail -30 /var/log/apache2/error.log ` shows you error logs from apache server.
+
+---
+
+#### Multiple Flask apps and adding user and group to process
+
+- Add new user `adduser apps`, remember password here
+- update primary group `usermod -g www-data apps`
+- give permission to group `chmod 775 /home/apps`
+
+- login with new user `apps`
+- `git clone the_web_app.git`
+- `python3 -m venv venv`
+- `source venv/bin/activate`
+- `pip3 install -r requirements.txt`
+- `touch __init__.py`
+- add `app.wsgi`
+
+```py
+#!venv/bin/python3
+import sys
+import logging
+logging.basicConfig(stream=sys.stderr)
+
+sys.path.insert(0, '/home/apps/todo')
+
+from lib.main import app as application
+```
+
+Apache v-host file:
+```py
+<VirtualHost *:80>
+  ServerName py.ess.com
+  ServerAdmin webmaster@localhost
+
+  DocumentRoot /var/www/html/py.ess.com
+
+  WSGIScriptAlias /site1 /var/www/apps/app1/app1.wsgi
+  <Directory /var/www/apps/app1>
+    Order deny,allow
+    Allow from all
+  </Directory>
+  Alias /site1/static /var/www/apps/app1/static
+
+  WSGIScriptAlias /flap /var/www/apps/flap/app.wsgi
+  <Directory /var/www/apps/flap>
+    Order deny,allow
+    Allow from all
+  </Directory>
+
+
+        WSGIScriptAlias /todo /var/www/apps/todo/app.wsgi
+        <Directory /var/www/apps/todo>
+                Order deny,allow
+                Allow from all
+        </Directory>
+
+  WSGIDaemonProcess todo-client user=apps group=www-data threads=5
+        WSGIScriptAlias /todo-client /home/apps/todo/app.wsgi
+        <Directory /home/apps/todo>
+    WSGIApplicationGroup todo-client
+    WSGIProcessGroup todo-client
+                Order deny,allow
+                Allow from all
+    Require all granted
+        </Directory>
+  Alias /todo-client/static /home/apps/todo/lib/static
+  WSGIPassAuthorization On
+
+
+  # WSGIDaemonProcess site2 user=myserviceuser group=myserviceuser threads=5 python-home=/$
+  # WSGIScriptAlias /site2 /var/www/apps/app2/application.wsgi
+  # <Directory /var/www/apps/app2>
+  #     WSGIApplicationGroup site2
+  #     WSGIProcessGroup site2
+  #     Order deny,allow
+  #     Allow from all
+  # </Directory>
+
+  # logs configuration
+  ErrorLog ${APACHE_LOG_DIR}/error.log
+  CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+</VirtualHost>
+```
+
+Note:
+- ensure group has permission to database and log directories.
 
 To Do:
 - WSGIDaemonProcess helloworldapp user=www-data group=www-data threads=5

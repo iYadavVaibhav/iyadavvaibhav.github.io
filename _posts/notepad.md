@@ -1,3 +1,12 @@
+Handover
+- [x] api is working via domain and wsgi
+- [x] add basic auth, followed by user auth
+- [x] create tasks rest
+- [ ] add process starter, miguel modern deployment.
+
+
+------------------------------------
+
 # SA4
 
 ## Linear Regression 
@@ -109,13 +118,7 @@ Answer:
 
 ------------------------------------
 
-Handover
-- [x] api is working via domain and wsgi
-- [x] add basic auth, followed by user auth
-- [ ] create tasks rest
 
-
-------------------------------------
 
 vy tk
 - beer mug viz
@@ -346,7 +349,11 @@ Instagram page earning:
 
 ------------------------------------------------
 
+# Web Server Notes
 
+- password for apps is apps
+
+- 
 
 
 
