@@ -76,7 +76,7 @@ a {
 }
 
 ul, ol {
-  margin: -10px 0 14px 0;
+  margin: 14px 0;
   padding-left: 25px;
 }
 
@@ -121,41 +121,6 @@ tr:hover {
 
 /* Base Rules END */
 
-/* Custom CSS by VY */
-
-// Fixes images in popup boxes from Google Translate
-.gmnoprint img {
-  max-width: none;
-}
-
-.date {
-  color: #808080;
-  align-items: center;
-  text-align: center;
-  font-size: 10px;
-  padding-top: 20px;
-}
-
-.post > h1 {
-  margin-bottom: 0;
-}
-
-/*Last modified*/
-.post h1 span {
-  font-size: 10px;
-  line-height: 40px;
-  float: right;
-  vertical-align: middle;
-  font-style: italic;
-  color: #808080;
-}
-
-.post > hr {
-  border: none;
-  border-top: 1px solid #dddddd;
-  margin-top: 5px;
-  margin-bottom: 30px;
-}
 
 // Specify the color of the selection
 ::-moz-selection {
@@ -247,21 +212,6 @@ tr:hover {
   }
 }
 
-// Adding 'Contents' headline to the TOC
-#markdown-toc::before {
-  content: "Contents";
-}
-
-#markdown-toc {
-    border: 1px solid #eee;
-    padding: 10px 10px 10px 25px;
-    list-style: inherit;
-    display: inline-block;
-    margin: 10px 0 10px 0;
-    line-height: 20px;
-    width: 100%;
-}
-
 nav {
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
@@ -337,27 +287,112 @@ footer {
 
 // code highlights
 
+
+/************* Custom CSS by VY /*************/
+
+/* Block highlighter */
+
 pre.highlight {
-  background-color: #f6f8fa;
-  border-radius: 3px;
-  font-size: 85%;
-  line-height: 1.45;
   overflow: auto;
-  padding: 16px;
-  margin-bottom: 0;
+  padding: 10px;
+  margin: 14px 0 0 0;
   word-break: normal;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  border-radius: 4px;
+  border: 1px solid #cccccc;
+  line-height: 20px;
+  font-size: 90%;
+
+}
+
+ul + div.highlighter-rouge > div.highlight > pre.highlight {
+  padding-left: 25px;
+  margin-top: 14px;
+}
+
+/* Inline highligter */
+code.highlighter-rouge {
+  /*background-color: rgba(27,31,35,.05);*/
+  background-color: #eee;
+  color: #b50000;
+  border-radius: 6px;
+  /*font-size: 90%;*/
+  margin: 0;
+  padding: .2em .4em .1em .4em;
   font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
 }
 
-code.highlighter-rouge {
-  background-color: rgba(27,31,35,.05);
-  color: #b50000;
-  border-radius: 3px;
-  font-size: 85%;
-  margin: 0;
-  padding: .2em .4em;
-  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+
+// Fixes images in popup boxes from Google Translate
+.gmnoprint img {
+  max-width: none;
 }
+
+/* Sibling Margins */
+
+p { 
+  margin: 16px 0 0 0;  
+  line-height: 20px;
+}
+ul { 
+  margin-top: 16px; 
+  margin-bottom: 0; 
+  line-height: 22px;
+}
+/*p + p { margin-top: 14px; }*/
+p + ul { margin-top: 2px; }
+/*ul + p { margin-top: 14px; }*/
+
+
+.date {
+  color: #808080;
+  align-items: center;
+  text-align: center;
+  font-size: 11px;
+  padding-top: 20px;
+}
+
+.post > h1 {
+  margin-bottom: 0;
+}
+
+/*Last modified*/
+.post h1 span {
+  font-size: 11px;
+  line-height: 40px;
+  float: right;
+  vertical-align: middle;
+  color: #808080;
+}
+
+.post > hr {
+  border: none;
+  border-top: 1px solid #dddddd;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 32px 0 0 0;
+}
+
+// Adding 'Contents' headline to the TOC
+#markdown-toc::before {
+  content: "Contents";
+}
+
+#markdown-toc {
+  border: 1px solid #eee;
+  padding: 10px 10px 10px 25px;
+  list-style: inherit;
+  display: inline-block;
+  margin: 20px 0 0px 0;
+  line-height: 24px;
+  width: 100%;
+}
+
+/************* Custom CSS by VY ENDS *************/
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
