@@ -1,13 +1,16 @@
-Handover
-- [x] api is working via domain and wsgi
-- [x] add basic auth, followed by user auth
-- [x] create tasks rest
-- [ ] add process starter, miguel modern deployment.
+ISB and SDM
+
+SDM#1
+
+------------------------------------
 
 
 ------------------------------------
 
-# SA4
+
+------------------------------------
+
+# SA4 - Term 4
 
 ## Linear Regression 
 
@@ -49,11 +52,70 @@ Results:
 Assumptions:
 - Hypothesis testing on the regressions:
 - $Y = \beta_0 + \beta_1X_1 + \epsilon$
-- here e is the error.
-- these errors are normally distributed around avg value 
-- avg of errors is 0, $\epsilon_i ~ N(0,\sigma)$
+- there is error associated, calles epsilon
+  - becasue we are missing one of the X
+  - X and Y are not perfectly linear.
+  - this error is how individaul data point(on regression line) deviate from actual point
+  - THis is one of the most imp of 5 assubptions underlying regression.
+  - these errors are normally distributed around 0.
+  - avg of errors is 0, $\epsilon_i ~ N(0,\sigma)$
+  - based on this assumption we can develop a hypothesis test around this regression model 
+
+Based on above:
+- $Y ~ N(\beta_0 + \beta_1X_1 + \beta_2X_2 + ... + \beta_kX_k , + \epsilon$)$
+- here mean is Betas and Xs, and std dev is epsilon
+- [ ] Why
+
+Base on above we will generate Confidence interval
+- True Model : $Y = \beta_0 + \beta_1X_1 + \beta_2X_2 + ... + \beta_kX_k $
+- Estimated Model : $y = b_0 + b_1x_1 + b_2x_2 + ... + b_kx_k $
 
 - in regression output we do have result of hypothesis test, as p-values
+- Now CLT says, the whne we take sample from population them sample mean $\barx$ follows Norm Dist ($\mu, frac(\sigma\\sqrt \sqrt(n))), this is imp
+- CLT develops relation b/w sample and popltn mrean.
+- This CLT projects sample results to estimate the population params.
+- We will never know betas as they are of population.
+- $b_0 ~ Norml(\beta_0, std_\beta_0)
+- In this way we estimate all betas based on bees
+- This is used for hypo thesis testing.
+- $\frac(\b_0 - \beta_0)(S_b_-1) ~ t_(n-k-1)$
+
+Example: Toy example
+- now if you have coefficient estimate 600 but sales people say i should be around 300, then we have to check.
+  - it is estimate ffrom sample, hence estimate and is uncertain, it is a belief, and it can be accepted or rejected. Hence, Hypothesis test.
+  
+**Method 1:**
+
+Step 1: Formulate  a Hypothesis test.
+    - Ho: beta2 = 300
+    - Ha: beta2 != 300
+
+Step 2: Calculate t-statistic:
+- t is x bar - mu over sigma
+- (b2 - beta2) / std_err of b2
+- (648-300)/209.004 = 1.667
+
+Step 3: cutoff for t statistic: 
+= T.INV(prob/deg of fredm)
+= Left T.INV(0.005/2, 1.667) = -2.0859
+= Right = 2.0859
+
+Step 4: Make a decision
+- Since, t satistics (1.667) does not fall in any reejection region, Outside of(-2.0859,+2.0859), i cnnot reject the nULl hypo.
+- My data does not have enough evidence to falisfy the claim.
+
+
+**Method 2:**
+
+1,2 same
+
+Step 3: Calc p
+Calculate p-value =  twice the area of tail cut by t-statistic.
+=2\*(1-T.DIST(1.667,20,TRUE)), 1- cz we need right.
+
+Step 4: Reject or not
+- When p is low null has  to go.
+
 
 Why is p-value imp:
 - tells significance of X in explaining Y,
@@ -116,22 +178,154 @@ Answer:
   - 1sd change in weight, has coeff sd change in Y, 1sd change in weight is 1.01 sd change in Y. hence weight has more impact.
 
 
-------------------------------------
+# Session 3:
+
+- When understanding marginal (individual) effects, then multicolienarity is considered, might be a prob. DO a pair wise col- relation, when high the worry,  like more than 90. To solve, just drop one var.
+- when predicting, then multicolienarity is, the ignore muli co. it is not a prob.
+
+
+## Models with Categorical Independent variables
+
+What are categorical vars:
+- eg: Gender, values are simply labels.
+- eg, Color of car, [red, black, blue, silver]
+- we cannot do mathematical operations.
+- eg, Quarter of year [1,2,3,4], numerical by cannot do operrations, like 4th quarter is 2 times 2nd quarter. They are simply labels.
+
+How can they be helpful in reg analysis
+- Take auto dealership example:
+- does color effect sales? yes
+- now software cannot take colors.
+- specific technique to incorporate catagorical var in regression model, use **Dummy Variables**
+- Rules for dummy varibales:
+  - can take only 0 or 1
+  - number fo dummy varibales required is one less than the number of caehories in the caregorical vaariables.
+  - we need, 1 dv for gender. 3 for quarters, 3 for color
+  - inference is always in reference to each oher, eg, male earn more than female, regionA is far than regionB.
+
+Problem: Delivery Service, relation b/w deliver time and number of paecels in region A and region B
+
+Soltion:
+- data tells, truck moves from warehosue (ISB) goes to region A and makes 30 deliveris and takes 304 minutes.
+- Y var is minutes, dependent var
+- Region is categoriccal, can take one dummy var, 'Dummy', 1 when A, 0 when B, as A is 1, hence name can be, RegionA, this makes helpful to see what column has.
+- $Minutes = \beta_0 + \beta_1RegionA + \beta_2Parcels$
+- These two vars, RegionA and parcels, can explain 96.6% of variablility in delivery time.
+- Remaining 3.4% that goes unexlained. May be more vars can explain that, like traffic, truck age etc.
+- b2, for each new package, 8.71 minutes more is taken, irrespective of region delivered. SInce, p-value is low hence his is significant. 
+- b1, deliveris made to regionA takes 111.58 minutes less as compared to deliveries to regionB.
+- b0, intercept, 142.06, this is time to deliver 0 parcels to region b, regionB because it is 0 and 0 parcels as deliveries are 0. this is tiem to travel from ISB to region B, once at region B, then it will take, b2, 8.71 more time to deliver each additional packages.
+- b0 and b1, time taken to reach regionA, = 142.06 - 111.58 = 30.486, if we take dummy variable as regionB (1 for b and 0 for a) then we would get intercept, b0 as 30.486 and b1, as +111.58. They are all relative to data. 
+
+How would you test the null hypothesis that the “fixed time” to travel to both regions is the same, against the alternative that it is different using this output at a 5% significance level? .
+- $Minutes = \beta_0 + \beta_1RegionA + \beta_2Parcels$
+- Fixed time for regionA is time in mking 0 deliveries.
+- $Minutes = \beta_0 + \beta_1X1 + 0 = \beta_0 + \beta_1$
+- for regionb,  $Minutes = \beta_0 + \beta_1X0 + 0 = \beta_0$
+- reject, Ho: Bo = 0 | Ha: Bo != 0
+- by p vale we reject null hyp, 
+> please follow vdo.
+
+Problem: We ahve region C as well.
+
+- we need 2 dummy variables. regA, regB, or any combination of these. we take RegB and RegC.
+- `RegB=IF(B2="B",1,0)` where B2 is region. same for C.
+- RegionA will always be 0, it becomes reference var, interpretation of B and C will be w.r.t region A, it is our choice and can be changed.
+
+- $Minutes = \beta_0 + \beta_1RegionB + \beta_2RegionC + \beta_3Parcels$
+- more in spreadsheet, deliveris2.xlsx.
+
+- p-value is hight, then, it means the two dummy values are kind of same. Foe eg, if we have Q1 Q2 Q3 and Q4, then if beta for q2 is 3.5 with p-value .267 does not mean q2 sales is 3.5million$ more than Q4, it means Q2 is similar to Q4.
+
+- Get the data
+- define x and y variables, based on problem
+- make categorical x variables as dummy variables.
+- run the regression.
+- analyse the output
+- hyp
+- do prediction, 
+- get conf interval for prediciton.
+
+
+# Session 4
+
+- To extend lin reg to more than 3 dummy variable we have to follow the same process. make n-1 dummy var columns with 0 and 1.
+
+## Handling Npn-Linearity
+
+- 95% time should be spent on understanding data.
+- how variables are related. Are they linear or have a curve?
+- Lin Reg will try to find a best fit line but actually the relation might be curved.
+- rather than new non-linear technique, we can transform the data.
+
+![Cureved Relation](../images/linear_regression/curved_relation.png)
+
+### How to find non-linearity
+
+- make scatter plots between Y and all Xs. Plot the Y - dependent variable against each of the Xs - explainatory variables and visually see for non linearity if any.
+- take transformations, like log(X3) or log(Y) and see if R^2 is improved.
+
+Common transformations:
+- log
+- exp
+- sq, sr root, cubes
+- inverse
+
+These transformations need to be non-linear, it can't be 6x +5.
+
+$$
+lm(a) = B
+
+a = expt(b)
+ln(a x b) = ln a + ln b
+ln a/b = ln a -ln b
+ln 1 =0
+ln -1 - not defined
+ln 0 = not defined
+$$
+
+if our data has 0 or -ve values the we cannot take log transformations.
+
+### Log-Log Model (or Elasticity Model)
+
+$ ln(y) = \beta_0 + \beta_1ln(x_1) + \beta_2ln(x_2) + ... +  $
+
+**Interpretation**: 1% inc in x1 increases y by beta1% and so on...
+
+e.g. $ ln(sales) = \beta_0 + \beta_1ln(price) + \beta_2ln(AdExp) + \beta_2ln(Promotions) $
+
+say, b2 = 0.04, p-val=0.00001
+
+so, 1% inc in AdExp increases Sales by 0.04%. That's how log-log model should be interpreted.
+
+Economists love this kind of interpretation, called *elasticity*.
+
+### Semi-log model (growth rate model)
+
+$ ln(y) = \beta_0 + \beta_1x_1 + \beta_2x_2 + ... +  $
+
+**Interpretation**: 1 unit inc in $x_1$ increases y by $(\beta_1\times100) \% $ , and so on...
+
+
+Problem: Coffee Production from 1946-91
+
+more in coffee.xlsx
+
+if it is mixed, log and non-log then the interpretation changes. if both x and y are log then log log, if ln(y) and x, then semi-log.
+
+
+## Session 5: Logit Models
 
 
 
-vy tk
-- beer mug viz
-- payments getting back in sector
-- kiran flask following on conv .2 for ds plz let me know
-- gone down the storm
-- send link
+8:40 onwards -->
 
-Partnerships:
-- change filter label, grp = partner type, and partner name.
-- on all pages.
-- add same filters on single merch p&L.
-- wed morning.
+Slide 6:
+
+B1 - For 1 unit inc in X1, the odds ratio gets multiplied by e^B1, all other variables kept at them same level, i.e., odds increase by (e^B1 - 1)X100%
+
+
+
 
 
 ------------------------------------
@@ -233,83 +427,28 @@ Patters:
 
 -------------------------------------------
 
+only ISB above ^
+
+-------------------------------------------
+
+
 # Mind Dump
 
-To do:
-- [ ] Plotly Dash +1, Eric Kleppen
-- [x] Post to github your flutter finished apps. eg: starred repos
-- Finder is slower
-- speed up terminal startup time.
-- Flutter ORM
-- [x] Python Flask REST API GCP Firebase
-- Starred Repos
-- Tabs app using BloC.
-- todo app in flask RESTful completed, decide backend to be sqlite or firebase?
-- flutter ui for todo [app](https://github.com/devinsays/laravel-react-bootstrap)
-- flask app with data models integrated, and hosted
-- flutter [app](https://wptheming.com/2019/11/flutter-todo-app/) with data models integrated, and hosted
+-------------------------------------------
+# MacBook Pro 9,2
 
-- Intro to- Tensorflow +1
-- intro to Digital Marketing
 
-Watch
-- Startup stories
-- Google Channels - cloud for students
-- ML Recipies
-- 7 steps of ML
-- ML zero to hero
 
-- wordpress -> JAM Stack
 
-on-going:
-- Flutter architecture samples - [BloC](https://medium.com/flutterpub/architecting-your-flutter-project-bd04e144a8f1)
-- flask restful
-- flask todo miguel
-- whatsapp analytics
-- feedback pwa, qr
-- doodh hisab, notification daily
-- medi tracker
-- firbase ML in Flutter
-- Python ETL notebook
-- Tableau publish favourites
-- Tableau Live Monitor tutorial article/git
-- Medium articles to be published
+-------------------------------------------
 
-Clean up Mac:
-- Used GrandPerspective.dmg
-- Win 10 image
-- ISB Cludera clarify backup folder
-- Files in documents
-- remove and delete vagrant
-- Pictures- backup and delete
-- Music in iTunes
-- android avds Library/Android
-  - .andoird
-- code/Video Tutorials
-- code/clients and docs - zip them
-  - mongo db - up and running
-  - elastic - up and running
-  - native - completely remove
-  - infy online trainigs - review remove
+# Blogging and Notes Decisions:
 
-# Do what I want to do
-- dont wait for a miracle to happen.
-- be consistent to see result
-- get out of comfort zone and 
-- no short term pleasures
-- If you want to shine like a sun, then first burn like a sun
+-------------------------------------------
+# Me
 
-## identify the pattern, start a journal.
-- Identified - laptop/mac not in morning
-- Start small, one exercise, picking gradually
 
-## How:
-- Goal oriented, break, stick, achieve, reward
-  - Goal - fit and look good
-  - Break - one exercise
-  - Stick - just one, but daily
-  - Achieve - Doing
-  - Reward - in the mirror.
+------------------------------------------------
 
 ------------------------------------------------
 
@@ -318,6 +457,54 @@ Clean up Mac:
 Instagram page earning:
 - original images
 - regular posting
+
+
+------------------------------------------------
+
+# Plotly D3 Vizs
+
+- poltly built on top of D3
+- python api uses plotly.js
+
+Chart Studio 
+- is like Tableau web edit and public.
+- Can create and host data, charts and dashboards.
+- can explore other people's work.
+- charts are interactable and linked together.
+- can be reverse engineered.
+- can host notebooks as well.
+
+
+Plotly Library:
+- data - result of go.chartType(x=, y=, others=....)
+- layout - title, axis, annotations
+  - has param `updatemenus`
+  - There are four possible update methods:
+    - "restyle": modify data or data attributes
+    - "relayout": modify layout attributes
+    - "update": modify data and layout attributes
+    - "animate": start or pause an animation
+- figure - final object combining data and layout.
+
+Dash is putting and linking many plotly charts together.
+
+Dash:
+- Dash is Python framework for building *analytical web applications*.
+- It is built on Flask, Plotly.js and React.js
+- Just like flask, we define `app = dash.Dash()` and then at end `app.run_server()`
+- We can create complete site with links.
+- It has intractable story.
+
+ObservableHQ:
+- Live, web edit, d3 notebooks.
+- markdown and JS blocks
+- lots of d3 features. like counts, action buttons etc
+- can make dasboard as well.
+
+
+References:
+- [How and why I used Plotly (instead of D3)](https://www.freecodecamp.org/news/how-and-why-i-used-plotly-instead-of-d3-to-visualize-my-lollapalooza-data-d48345e2ca68/)
+- [4 interactive Sankey diagrams made in Python](https://medium.com/plotly/4-interactive-sankey-diagram-made-in-python-3057b9ee8616)
 
 ------------------------------------------------
 
@@ -341,6 +528,8 @@ Instagram page earning:
 
 
 
+
+
 ------------------------------------------------
 
 # Flask Notes
@@ -350,10 +539,7 @@ Instagram page earning:
 ------------------------------------------------
 
 # Web Server Notes
-
-- password for apps is apps
-
-- 
+ 
 
 
 
@@ -362,6 +548,8 @@ Instagram page earning:
 
 
 # Python Notes
+
+## Anaconda and Conda Notes with Jupyter and R Studio
 
 
 ## Regex Notes:
