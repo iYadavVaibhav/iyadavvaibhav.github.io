@@ -1,11 +1,114 @@
-ISB and SDM
-
-SDM#1
-
-------------------------------------
+ISB 
 
 
 ------------------------------------
+
+
+------------------------------------
+# History:
+
+Indus valley
+- building cities and bath
+- exchanged goat and crops
+- had a language
+
+Egypt
+- around the river NIle
+- rich in resources
+- advancement in trade and military
+
+Perians and Greeks
+- 
+------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# CT3: Fraud Analytics
+
+Frauds: Fake insurance, wrong medical claims and invalid transactions.
+
+Money Laundering: Hide the origin of money by passing from complex transactions.
+
+Why ML here: It can detect fraud using behaviours in data.
+
+[C5.0](https://cran.r-project.org/web/packages/C50/vignettes/C5.0.html) is a classification algorithm. This was used to create a model which detected Money Laundering. It reduced number of transactions reported from 30% to 1%.
+
+Based on behavioural data ML model can detect **anomalies**. It shows a row of data that stands out, like, too many txns on online shopping.
+
+We use supervised learning, where based on each columns (attributes) we assign a class to the data. Data has to be labbeled.
+
+- **Deep Neural Network (DNN)** can be used for classification. **Neural Networks** has hidden layers where we use transform functions, DNN has 100s of hidden layers.
+
+- **Perceptron** is the simplest neural network possible: a computational model of a single neuron. A perceptron consists of one or more inputs, a processor, and a single output. It defines decision boundary between classes by defining the **hyper planes** in higher dimensions.
+
+- **SVM or Support Vector Machines** can be used for classification. It uses a technique called the kernel trick to transform your data and then based on these transformations it finds an optimal boundary between the possible outputs. It finds several hyperplanes to minimize the classification error.
+
+- **K-Nearest Neighbours or KNN** uses simplicity metrics to group samples into classed in featured space. New data is assigned to the class which is nearest to the class.
+
+- **Random Forests** breaks data in many samples and makes decision tree from each. New data is passed from trees and then picks the majority vote to assign data to class. This outperforms others but has issues of overfitting.
+
+Financials fraud data is generally skewed.
+
+**Exploratory Data Visualization** is used to view how our classes differentiate. Find patterns of differentiation in data.
+
+- **Andrews Plot** shows curves and usually classes are well seperated in the curves.
+
+- **Parallel Lines**
+
+ML
+
+Dimentionality Reduction
+
+Examples Datasets
+
+
+
+
+Machine learning for Fraud Analytics
+
+Fraud Stats:
+- $26b fraud
+- CNP 82% reason
+
+Examples of Fraud:
+
+
+Potential for ML use:
+- banks legacy systems use about 300 rules to approve a txn
+- ML algos can use other attributes of user like IP, device, day of time etc to detect fraud.
+- We will use supervised learning.
+- *80% time in EDA and DC.*
+
+Anomaly Detection:
+- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ------------------------------------
@@ -14,7 +117,10 @@ SDM#1
 
 ## Linear Regression 
 
-Relation in Y and X such that X variables explain Y
+
+It is relation between observations X and their outcomes Y.
+
+It is a line which has closet distance to all possible outcomes from observation.
 
 Why do LR:
 - Relation: Understand relation between X and Y, e.g.
@@ -23,14 +129,14 @@ Why do LR:
 
 **Problem:** Anita wants to predict the number of toys she can sell in coming half year.
 
-Step 1: Modeling: Develop a regression model
+Step 1: Modeling (define): Develop a regression model
 - identify the variables: proce/advertising cost/promotion costs
 - Variables are not exhaustive
 - SalesUnits = $\beta_0 + \beta_1 Price + \beta_2AdExp + \beta_3PromExp$
 - Beta_s are coefficients,
 - signs expected are: b1 -ve, b2 +ve, b3 +ve
 
-Step 2: Estimation: Using software to estimate the model
+Step 2: Estimation (fit): Using software to estimate the model
 - prior data, collected over time
 - use excel/r/python and get refgression output
 - this gives coeffiecients, the betas
@@ -45,6 +151,8 @@ Step 3: Inference: Interpreting the estimated regression model
 Step 4: Prediction: Making predictions about Y variable
 - put value of Xs and betaS and get Y value.
 - create 3 scenarios, how much to set price, how much to send on ad and promotions, based on these scenarios we get Y that can help us decide.
+
+Step 5: Evaluate: Determine how accurate the model's predictions are.
 
 Results:
 95% time on Modeling, 5% on rest steps.
@@ -328,6 +436,80 @@ B1 - For 1 unit inc in X1, the odds ratio gets multiplied by e^B1, all other var
 
 
 
+
+
+
+
+
+# SA4 Tutorial
+
+- Logistic regression used when y(0,1)
+- it predicts probability of Y being 1, usually success
+  - labour force participaiton of women
+  - medicine is effective to cure or not
+- Why no linear regression for binary responses?
+  - usually inadequate [ ]
+  - predicts b/w -infinyt to = infinity, weneed b/w 0,1
+  
+logit is function, hence logistic 
+
+- it can take val b/w 0,1 and map it to val b/w -ini to + inf
+
+- todo: add equations
+
+Problem: Donner Party
+- women are more capable of surviving harsh conditions compared to male
+- do EDA
+- Fit the model and interpret it.
+- Test the Goodness of Fit.
+- Accuracy from Confusion Matrix.
+- Specificty of the model
+- ROC Curve - more the area under the curve, better it is.
+- H2O - GLI, good guide
+- uc-r.github.io/iml-pkg - can be used with R
+
+
+## generalized linear model 
+Not required:
+- No lin rel b/w dependent nd independednt vars
+- normality of err not required
+- homoskedasticity not  reqquied
+
+Needed
+- vars is binaty
+- model specifictin
+- no collinearity
+- independence
+- linearity - log odds and independednt vars
+- large samole size
+  - 10 obs per independent variable
+
+- Do residual plots
+
+- model selection, 
+  - fwd selection
+  - bkwd selection
+  - stepwise
+  - Bases on AIC, BIC, Pseduo R-sqrd
+
+Lasso for var selection
+Ridge is a way to make better model.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ------------------------------------
 
 # Focused Session on Big Data Analytics
@@ -435,7 +617,6 @@ only ISB above ^
 # Mind Dump
 
 -------------------------------------------
-# MacBook Pro 9,2
 
 
 
@@ -444,8 +625,36 @@ only ISB above ^
 
 # Blogging and Notes Decisions:
 
+
+## Bookdown:
+
+Quick [getting started](http://seankross.com/2016/11/17/How-to-Start-a-Bookdown-Book.html).
+
+Steps:
+- `mkdir bookdown`
+- `cd bookdown/`
+- `git clone https://github.com/seankross/bookdown-start`
+- `cd bookdown-start/`
+- `r`
+- `bookdown::render_book("index.Rmd")`
+
+- all `# heading 1` are chapters.
+- Add `Part I` before a chapter to make it part in a book, `# (PART) Data Science {-}`
+- `> options(bookdown.render.file_scope = FALSE);` to use parts in diff directories.
+
+References:
+- https://bookdown.org/mpfoley1973/data-sci/
+- https://bookdown.org/yihui/rmarkdown-cookbook/rmarkdown-anatomy.html
+- https://bookdown.org/yihui/bookdown/html.html
+- https://rafalab.github.io/dsbook/introduction-to-productivity-tools.html
+- https://github.com/rafalab/dsbook/blob/master/_bookdown.yml
+- https://bookdown.org/jamie/python_visualisation/
+- [Python Environments](https://bookdown.org/yihui/rmarkdown/language-engines.html)
+- [Show plotly html js in Rmarkdown](https://stackoverflow.com/questions/50191208/display-python-plotly-graph-in-rmarkdown-html-document)
+- code options [cheat sheet](https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
+
+
 -------------------------------------------
-# Me
 
 
 ------------------------------------------------
@@ -466,14 +675,6 @@ Instagram page earning:
 - poltly built on top of D3
 - python api uses plotly.js
 
-Chart Studio 
-- is like Tableau web edit and public.
-- Can create and host data, charts and dashboards.
-- can explore other people's work.
-- charts are interactable and linked together.
-- can be reverse engineered.
-- can host notebooks as well.
-
 
 Plotly Library:
 - data - result of go.chartType(x=, y=, others=....)
@@ -484,9 +685,15 @@ Plotly Library:
     - "relayout": modify layout attributes
     - "update": modify data and layout attributes
     - "animate": start or pause an animation
+- frames: used for animations
+  - we can add different frames to a chart
+  - this can be used to produce the animations
+  - Example can be found [here](https://plotly.com/python/animations/#frames).
 - figure - final object combining data and layout.
 
 Dash is putting and linking many plotly charts together.
+
+## Other plotly products
 
 Dash:
 - Dash is Python framework for building *analytical web applications*.
@@ -494,6 +701,14 @@ Dash:
 - Just like flask, we define `app = dash.Dash()` and then at end `app.run_server()`
 - We can create complete site with links.
 - It has intractable story.
+
+Chart Studio 
+- is like Tableau web edit and public.
+- Can create and host data, charts and dashboards.
+- can explore other people's work.
+- charts are interactable and linked together.
+- can be reverse engineered.
+- can host notebooks as well.
 
 ObservableHQ:
 - Live, web edit, d3 notebooks.
@@ -539,7 +754,6 @@ References:
 ------------------------------------------------
 
 # Web Server Notes
- 
 
 
 
@@ -550,6 +764,54 @@ References:
 # Python Notes
 
 ## Anaconda and Conda Notes with Jupyter and R Studio
+
+**Anaconda** is toolkit for Data Science.
+- it includes ds and ml libraries along with conda, and 
+- other tools like jupyter, rstudio etc.
+
+**Conda** is package manager and environment manager, like pip,
+- it can install packages and 
+- can manage envs 
+- It is a CLI
+
+**Anaconda Navigator** is GUI to use conda.
+
+Conda Basic Commands:
+- `conda config --set auto_activate_base false` disables autoload base
+- `conda update conda` updates conda
+- `conda install PACKAGENAME ` installs pkg to default/active env
+- `conda update PACKAGENAME ` updated pkg
+- `pip install pkg` aslo intalls to active env
+
+Conda Env Commands:
+- `conda create --name py35 python=3.5` created new env and installs py 3.5
+- `conda activate py35` activates
+- `conda list` lists all akgs installed ina ctive env.
+
+**Jupyter** name comes from Julia, Python and R,
+- formerly known as *IPython Notebook*
+- it is pkg, same as flask
+- `pip install jupyter` or it comes installed in Anaconda dist.
+- `jupyter notebook` runs a server to server jupyter notebooks at http://localhost:8888/tree
+
+**R and RStudio** are statistical language and IDE,
+- `r` or `R` - R console in terminal
+- `Rscript my.r` - executes file in terminal
+- `Rscript -e "getwd()"` - executes cmd in terminal, can quickly install a library.
+- `R CMD BATCH my.r` runs R script and saves output to `my.r.Rout`
+- To make R Script executable like `./my.r` then:
+  - set permission to 755
+  - add correct `#!` to top of file
+
+```r
+#!/usr/bin/env Rscript
+sayHello <- function(){
+   print('hello')
+}
+
+sayHello()
+```
+
 
 
 ## Regex Notes:

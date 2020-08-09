@@ -44,6 +44,15 @@ Get an instance on GCE as per requirement or as in example above. We will config
 
 Congratualations, you have your own linux machine on cloud, free for lifetime and is scalable. It is time to get your hand dirty.
 
+#### Transferring files to and from GCE instance
+- You can transfer files using various options mentioned in [this](https://cloud.google.com/compute/docs/instances/transfer-files#transfergcloud) guide.
+- we are using `gcloud` cli to transfer files between workstation and gce instance.
+- Upload `gcloud compute scp local-file-path instance-name:dir-on-instance`
+  - `instance-name` is name given during creation of instance
+  - `dir-on-instance` is address where you need to copy, eg, `~`
+- Download `gcloud compute scp --recurse instance-name:remote-dir local-dir`
+
+
 ## GCP Firebase
 
 Firebase is cloud based, app-backend service that is scalable and it helps in authentication, database, file storage, hosting, crashlytics, messeging, adMob, analytics, campaigns etc. 

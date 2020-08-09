@@ -9,7 +9,8 @@ Gemfile
 Gemfile.lock
 node_modules
 package.json
+vybook
 
-# Uoload only .md in _posts
+# Upload only .md in _posts
 /_posts/*
 !/_posts/*.md

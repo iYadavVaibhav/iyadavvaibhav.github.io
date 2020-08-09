@@ -11,7 +11,7 @@ Statistics is used to summarize data. Probability is a way to find likeliness of
 {:toc}
 
 
-# Probability 
+## Probability 
 
 Probability is how likely event is going to happen. It is possibility of event that is fundamentally random. Any experiment can have outcome for an event. The possibility of outcome is the probability. 
 
@@ -175,7 +175,7 @@ Repetition not allowed, order doesn't matter = Combination =
 
 $$ \frac{10.9.8}{3.2.1} $$ 
 
-# Statistics
+## Statistics
 Basics of statistics for Data Science.
 
 **Central tendency** measures tell us how values are grouped around the centre value.
