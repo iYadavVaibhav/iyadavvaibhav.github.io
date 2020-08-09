@@ -19,6 +19,7 @@ Some of the very basic how to guides as I learn through:
 ### Notes
 
 Reference docs I prepared for personal learning:
+- [VY Book](https://iyadavvaibhav.github.io/vybook/)
 {% for post in site.categories.notes %}
 - [{{ post.title }}]({{ post.url }})
 {% endfor %}
