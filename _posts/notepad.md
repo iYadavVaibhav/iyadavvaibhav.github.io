@@ -642,17 +642,23 @@ Steps:
 - Add `Part I` before a chapter to make it part in a book, `# (PART) Data Science {-}`
 - `> options(bookdown.render.file_scope = FALSE);` to use parts in diff directories.
 
+To support GitHub flavoured MarkDowm, you need to add the following line to `_output.yml` file:
+
+`md_extensions: +lists_without_preceding_blankline+pipe_tables+raw_html+emoji`
+
+
 References:
-- https://bookdown.org/mpfoley1973/data-sci/
-- https://bookdown.org/yihui/rmarkdown-cookbook/rmarkdown-anatomy.html
-- https://bookdown.org/yihui/bookdown/html.html
-- https://rafalab.github.io/dsbook/introduction-to-productivity-tools.html
+- Bookdown [cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/rmarkdown-anatomy.html)
+- [Bookdown](https://bookdown.org/yihui/bookdown/html.html)
+- Rafalab [dsbook](https://rafalab.github.io/dsbook/introduction-to-productivity-tools.html)
 - Rafalab book [source github](https://github.com/rafalab/dsbook/blob/master/_bookdown.yml).
+- Bookdown data science notes [book](https://bookdown.org/mpfoley1973/data-sci/)
 - Python Visualizations in [bookdown](https://bookdown.org/jamie/python_visualisation/)
 - Using [Python Environments](https://bookdown.org/yihui/rmarkdown/language-engines.html)
 - Show plotly html js in Rmarkdown [stackoverflow](https://stackoverflow.com/questions/50191208/display-python-plotly-graph-in-rmarkdown-html-document)
 - code options [cheat sheet](https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
 - publishing on [github](https://bookdown.org/yihui/bookdown/github.html)
+- pandoc markdown [formats](https://pandoc.org/MANUAL.html).
 
 
 -------------------------------------------
