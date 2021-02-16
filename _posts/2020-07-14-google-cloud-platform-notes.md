@@ -51,6 +51,7 @@ Congratualations, you have your own linux machine on cloud, free for lifetime an
   - `instance-name` is name given during creation of instance
   - `dir-on-instance` is address where you need to copy, eg, `~`
 - Download `gcloud compute scp --recurse instance-name:remote-dir local-dir`
+- to login to server using command `gcloud beta compute ssh --zone "us-central1-a" "instance-name" --project "project-name"`.
 
 
 ## GCP Firebase

@@ -2,7 +2,7 @@
 layout: post
 title: Data Wrangling in Python using Pandas
 categories: howtos
-last_modified_at: 2019-07-14 11:19:55
+last_modified_at: 2020-09-26 20:00:19
 ---
 
 [Pandas](https://pandas.pydata.org/) is a package in Python that can be used for data manipulation.
@@ -20,6 +20,19 @@ Data manipulations can be organized around six key verbs:
 Here, variable is a column in data set.
 
 We'll cover how to perform above operations on a dataset using Pandas.
+
+## Quickest data in pandas
+
+```python
+text = '''colA colB
+Jan 239
+Feb 234
+'''
+
+from io import StringIO
+import pandas as pd
+pd.read_csv(StringIO(text),delimiter=' ')
+```
 
 ### Filter
 We can filter data to get a set of rows from complete dataset. It is similar to `WHERE` clause in SQL.

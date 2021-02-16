@@ -80,6 +80,17 @@ user = User.query.filter_by(username=data['username']).first() # or .all()
 users = User.query.all()
 ```
 
+### Creating Tables
+
+Once you have created a db model in flask app, you can create db and tables using follwing steps:
+- `python`
+- `from main import db` main is filename of flask app
+- `db.create_all()` creates all tables from model class
+
+Now you can check SQL for tables created. You can do:
+- `sqlite3 filename.db`
+- `.tables`
+
 Caution: 
 - Provide full path to db file, so that apache can locate it.
 
@@ -118,6 +129,7 @@ Data of a task can be, JSON blob, as:
 ```
 
 - This API can be consumed by client side app which can be single page HTML.
+- Note, JSON obect is defined in python as dict, `jonify` converts and send as JSON Object.
 
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: JavaScript Libraries and Frameworks Notes
 categories: notes javascript
-last_modified_at: 2019-08-01 12:53:18
+last_modified_at: 2020-08-13 15:30:08
 ---
 
 ## Node JS
@@ -32,6 +32,17 @@ We can make a function in JS by defining it like we define a variable.
 
 ```javascript
 myFunction = function(arg1, arg2, arg3) {
+  // all that you want to do
+  // use args or may be they are optional
+  //...
+  return myResult;
+}
+```
+
+another way is, tree is a function and data is argument:
+
+```javascript
+myFunction = arg1 => {
   // all that you want to do
   // use args or may be they are optional
   //...
