@@ -1,5 +1,1047 @@
+# ISB T6 Pricing Analytics
 
-# ISB Marketing Analytics
+Prof. Abhinav Uppal                         
+
+**Course Objectives**
+
+Pricing is one of the most powerful tools available with businesses to maximize their profits. Businesses spend a lot of resources to enhance the value of their product offerings through innovation, advertising, promotions, sales force effort and working with their channel partners. Implementing an effective pricing strategy is critical for businesses to capture that value back into the business. However, managers often under-attend to the pricing of their products, failing to tap into this opportunity to boost their profits.
+
+The objective of this course is to help you develop a systematic framework for assessing and formulating effective pricing strategies for businesses across a variety of contexts. Pricing decisions require careful attention to economic, marketing, organizational and psychological factors. We will learn relevant concepts and methods, and explore new approaches that will help you make better pricing decisions while keeping these factors in mind.
+
+The course will use a combination of lectures, in-class case discussions and assignments that will help you understand and apply the concepts that we will develop in class. The list of topics covered is detailed in the course schedule.
+
+**Learning Goals**
+
+Critical and Integrative Thinking: Each student shall be able to identify key issues in a business setting, and develop a perspective that is supported with relevant information and integrative thinking, to draw and assess conclusions.
+
+Effective Oral Communication: Each student shall be able to communicate verbally in an organized, clear and persuasive manner, and be a responsive listener.
+
+Interpersonal Awareness and Working in Teams: Each student shall demonstrate an ability to work effectively in a team, exhibiting behavior that reflects an understanding of the importance of individual roles and tasks, and the ability to manage conflict and compromise, so that team goals are achieved.
+
+**Course Materials and Reference Books**
+
+- Lecture notes, cases, problem sets and supplementary readings on LMS.
+- Nagle, Hogan and Zale, The Strategy and Tactics of Pricing, Pearson.
+- Raju and Zhang, Smart Pricing, Prentice Hall.
+
+
+## Session 4:
+
+Temporal Pricing Strategies
+
+strategic price changes over time
+
+coupons, discounts
+
+skimming - higher to lower price, like electronics, apparels.
+
+penetration pricing - is minimum price o
+- network effect is that the more number of people on a service the more value it has, eg, dropbox, uber, paytm etc.
+
+- we can use oenetration princing when n/w effect is +ve
+
+Short-term price discount:
+- price discount can be passed on to consumer only if it is in high demand compared ot competitior.
+
+Problem Set 3:
+
+- marginal cost = $2
+
+- fixed cost = $25
+
+- w = whole seller price = 19.5
+
+- profit_retailer = (p-w) D(p) -25
+
+= Profit_manufacturer = (w-2) D(p)
+
+now we have size changed to 20, 80
+
+now we ahve to give discount.
+
+we have retailer and manufacturer profits
+
+we canc alcualte price by makign profit of retailer 0.
+
+manufacture ahs to be congnizant of what retailer can  do,. 
+
+we need to set price such that both manufacturer and retailer make profit. manufacturer to make max profit and followed by retailer.
+
+Let \$c is coupon price.
+
+if coupon is redeemed by both segments, then it is worth it.
+
+Hence, by price discrimination and coupon strategy we can make manufacturer's profit high and retailer's low..
+
+Game Theory : you respond to what your competitors are doing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------
+
+
+# ISB T6 Financial Analytics
+
+By: Ramana Sonti | Email: ramana_sonti@isb.edu
+
+**Course objective:**
+The objective of the course is to provide “new ways of thinking about risk, randomness and investments”. Though the material is always set in the context of finance, almost all the content is directly relevant to any application setting.
+
+The course is structured also as an introduction to analytics in Finance. We will consider some of the most prominent quantitative finance problems. Each problem will be motivated and formulated along with a discussion of relevant theory.
+
+It will help students develop basic skills in financial modeling, problem solving and quantitative analysis of risk-return tradeoﬀs. Besides, it is a good primer on using data science tools to finance problems.
+
+We will mainly cover portfolio selection, the Capital Asset Pricing Model (CAPM), and option pricing. Time permitting, we will also look at wrangling and analyzing financial data.
+
+Suggested books
+- [BKMM] “Investments” by Bodie, Kane, Marcus, and Mohanty, 8th ed, 2009, McGraw Hill
+- [DL] “Investment Science” by David Luenberger; Oxford University Press, 2013. (or earlier editions)
+
+## Session 1: 
+
+Old type of finance analytics. we still use linear regression. not really need bayesian DL.
+
+### Risk and return
+
+more risk is more return, but in structured format, 
+
+we dont spend today to save for tomorrow, that's investment.
+
+we get return, that is mean over time. so 22% return mean the return is distributed around 22%.
+
+we can find variance adn st dev based on the probabilities of return.
+
+st dev is kind of risk. it tells how much our return will fluctuate.
+so with same risk, more return si more happiness.
+
+as risk increases more and more return is demanded.
+
+casino is different, we know we will loose and go for fun.
+
+invsestment depends on only two things (expected return and risk)
+
+function is nothing but estimation of reality, it is mathematical model.
+
+it is all compenstion for the risk.
+
+when combined we find exp return and exp st dev
+
+
+Risky asset weight is how much we want to invest in risky asset. 1 means all in risky.
+
+for portfolio, st dev is linear func. exp return is linear in W. resiltant, is also linear. all possible portfolio combinations lie on the straight line. 
+
+leverage means borrowing.
+
+que is which point on line should be picked.
+
+risk aversion - disliking risk. (A)
+
+now optimize this, $w^* $ is optimal weight in risky asset.
+
+aspirations meet poortunities:
+
+line is all possible combi of risk-free and risky investment, grey line.
+
+we are finding optimal point in this line.
+
+curve is indifference curve. 
+
+we find points where curve cuts line. that is the points which are feasible and makes one happy. 
+
+There is not just one risky asset, there are many.
+
+do we even know A?
+
+w* goes down, as A goes up, as age goes up. 
+
+Let us say, A is constant. 
+
+tomorrow, multiple risky assest. we will take n risky and boil it to one risky portfolio. 
+
+
+## Session 2:
+
+We cnnnot exactly model or make a fucntion of utility, hapiness etc but people are trying.
+
+
+Two asset protfolio:
+- if the correlation is low between two assets then the portfolio gives good return. but correlation is not in our hand.
+- all possible portfolio options are on the curve.
+
+Three asset portfolio:
+- if we add z, then the possible portfolios will be on the surface.
+
+Short selling is selling something you dont own. tht is like borrwo and sell it now. people do it to gain by using price fluctuations. Like if TV is going to be chaep in future, then sell it for 1lks now and later when it costs 50k then buy and give abck to lender.
+
+as the number of assets increase, the std dev becomes asymtotic (converges infinitely) at a value.
+
+
+
+## Session 3:
+
+Mental Accounts and Portfolio Optimization
+
+$$ P(r_{ref} < 5\%) \leq 10\% $$
+
+ask the client this question.
+
+bequest is heritasge
+
+
+
+## Session 4:
+
+diversification is acceptable every where. what is compensation for risk.
+
+The Capital Asset Pricing Model (CAPM)
+- gives compensation for systematic risk only. 
+
+$$ E(R_{i}) = R_{f}+\beta_{i}(E(R_{m})-R_{f}) $$
+
+$E(R_{i})$  = capital asset expected return
+
+$R_{f}$ = risk-free rate of interest
+
+$\beta_i$ = sensitivity
+
+$E(R_{m})$  = expected return of the market
+
+this eq says if you invest in only one stock then you get compensation only of systematic invt of that stock.
+
+Infy up down is risk. Compensation is systematic portion, i.e., pandemic, gdp etc, this goes with whole market. They will affect infy with market, this is $\beta$. now much infy is related to these overall fluctuations is $\beta$.
+
+for eg, hotels are most affected by pandemic and economy, and gdp and recession. 
+
+insurance should be separate from investment.
+
+Comparing portfolio std dev and beta:
+- CAPM satisfies all assets, hence all points are on line.
+- if P Q R have same return but diff st dev, then they have same beta.
+- ONLY risk that matters is the SYSTEMATIC RISK.
+
+Uses of CAPM:
+- 
+
+adjusted colisng price of stock is the true return, they adjust the price going backwards.
+
+risk = sys risk + co of risk
+
+
+## Session 5
+
+options, 
+- risk transfer instruments,
+- call/puts
+
+option is always good but comes at a cost and they are very useful.
+
+eg, Insurane has premium,
+
+Option pricing:
+- what price should an option have.
+- what should be the premium price.
+
+The Black-Scholes Model.
+
+we cannot make prices normally distributed as norml dist is from - infinity to + infinty
+
+similarly return can max go to -100% and not beyond that.
+
+log-normal is something of which the log is a normal distribution.
+
+Volatilty Index: https://www.google.com/search?q=volatility+index&oq=volatility+&aqs=chrome.2.69i57j0i433l2j0l4j0i131i433j0l2.3861j0j7&sourceid=chrome&ie=UTF-8
+
+
+
+
+
+-----------------------------------------------
+
+
+# ISB T6 Application of Artificial Intelligence
+
+Instructor: Dr. Manish Gupta | Email id: manish_gupta@isb.edu | TA: Vishal Siram | Email id: aai_ampba@isb.edu
+
+**Course Objective:**
+The goal of this course is to introduce students to latest technologies which could be very relevant towards their AMPBA project as well as further work on data science in industry. Specifically, in this course, I will focus on topics like chatbots, recommendation systems, word embedding methods, and image/video analytics. While the first two topics do not involve any deep learning, word embedding methods, and image/video analytics will be further extensions of topics that were covered as part of the basic deep learning course. Specifically, word embedding methods are focused on advanced deep learning for NLP/text while image/video analytics will be focused on advanced deep learning for vision. We will discuss recently proposed methods and algorithms which have disrupted businesses significantly and have a strong potential.
+
+The objective of the course is to enable the students to
+- How to build simple chatbots very easily. How to integrate a question-answer knowledge base with bots.
+- Understand advanced architectures in deep learning and their business applications.
+- How to harness deep learning techniques for image/video analytics use cases.
+- What are the best ways to capture semantics of words.
+- How to build basic recommendation systems with hands-on code.
+- Prerequisites: Python, little bit of Tensorflow/Keras/PyTorch/CNTK, knowledge of basic neural architectures like CNNs and LSTMs.
+
+## Session-1 Recommendation Systems
+
+optimization/ linear programming / quadratic programming is often required by logistic companies.
+
+collaborative filtering and K-neareest neighbours are  alcmost similar algos.
+
+idea: fake people army
+
+read more/: neural colaboraive filering.
+
+CF prob:
+- cold start
+- sparsity
+- scaling is also an issue
+
+how to do map-red in CF.
+
+hybrid recommendation methods:
+- for cold start - start with popular items, then switch to CF
+- mixed: several type of recommendations
+- cascade: funnel kind of, hig recall, low precesion. top is low precesion, bottom is hig preceison recommendations.
+
+Content recommendation videos
+- receent - like old new people dont want
+- diverse - not really imp in search but is good in recommendations
+- relevance - user session activity matters, 
+- explaination - why recommended for a user, increases change of clicking.
+
+rating matrix - nobody rates youtube video for eg. If user liked shared commented etc. ANy interactions can help score a video, thus we can recommend it to users.
+
+Tag Recommendations:
+- based on one tag, we can recommend related tags to users. eg, barcelona the recommend spain.
+- 
+
+user get info from ads being shown on website, ads are shown by google ad exchange.
+
+Explaination Types:
+- Nearest neigbour explaination,
+- content based explaination - your read sports news, hence sports article is recommmended.
+- social based - if friend reads the you will too,
+
+### Evaluation of recommendation systems:
+
+Offline:
+- imp to measure accuracy. check interaction on recommended things.
+
+- novelty an dexploration , user searched / not but recommended.
+
+- recommnedations is personalization but then it has bad impact as well as it limits content based on someone else's eye.
+
+- widget should not be heavy to load.
+
+- interaction should be quick, like quick look a post/ connect a friend with just one click,
+
+References:
+- https://recsys.acm.org/ Recommendation Research
+
+cat u.data|cut -f3|sort  - group by column 3 and give count.
+
+
+
+
+
+
+
+## Session-2 Word Embeddings
+
+NN has n/w and we need to feed sentense hence, word embeddings.
+
+1hot encoding 
+- one word embeddingis 1 at word place and else 0.
+- sparse prob
+- similarity cnanot be established.
+- cosine similarity  = 0
+
+hence we use dense representation of words.
+- they are short
+- they are not sparse
+- they carry meaning, similarity can be established
+- how word2vec is done:
+  - they are pre-trained model
+  - pretrained by google, 3 billion words.
+  - it has phrases as well, new york
+  - build on 100 billion news dataset words
+  - vector size is 300 dims.
+  - they are trained using shallow NN.
+  - started in 2013, has just one hidden layer.
+  - it is quick to learn these networks because o fshallo, 1 hidden layer.
+  - CBOW, Skipgram?
+  - after entire learning we get weight matrix, which is vocal by 300.
+  - in skipgram we try to find related word to a word. it needs less data to learn framing.
+  - windosize is a paramenter, usually 5.
+  - we can enable stop words, stem words etc, these are all params.
+- gensim is package for this.
+- 300 dim is for one word 'King'
+- cosine similarity can be found b/w words
+- we can visualize this to see similar words closed to each other on x-y plane. 
+- it aut0 creates dictionary of similarity from any corpus.
+
+- we can do math, like, male-female.
+
+Word Vectors - GloVe
+- improves similarity, words can be similar not only if they occur in same sentence, but other sentenses as well.
+- trained on wikipedia, 
+- much better quality than word2vec.
+
+- word2vec used for sentiment analysis, 
+
+- outofvocabWord - word may be in test data but not in train, so we use fastText
+
+FastText
+- use embeddings for characters, word is made of parts, prefix, suffix, word root etc.
+- combines skip-gram with sub-word model.
+
+there are many models, recent ones use transformers, deep models, \~20 hidden layers.
+
+PYNB----mahabharat file
+
+
+ELMO (Embeddings form Language models)
+
+
+## Transformers
+
+good for 512 inputs only.
+
+BERT:
+- transformer is broken into encoder and decoder, encoder is BERT, decoder is GPT (genreatlised pre trained transforms).
+
+
+## Session-3 Image analytics 1
+
+CNNs, conv > Relu > pool
+
+Grouped Convolutions:
+
+Depth Wise CNNs:
+- dividing imgae into groups and using groups 
+
+
+PNASNet-5
+
+This was not decided but build using neural architecture search. 
+
+we can do reserch or we cannot do grid search because of husge params and layers. But we do random seacrh.
+
+Genetics is followed by evolution. it is an iterative process. Chromosome is collection of genes.
+
+it has depth wise separable convolution.
+
+we only change last 4 layers of n/w to fine tune recognition.
+
+fastAI is on top of pytorch and keras.
+
+
+
+## Session-4 Image analytics 2
+
+Object detection algos:
+- R-CNN
+- SSD
+- YOLO
+
+object detection framework:
+- regional detection
+  - what is a region, 
+
+
+
+## Session-5 Video analytics
+
+
+Dialated CNN have 0 is between the filter. they are common for segmentation purpose.
+
+Deeplab is atrous + multi Scale + CFRs
+
+### CRF - conditional random fields.
+
+HMMs are CRFs.
+
+Part of speech tagging, before DL, was done using multi class (36) classification.
+
+So likely after adjective we have noun. They helped in sequential data.
+
+CRFs are cheaper compared to DL and still work well.
+
+CRFs work by bringing joint speech tag. All words get prediction jointly. similarly we don't get label for eah pixed but grouped pixels.
+
+read more on google.
+
+### DeepLab
+
+in 3rd conv layer, you have a receptive field, but if we need to vary this, we change violation rate. for each filter, we change by adding 0, to make filter large, and this changing resolution we are looking in input image.
+
+Atrus special pyramid pooling (ASPP) is build after this.
+
+input - cnn with atrus - conv output mid level - upsmapling (bilinear interpolation or DL way of upsampling) - fine grain not taken care - use fully connected CRF to bring out final details.
+
+atrus with rate 1 is simple conv. rate 1 = no zero added.
+rate 2 = 1 zero added
+
+rate r = r-1 zeros b/w filter values.
+
+thus receptive field becomes larger.
+
+DeepLab used VGG-16 with 'fc6' layer, with fully convlutional n/w. they dialated conv layer. we do dialation here, and 'fc6' give good accuracy.
+
+multi scale because we can change the scale at which we process the image.
+
+we do max-pooling on top of it to get the final output.
+
+Rate = 6 maeans dialation rate. so has 5 zeros.
+
+CRF do joint labeling so we do interation to get sharper segmentaiton.
+
+Fully connected CRF give more crisp segmentation.
+
+More examples to follow.
+
+code as well to lookup.
+
+assignment will cover the notebook.
+
+### Part 1 Assigment:
+
+group 2-3, do on colab
+
+submit py only from colab notebook.
+
+use logistic regression for 5 classes.
+
+2. train word2vec then classify
+
+use test only for scoring.
+
+
+### Visual question answering
+
+interesting becuse of multi-modal aspect. it is image + text. ans cna be binary or logns asnwer.
+
+we cna combine object detection with knowledge base like wiki to ans the quesions.
+
+we do this in closed domain. where vocal is small. 
+
+Challenges in VQA
+- labeled data is created
+- combining modalities, CNN for image, LSTM for text.
+- attension - what part of picture is being asked for?
+
+mostly binary ques have ans yes. that's how people ask. So the trained ata has biad prob.
+
+Applications are anything you imageine.
+
+Visual DataSet Visual7W:
+- had abastract image to manage bias by adding images with ans 'no'
+
+VQA Models: LSTM Q + norm L.
+
+
+
+.
+.
+.
+
+
+
+Hard and Soft Attention:
+- sum of all weight is 1.
+- a block might be left out, so for this, they made the sum add up to 1.
+
+model-decoder model was changed to have alpha ti have sum equal to 1.
+
+using hard and soft we can have differntent caption for the images.
+
+insome case soft would be better and in some hard.
+
+more examples to look at.
+
+exam, May first week.
+
+
+
+
+
+--------------------------------------
+
+
+
+# ISB T6 Digital Media Analytics
+
+Instructor: Prof. Madhu Viswanathan | Email: Madhu_Viswanathan@isb.edu | TA: Shreya Singireddy  
+
+**Course Description:**
+This course will provide a foundation to explore and study the ever-evolving and fast-paced field of digital and social media marketing. We will learn about how the digital economy works, online advertising, and its relationship to basic theories of advertising. While doing so, we will also investigate how to causally measure advertising effects using randomized clinical trials (RCTs) and field experiments.
+
+## Session 1: Introduction to Digital Marketing and Web Analytics
+
+traditional marketing -> digital marketing 
+
+things have changed, focus has shifted form prod centric to consumer centric.
+
+customer will tell what is annoying them but not what what the problem is. you will have to find the problem.
+
+dont start with product, start with problem,them make s/q to fit the eco-system.
+
+customer personas  - needs wants and so on.
+
+audience tribes - privacy is an issue. build segmentation of customers based on behaviour. eg, netflix.
+
+customer decision journey - how customer walks from awareness to conversion. how interacts iwth different channels, like sales. this is cust journey. the behaviour comes in. 
+
+Digital Channels:
+
+- Search - google
+
+- Display - advt. on apps and web.
+
+- Social Media - 
+
+- mobile - people use a lot
+
+digital helps measure things. makes desicaon data backed.
+
+Challenges - gdpr, ott laws.
+
+ar - ve have improved.
+
+evolution is there , be prepared for changes. () voo
+
+
+google changed our behaviour.
+
+locatoion based targeting, like airtel putting tents.
+
+
+STP: Segemtnatioj, targeting and positioning.
+
+
+zzzzzZZZZ
+
+
+Challenges today:
+- lot of content
+- lot of people, videos etc.
+
+make money from the content, only then content matters.
+
+newspapers are dying because marriage, jobs, real state have moved to their own apps.
+
+digital marketing:
+- paid - web, social, influential, lead targeting
+- owned - website, mobile, blog. 
+- earned - shares, mentions, reposts, reviews.
+
+
+
+## Session 2: Display Advertisements
+
+persona behaviour journey
+
+pyscology is how ppl think of prod and services.
+
+who is cust? 
+- many details like gneder, age, ocupation etc.
+
+who is prod for?
+- individuals are different, stereotypes, caring, harsh etc. batchelors are different.
+- is it married men of a kind?
+
+what is differene about the customer?
+- stereotypes, forward moving
+
+Interact customers effectively and efficiently:
+- we need to be strategic about digital.
+- you need to know where to cut.
+
+Consumer deision Journey
+- framework , current process, loyalty loop.
+- old way to generate need was advertising.
+- people do info search by frnds whoc have bought a car.
+- people evaluate by brochures of cars.
+- then make a choice.
+- then people evaluate, is car good or bad.
+
+per==================================
+Consideration set is a set of prod a cust focuses at, eg, brezza, eco, duster.
+
+this is funnel model, keep decreasing the coices in the set.
+
+Now, in digital world, things have changed, ad is not really required. need is generated on its own. and people do google serch. 
+
+80% cust are looking aroudn even after purchasing prob. bust returnt he prod.
+
+google - mement of thruth is hapamrning, 
+
+
+zzzzZzzzZZZZ
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+prospect of a customer: we neee ots6hh o
+
+
+all tribe hows a  hierarchy
+
+peopelc can be in multiple tribes.
+
+tribes can be like, cookig, driving, etc.
+
+you need to have attribution srategies, what channels matter, mail, social etc.
+
+listening is big succes.
+
+
+### Search Engine Marketing
+
+seo is all about ranking, amazon has stepped up as a prod search engine.
+
+Google algo for SEO:
+- unique content
+- penalty for duplicate content
+- inbound link, other websites that link to your website.
+
+
+
+
+
+## Session 3: Role of social media
+
+Social media analytics:
+- content analysis
+- influencial marketing
+- how to find influencer
+
+Group assignment will be based on this, find influencer based on data.
+
+Sentiment of tweets for airlines;
+- more number of tweets is more negative.
+- people hardly post =ve tweets.
+- this score/ranking was similar to ASCI (american customer satisfaction index)
+
+sentiment is just like themrmometer for fever, it tells symptoms and then we have to dig further if required.
+
+Sentiment Anlaysis on Warren Buffet's letter to subscribers:
+- It's result showed that it was related to market events, like crash in 1987, .com y2k in 2001, 2002 9/11. This was alos simple sentiment that gave us insights.
+
+7 steps framework is used to find influencers.
+
+Influencers are linked to words, categories, markets. We have to find that stickiness index.
+
+Process of measuring give, customer influence value (CIV) and customer lifetime value (CLV).
+
+4 ideal chards:
+- activeness: how engages.
+- clout - reachabluity
+- talkativeness - retweet, reshare
+- likemindedness - similarity, like amitabh is more followed and people will buy it.
+
+Value of facebook like:
+- run the experiment, identify customers, send invite to join fb page to a few customers. then look at the sales numbers. If there are postings again ,look at the likes. now we have group of people, those who ike and buy and those who don;t like but buy.
+
+fb page has no value of page.
+
+design is automatically done if we know the problem.
+
+
+eBay Search Ad effectiveness
+- spent a lot on search ad.
+- roi was 300%.
+- paper: https://faculty.haas.berkeley.edu/stadelis/Tadelis.pdf
+
+ebay Ad test:-
+- they stopped paid search and the sales was still same.
+
+for ebay it was a scenario but for some other brand paid search may work.
+
+experimentation is vital in digi world to figure out the ROI on ads, pages etc. Influence was lower as could be seen from data.
+
+
+## Session 4: Introduction to A/B testing
+
+
+## Session 5: Analytics of Digital Attribution
+
+Correlation vs Causation
+- cops vs crime is not causal, but correlated, high crime has hgih cops.
+- cusality can be used to target audience
+
+Controlled Test
+- 
+
+Experiments are good when we have specific questions.
+
+DMA Measurements - ROI of DM:
+- organize the data, solves 75% probs
+- experiment, turn off ad, try A/B testing
+- try to find the best combo
+- Apply simple stats, do regressions. 
+
+
+Attribution Model:
+- display first, all credit goes to display
+- last click models, search will get all craadits.
+
+these are worst assesement. 
+
+https://sudhir-voleti.shinyapps.io/CustomerAttribution/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------
+
+
+
+# ISB T5 Deep Learning
+
+Session 1:
+- Autoencode is only unsipervised DL others are supervised.
+- Transformers, Birt and BPT3 are new algos
+
+Deep Learning mimics the human brain. Neurons take input, mul by weights, then sum it up. and based on threshhold it outputs erither 0 or 1
+
+
+IRIS example, it has 4 features, hence 4 inputs suppose it outputs 1 if versicolor else 0. Them it sums all inputs multiplied by weights
+
+
+## The Artificial Neuron
+
+It has  a input vector, $\overrightarrow{x}$, it is a row of features, eg, iris row with SL PL SW PW. Input vector has x1, x2, ... , xM. All are multipied by weights w1, w2, ... , wm. These are then aggregated by function `f()` called **INtegration Function** and then this passes through another function call **Activation Function** `a()`, this give output `y`. a() has the thresholding logic.
+
+
+Integration Function, f(.) :
+
+$$ f(\overrightarrow{x}) =  \sum W_i x_i <>= \theta $$
+
+This function aggregates signals from other neurons, boosts or supresses the inputs.
+
+Activation Function, a(.) :
+
+This function outputs y based on threshold. It can be 
+- step, it is either 0 or 1.
+- ramp, for x = 0 to 1 it is slope
+- sigmoid - used to have gradients in output, b/w 0and 1.
+- Tanh - used wehn we need garadients and values between -1 and 1. 
+
+The sudden change in function is a problem for derivative. Hence, we use sigmoid or tanh.
+
+Rectified Linear activation function or **ReLU** is a piecewise linear function that will output the input directly if it is positive, otherwise, it will output zero.
+
+$$ f(x)= max(0,x) $$
+
+A smooth approximation (softplus) to the rectifier is the analytic function: $ f(x)=log(1+exp(x)) $. Derivative of softplus is the logistic function.
+
+Perceptron algorithm:
+
+Iterative algo to learn weight vector. Update weights in proportion to the error contributed by inputs. 
+- Randomly initialize the weight vector
+- repeat until error is less than threshold $\gamma$ or max iterations M.
+
+$t_i$ is expected value, $y_i$ is predicted value, $\eta$ is learning rate.
+
+$$ \overrightarrow{w}_{n+1} = \overrightarrow{w}_n + \eta * (t_i - y_i) * \overrightarrow{x}_i $$
+
+$(t_i - y_i)$ is error.
+
+As we correct the weights, it rotates the hyperplane and this separates the classes better. It controls how quickly the model is adapted to the problem.
+
+**Learning Rate** is a tuning parameter in an optimization algorithm that determines the step size at each iteration while moving toward a minimum of a loss function.
+
+## Learning Non-Linear Patterns
+
+**Changing Integration Function**, it is similar to kernel trick in SVM, we use quadratic or spherical intergration function, then w is mul with $x^2$ for example. We cna take data to higher dim using polynomial integration func, then a hyperplane can separate the classes and when we reduce it back we get non-linear classification.
+
+**Multi-Layeered Perceptrons**, MLPs, have hidden layers. Each hidden layer has its x, y line. Set of lines can form a triangle, eg, three lines. Then we hve two classes one in triangle and another outside triangle.
+
+## Back Propagation Algorithm
+
+We have functions at each layer, we pass back the output as input back to previous layers based on the error each node contributes. 
+
+---
+
+Session 2:
+
+Tensor flow and pytorch are libraries ti implement DL. Keras is wrapper on top of these libs.
+
+Use DL only if the problem is not solvable by ML, for eg, image classification when we have 1000 object to classify from.
+
+Layout accuracy, 3d position of objects, positional relationships in objects, come up with a network of objects. Humans have hierarcial apporach
+
+
+## CNN and ImageNet
+
+ImageNet holds 1,281,167 images for training and 50,000 images for validation, organised in 1,000 categories.
+
+
+MLP can't be used for imgae because the number of parameter to estimate grows to billions. becaus it is fully connected,
+
+In CNN, we have convolution layers. not all nodes are cnneted to each other, the network has conv and pooling.
+
+CNN of image with a filer:
+
+We get convolved feature in each convolution layer,
+
+at each layer we process part of image, and we overlap in each iteration. Filter size, eg, 3x3, is also paramenter, skipping 2px is alos paramenter. This allows us to reduce the number of weights we need to train,
+
+weights are shared so edges may be more but weights are less.
+
+The weights will learn in back propogation.
+
+We have multiple convolution layers. the number of filters define that.
+
+padding is added to the image if stride and filter cannot aprse whole imgae, also to make the edge pixels count same number of itmes as the other pixels. count as in passed by the filters.
+
+we can do zero paddign or mirror padding.
+
+The number of weights is eaqal to number fo filters passign thirugh image and plus 1 bias which is shared by all the filters. 
+
+if we have two filters, eg, [3x3]x2, then we have weights times 2.
+
+Number of parameer is the filter size and bias and number of passes.
+
+so for 5x5 filter, 10 passes, params are , (5x5x3 + 1) x 10, 1 is a bias.
+
+FOr number of output, we count by adding padding twice, - filter size + 1.
+
+
+---
+
+
+Session 3
+
+
+## Pooling Layer
+
+has 0 weights. ha filter that moves and gives max of points. it downsamples the imgae.  pool is done on all channels. so for 224x224 image with 64 channels, if we do pooling , max pool with 2x2 filter and stride 2, we get downsampled 112x112x64 size imge.
+
+max, l2, avg pooling
+
+why pooling, Pooling layers are used to reduce the dimensions of the feature maps. Thus, it reduces the number of parameters to learn and the amount of computation performed in the network. The pooling layer summarises the features present in a region of the feature map generated by a convolution layer.
+
+Convolution brings out pattern, pooling finds most imp feature by avg or max.
+
+Overfitting can be avoided by dropout.
+
+We can augment data by flip rotate and rescaling images. dog remains a dog if we rotate.
+
+## RNN
+
+Neural understand only numbers, now we have text data. 30 million unique words.
+
+vector to show word, w1 has vector with 1 at its location others 0, but cant be done for 30m words.
+
+each word has vector of fixed size with any number in vector, like 100 numer. similar word have similar numbers.
+
+word2vect
+
+RNN for text based work. it learns sequences, in context, letters in words have dependencies, 
+
+Language models store bigram, trigrma etx. what comes afger what, ngram models.
+
+in neural we do word to vector by different algos.
+
+eg, we have 3 words and ech is represented by vecotr of 100 numbers then we have 300 inputs and 100 output uin NN.
+
+The output number is the predicted word and we assign that to our list of words.
+
+## Transformers
+
+Like LSTM, Transformer is an architecture for transforming one sequence into another one with the help of two parts (Encoder and Decoder), but it differs from the previously described/existing sequence-to-sequence models because it does not imply any Recurrent Networks (GRU, LSTM, etc.).
+
+An architecture with only attention-mechanisms without any RNN (Recurrent Neural Networks) can improve on the results in translation task and other tasks! 
+
+Another improvement is, BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding.
+
+![Transformer: From ‘Attention Is All You Need’ by Vaswani et al.
+](https://miro.medium.com/max/700/1*BHzGVskWGS_3jEcYYi6miQ.png)
+
+It has no RNN but knows relative position of elements. 
+
+
+Reference:
+- https://medium.com/inside-machine-learning/what-is-a-transformer-d07dd1fbec04
+
+
+## Session 4:
+
+RNN offer lot of flexibility:
+- one to one
+- one to many
+- many to many
+
+RNN output is matched against original. Output is concatenation of final neurons. If the output does not match then it backpropogates.
+
+paperwithcode.com - to keep updated
+
+we hve weights availabe in public by pre-trained model.
+
+output of a CNN is embedding for the captioning RNN.
+
+So we have dataset, [image, captions]. we pass image through public CNN for getting embeddings. Now our dataset is [Image embeddings, Captions]. Now we train on this.
+
+Bidirectional RNN to make use of 4th word to predict 3rd word.. not onlt firward looking but backword as well.
+
+Named-entity recognition (NER) is a subtask of information extraction that seeks to locate and classify named entities mentioned in unstructured text into pre-defined categories such as person names, organizations, locations, medical codes, time expressions, quantities, monetary values, percentages, etc
+
+Vanishing Gradient Problem:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------
+
+
+# ISB T5 Marketing Analytics
 
 Marketing analytics is done on CRM database to market more effectively. It is done to optimize the costs associated with marketing products and costs for customer acquiring and retention.
 
@@ -30,9 +1072,65 @@ If the budget is lower than the optimal value for keywords, then do optimization
 
 # ISB ML SL2
 
-https://www.youtube.com/watch?v=lowavG2SXsQ
+**linear classifier** is a classification algorithm that makes its predictions based on a linear predictor function combining a set of weights with the feature vector (input matrix).
 
-https://www.youtube.com/watch?app=desktop&v=4b5d3muPQmA
+**Bias** is gap (error) between actual and predicted value whereas **Variance** is the scatterness of these values.
+
+if we have less complexity and more error then it is HB-LV, as we increse the complexity and reduce training error, it has more validation error and LB-HV. To find an optimal point where the model fits both training and validation data with less error is called **bias variance trade off**.
+
+**Linear Discriminant Analysis** or LDA is method to find linear combination of features that characterize or seperates two or more classes. It is dimentionality reduction technique while retaining as much info as possible. It is not a classifier. LDA and PCA are both linear transformation. 
+
+LDA vs PCA [>](https://sebastianraschka.com/faq/docs/lda-vs-pca.html) 
+- LDA : Supervised :: PCA : Unsupervised (ignores class labels)
+- LDA finds max separability, PCA finds max variance within a class.
+
+**Vector** is element of vector space having magnitude and direction. **Vector Space** is place/space of combination of vectors. It can be 2D ro 3D. Mul vectors together goves third vector. Mul by number to scale vector (bigger/smaller). 2D has two points (x and Y), 3D has 3 and n dimention has n. Matrix is a vector space and is used to store vectors. n x m matric can have vector in row or column. In CS, the data that we have, if we store it in matrix form it forms a vector space. [YouTube](https://www.youtube.com/watch?v=fNk_zzaMoSs)
+
+**Perceptron** is an algo for binary classification. Input is a matrix of numbers, output is weather this belongs to a class or not. hence, it is called linear classifier. It makes a hyperplane in space to classigy the objects.
+
+## Neural Network
+
+
+- Youtube Playlist https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi
+
+
+## Bayesian Network
+
+A Bayesian network is a probabilistic graphical model that represents a set of variables and their conditional dependencies via a directed acyclic graph.
+
+## SVM Support Vector Machine
+
+support-vector machines are supervised learning models with associated learning algorithms that analyze data for classification and regression analysis.
+
+the method of Lagrange multipliers is a strategy for finding the local maxima and minima of a function subject to equality constraints.
+
+The most significant benefit from solving the dual comes when you are using the "Kernel Trick" to classify data that is not linearly separable in the original feature space.
+
+agrangian function (Primal) , applying a lagrangian stationarity condition and substitute to get dual
+
+we can define a separating hyperplane in a systematic way by introducing slack variables  𝜉𝑖  and minimizing the total error, Slack variables are positive (or zero), local quantities that relax the stiff condition of linear separability, where each training point is seeing the same marginal hyperplane.
+
+Kernel Trick is to map the data in much higher space so that it becomes linearly separable. A Kernel Trick is a simple method where a Non Linear data is projected onto a higher dimension space so as to make it easier to classify the data where it could be linearly divided by a plane. This is mathematically achieved by Lagrangian formula using Lagrangian multipliers
+
+
+
+
+
+
+## Ensemble Learning
+
+ensemble methods use multiple learning algos to obtain better predictive performance than could be obtained from any of the constituent learning algos alone.
+
+An ensemble method is a technique that combines the predictions from multiple machine learning algorithms together to make more accurate predictions than any individual model.
+
+Bagging is composed of two parts: aggregation and bootstrapping. Bootstrapping is a sampling method, where a sample is chosen out of a set, using the replacement method.
+
+Bagging is a way to decrease the variance in the prediction by generating additional data for training from dataset using combinations with repetitions to produce multi-sets of the original data. Boosting is an iterative technique which adjusts the weight of an observation based on the last classification
+
+
+## References:
+- Calculus https://www.youtube.com/watch?v=lowavG2SXsQ
+- K-Means Stat Quest https://www.youtube.com/watch?app=desktop&v=4b5d3muPQmA
 
 
 
@@ -1550,3 +2648,91 @@ Where money goes?
   - Mars for Fire, 
   - Mercury for Earth, and 
   - Venus for Water.
+
+
+
+
+
+Advanced Management Programme in Business Analytics (AMPBA)
+
+-----------------------------------------------------------
+
+# Foundation Term
+
+## Probability and Statistics using R
+
+In the VY notebook
+
+## Data Analysis using Python and Introduction to Databases
+
+In Kaggle notebook, all python numpy basics and eda examples.
+
+# Miscellaneous
+
+## Additional Sessions
+
+# Term 1
+
+## Business Communication
+
+Mihir, notes in md in folder
+
+## Big Data Management-1
+
+## Data Visualization
+
+## Statistical Analysis-1
+
+## Data Collection
+
+# Term 2
+
+## Foundational Project-1
+
+## Big Data Management-2
+
+## Statistical Analysis-2
+
+## Text Analytics
+
+## Optimization
+
+# Term 3
+
+## Statistical Analysis-3
+
+## Machine Learning (Unsupervised Learning
+
+## Contemporary Topics-1
+
+## Big Data Applications
+
+## Advanced Optimization and Simulation
+
+# Term 4
+
+## Foundational Project 2
+
+## Statistical Analysis 4
+
+## Machine Learning - Unsupervised Learning 2
+
+## Machine Learning - Supervised Learning 1
+
+## Forecasting Analytics
+
+# Term 5
+
+## Contemporary Topics 2
+
+## Deep Learning
+
+## Supply Chain Analytics
+
+## Marketing Analytics
+
+## Machine Learning (Supervised Learning 2)
+
+# Term 6
+
+## Contemporary Topics 3
