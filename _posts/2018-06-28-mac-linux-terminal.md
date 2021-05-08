@@ -41,6 +41,10 @@ Brew Cask (GUI) commands:
 
 `diskutil list` - lists all disks
 
+Format a disk from Mac terminal:
+- `diskutil eraseDisk FILE_SYSTEM DISK_NAME DISK_IDENTIFIER`
+- eg: `diskutil eraseDisk FAT32 VY_Disk /dev/disk2` or use ExFAT 
+
 Copy to clipboard
 - `$ pbcopy < my_filename.ext` it copies the content of file to clipboard.
 - It is helpful to quickly copy RSA key to clipboard which you need to paste on, may be, GitHub.
