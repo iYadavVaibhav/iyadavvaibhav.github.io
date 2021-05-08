@@ -25,7 +25,297 @@ Interpersonal Awareness and Working in Teams: Each student shall demonstrate an 
 - Raju and Zhang, Smart Pricing, Prentice Hall.
 
 
-## Session 4:
+## Session 1:
+
+
+
+
+company make product, we promote to enhace value, value gets back to business for salary and all.
+
+pricing is balancing act. 
+
+important now becuase of new ideas in market. 
+
+Top-line is revenue, bottom line is the profit.
+
+New startups want to grow top-line, its not onlyu about profit but also about revenue.
+
+Role of pricing, why important:
+
+impact on profit by price is max, compared to fixed cost, vol, varianle cost. 
+
+### Role of cost in pricing decisions:
+
+when i set price i set quantitu, low means more buy, high means less buy. Willingness to pay is different. quantity change brings cost. even monopolist have to consider the cost besucase of relateion with quantitu.
+
+Marginal Revenue is the revenue gained by producing one additional unit of a product or service. Marginal Cost is the cost added by producing one additional unit of a product or service.
+
+not always sure of marginal revenue.
+
+costs:
+- fixed w.r.t. quantity sold
+
+
+what ever is the cost we have to bring that cost out from market by pricing.
+
+when we are giving discount then also we make adv and that incurs cost.
+
+Book publisher eg: 
+
+selling will reduce inventory cost, cost to store the books.
+
+it can bring in opportunity cost, like sell another book which can give more profit..
+
+consultant missing:
+- consumer will wait for sale.
+
+Linking cost structure to pricing and profit
+- price elasticity (of demand): how demand changes by price.
+
+PED = delta demand % / delta price % 
+
+PED > 1 elastic, else inelastic
+
+elasticity of revenue EOR:
+
+% chng in revenue  / % chng in price
+
+EOR = 1 + EOD
+
+in elastic demand revenue inc with proce ince.. else opposit,
+
+break even profit elasticity, = -1, EOR = 0/
+
+where price change will work:
+
+Break even Profit elasticiy = -1 / (current % margin * % price change)
+
+hence, price change = % delta Q / % delta P
+
+
+### Value supremem example:
+
+sell chicken below whole sale, chicken sale is related to ther prodcuts, which have difffernet % margin,
+
+how much more chicken to sell?
+
+2.2 is ratio, make 2.2 times the quantity,
+
+### price sensitivity
+
+- customer service. 
+
+Price elasticity of demand = % delta Q/ % delta p. compute elsticity dematn
+
+by using regression, linear. get price elasticity number.
+
+using regression unit sales against price.
+
+eg, quantity = b0 + b1 price
+
+price coeff b1 is +ve, generally -ve. price up qnatity down.
+
++ve it can be only fo rluxury good. price high then demand high. status changes fo prodcut.
+
+if we add week to analysis then, price coeff goes -ve
+
+we can detrend the data to improve model further.
+
+Let also see log log model, then find price elasticiy.
+
+Elasticity?
+ detrend data with time.
+
+linear demad = 
+
+$$ q_i = a - bp_i + ct_i + e_i $$
+
+=> POD = -bp/q
+
+in linear demand, price elsticity is not constant, change with price level.
+
+for last record, pod = -0.47 <= -38 * 12.5/1000
+
+pod = -0.47, is less than 1 hence inelastic
+
+since in elastic , henc to increase revenue, increase price.
+
+
+by how much to inc, till you reach 1.
+
+log-log model
+
+log q = log a -b log q
+
+=> POD = -b
+
+Analysis:
+- hsitorically get contect,
+- but real world prob needs to be handeled , be aware.
+- 
+
+
+## Session 2: 
+
+### Effect of cost change on price:
+
+Google it we looked at brek even profit elsticity convept.
+
+what happens when cost changes for a firm?
+
+fuel amy go up, cost amy inc. what proportion change is passed on to customers, up or down.
+
+demand = p = 500 - 10q
+
+marginal revenue is kitna milega, marginal cost is kitna lagega, on chaging quantity.
+
+if marginal revenue = marginal cost, then profit is max.
+
+if MR > MC, then we cna dec price to sell more.
+
+if MR < MC, then inc price.
+
+COncave convex demand cureve had different changes on price change.
+
+### Quanitty discounts
+
+buy 2 get one free. big maggie price, more discount.
+
+the more you sell, the more margin you make
+
+sell more bring production cost down.
+
+double marginalization prob - google it.
+
+manufacturer gives quantity doscoutn to retailer.
+
+
+## Two part pricing
+
+above cna be solved by this., tow pricing part, pfront free, then additino fee, which is usage fee. Like cab and telecom, fixed + Usage charges.
+
+not always to be used, the person who uses more can have more upfront fix price.
+
+Xerox prob:
+- two groups, with different usgae and pricing, find optimal price for them, to two stage pricing?
+
+this tells why one can go after only premium segment.
+
+ We can equate to find optimal , R and p, which is fixed cost and price of a copy.
+
+ so by two part pricing i am bale to extract willngness to pay from two differnet segmaetns, hence mroe profit. 
+
+
+if we have 3 segments, then we can have more var introduced, or increase part pricing, how muc surplus you cna extract. Single pricing, flat, like netflix also has benefit and varibale multi-part fee also has benefit, it all depends on cases.
+
+
+## Session 3 (2hr)
+
+Product Line Pricing
+
+We hvae different type, iphones, oyos, cards, dropbox plans, 
+
+Contemporaneous v s tempopral
+
+temporal price discrimination ,here consumers are separated into different groups with different demand elasticities by charging different price at different points in time.
+
+
+### Cambridge software
+
+produt line and pricing?
+
+Assumptions:
+- student version can be bought by anyobne
+
+for different software versions, we can find:
+- price for different segment
+- then weather differetn segment will buy or not, 
+- the quantity, variable cost, sidtribution cost, fixed cost and finally profit.
+- then in each version, we get max profit segment.
+
+max profit doesnot mean the version is profitable and should be developed.
+
+a segment may be willing to buy but weather we should develop that segment or not is diff que.
+
+Surplus = WTP - Cost, determines weather one will buy and will we produe that version.
+
+other approach is, depends on decision rule, marketing team can decide the decision to weather keep only corp or student, weather to keep big version only or studen tversion only.
+
+There may be strategic resons and competitiors to consider, so we sould do some what-if analysis and look at competitiors and then change our considerations to cover versions that our competitors could target.
+
+Data needed is, WTP of all segments across all versions, not that studen tonly for student version.
+
+### Max Willing to Pay, how to measure?
+
+1 identify attributes - research, market, domain language, 
+
+the attributes we take are usally max and min, like max 5000 songs and min 50 songs.
+
+2 create profiles, 
+
+different values for different attributes,
+
+3 code values, high level is 1 and low level is 0
+
+not samples are collection of ones and zeros.
+
+4 collect data
+
+create 16 profiles and ask for liking from people
+
+so ask for rank ordering paired comparisions, ratings.
+
+NOW, if we have 6 atts, we need at least  samples to say about each of these atts. so 7 are enough, beause it can cover all scenarios.
+
+many samples make it difficult to capture the data.
+
+eg, 16 profile and ask for rating,
+
+then run regression,
+
+betas are partworths.
+
+rating as a function of other attributes.
+
+step 7, beta_price is reduce in utility when price goes from 249 to 99.
+
+26 ratings go down if we inc price from 99 to 249
+
+
+this way we get price per utility, we can then create models/sampes
+
+and find total utility adn then mul by price per utility to get WTP.
+
+Step 8 now WTP across customers
+
+so we get ratings from different customers, we do get WTP for each customer, this can vary for different cust segments, then we can find WTP for different segments and do segment analysis,
+
+Step 9: WTP customer seg table.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Session 4 2hr:
 
 Temporal Pricing Strategies
 
@@ -366,6 +656,8 @@ cat u.data|cut -f3|sort  - group by column 3 and give count.
 
 ## Session-2 Word Embeddings
 
+"In natural language processing, **Word embedding** is a term used for the representation of words for text analysis, typically in the form of a real-valued vector that encodes the meaning of the word such that the words that are closer in the vector space are expected to be similar in meaning." - Wiki
+
 NN has n/w and we need to feed sentense hence, word embeddings.
 
 1hot encoding 
@@ -420,6 +712,8 @@ PYNB----mahabharat file
 
 ELMO (Embeddings form Language models)
 
+ELMO uses biLM (bidirectional language model)
+
 
 ## Transformers
 
@@ -430,6 +724,10 @@ BERT:
 
 
 ## Session-3 Image analytics 1
+
+Inception - groups pooling and filter, calls it inception module and puts them in b/w the POOLs.
+
+
 
 CNNs, conv > Relu > pool
 
@@ -2458,65 +2756,6 @@ https://observablehq.com/@d3/d3-hierarchy?collection=@d3/d3-hierarchy
 
 # Python Notes
 
-## Anaconda and Conda Notes with Jupyter and R Studio
-
-**Anaconda** is toolkit for Data Science.
-- it includes ds and ml libraries along with conda, and 
-- other tools like jupyter, rstudio etc.
-
-**Conda** is package manager and environment manager, like pip,
-- it can install packages and 
-- can manage envs 
-- It is a CLI
-
-**Anaconda Navigator** is GUI to use conda.
-
-Conda Basic Commands:
-- `conda config --set auto_activate_base false` disables autoload base
-- `conda update conda` updates conda
-- `conda install PACKAGENAME ` installs pkg to default/active env
-- `conda update PACKAGENAME ` updated pkg
-- `pip install pkg` aslo intalls to active env
-
-Conda Env Commands:
-- `conda create --name py35 python=3.5` created new env and installs py 3.5
-- `conda activate py35` activates
-- `conda list` lists all akgs installed ina ctive env.
-
-**Jupyter** name comes from Julia, Python and R,
-- formerly known as *IPython Notebook*
-- it is pkg, same as flask
-- `pip install jupyter` or it comes installed in Anaconda dist.
-- `jupyter notebook` runs a server to server jupyter notebooks at http://localhost:8888/tree
-
-**R and RStudio** are statistical language and IDE,
-- `r` or `R` - R console in terminal
-- `Rscript my.r` - executes file in terminal
-- `Rscript -e "getwd()"` - executes cmd in terminal, can quickly install a library.
-- `R CMD BATCH my.r` runs R script and saves output to `my.r.Rout`
-- To make R Script executable like `./my.r` then:
-  - set permission to 755
-  - add correct `#!` to top of file
-
-```r
-#!/usr/bin/env Rscript
-sayHello <- function(){
-   print('hello')
-}
-
-sayHello()
-```
-
-
-
-## Regex Notes:
-
-Remove single line comments // from code:
-- `\/\/.*$\n` - Finds all single line comments starting with //.
-  - `\/\/` - string has //
-  - `.*` - then has anything after that
-  - `$\n` - then matches next line as well.
-- Check and Validate on [Regex101](https://regex101.com/)
 ------------------------------------------------
 
 # AI image generator Notes:
