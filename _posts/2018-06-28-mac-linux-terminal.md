@@ -45,6 +45,8 @@ Format a disk from Mac terminal:
 - `diskutil eraseDisk FILE_SYSTEM DISK_NAME DISK_IDENTIFIER`
 - eg: `diskutil eraseDisk FAT32 VY_Disk /dev/disk2` or use ExFAT 
 
+- `/Volumes/PenDrive` location of usb mounts
+
 Copy to clipboard
 - `$ pbcopy < my_filename.ext` it copies the content of file to clipboard.
 - It is helpful to quickly copy RSA key to clipboard which you need to paste on, may be, GitHub.
@@ -180,7 +182,9 @@ Other
 - `rm -rf` removes non/empty dir and files forcefully
 - `rm` removes files not directories.
 
+### youtube-dl
 
+- `youtube-dl --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" http://www.youtube.com/watch?v=fdf4542t5g` -o is --output of filename.
 
 
 

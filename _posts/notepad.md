@@ -1,3 +1,23 @@
+Goal -> reach 30lpa by eoy. to buy big house
+
+Morning classes on Py and DS.
+
+-----------------------------------------------
+
+
+# K-Fold Cross Validation in Python
+
+We can improve model's performance by changing parameters of model. 
+
+
+
+
+-----------------------------------------------
+
+
+
+-----------------------------------------------
+
 # ISB T6 Pricing Analytics
 
 Prof. Abhinav Uppal                         
@@ -2622,6 +2642,17 @@ To support GitHub flavoured MarkDowm, you need to add the following line to `_ou
 
 `md_extensions: +lists_without_preceding_blankline+pipe_tables+raw_html+emoji`
 
+**Working on a book:**
+
+- All mds are in `./data_science` folder.
+- All images are in `./images` folder.
+- Add new md file to `./_bookdown.yml` file. It also has index order.
+- To build and run:
+  - `r`
+  - `bookdown::render_book("index.Rmd")`
+  - new site availabe at `./docs/index.html`
+  - `quit()` to exit R shell
+
 
 References:
 - Bookdown [cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/rmarkdown-anatomy.html)
@@ -2650,6 +2681,9 @@ Instagram page earning:
 - original images
 - regular posting
 
+Instagram Bot:
+- Scrapper - https://towardsdatascience.com/increase-your-instagram-followers-with-a-simple-python-bot-fde048dce20d
+- Post - https://www.youtube.com/watch?v=vnfhv1E1dU4
 
 ------------------------------------------------
 
@@ -2728,7 +2762,25 @@ https://observablehq.com/@d3/d3-hierarchy?collection=@d3/d3-hierarchy
 
 ------------------------------------------------
 
-# Mac OS (Linux) Notes
+# YouTube Channel Notes
+
+Start creating a web of terms , make understand each thing, chamkao cheezo ko.
+makeit understnad to 6yr old guy
+start from docs, make reading a habit, start taking notes.
+math teacher lessongs, i see, i do, i ...
+small age learn, big understand, then decision.
+
+Follow:
+- miguel grinberg - https://twitter.com/miguelgrinberg
+- Claudio Bernasconi - https://twitter.com/CHBernasconiC
+
+------------------------------------------------
+
+# Mac OS (Linux) Ubuntu Notes
+
+- `alias vynote="subl ~/path/to/file/notepad.txt"` add to `.bash_profile` to make shortcut
+
+- cheat book - https://github.com/0nn0/terminal-mac-cheatsheet#english-version
 
 ------------------------------------------------
 
@@ -2769,6 +2821,26 @@ https://observablehq.com/@d3/d3-hierarchy?collection=@d3/d3-hierarchy
 - lip syncing image to audio
 - dataGrid, deepFake AI models
 
+
+------------------------------------------------
+
+# Android Notes
+
+ADB is utility to interact with android phone. It can install/uninstall apks. change connections etc.
+ All commands here, [adb shell](https://adbshell.com/). 
+
+Enable Developer Options > USB Debugginh
+
+adb must be installed on your mac/pc.
+
+Uninstall blotwares
+- `adb devices` see your device
+- `adb shell` enter phone shell
+- `pm uninstall -k --user 0 com.mipay.wallet.in` to use pm is pkg mgr, and uninstall an app.
+
+References:
+- https://forum.xda-developers.com/t/uninstall-system-apps-without-root-vivo-bloatware.3817230/
+- https://technastic.com/vivo-bloatware-preinstalled-apps-list/
 
 ------------------------------------------------
 
@@ -2850,8 +2922,45 @@ Where money goes?
   - Soild needs skin, leves, grss etc.
   - Value organic matter.
 
+## Investment and Finance - Agriculure
+
+- asset/farming (growing market of organic)
+- Farm investment has higher ROI
+- it is capital intensive, for suplus income, for high net-worth individual. So you will have to find a **solid business plan** if investing
+
+Consider:
+- legal/papers/taxes all paid and setteled
+- ask seller to mark boundary and fence it. or at least mark corner poles so that neighbours don't rouble later.
+- research for right price.
+- consider human activity around. not much sez/minig should be around.
+- **most imp** water level. rainfall in area. water type and availability, nearby water resource
+- connectivity to highway/city
+- soil quality, can be worked in 5 years. fertility of land.
+- chemically cultivated land is waste to buy. You can heal in few years. by fungus and bacteria. 
+- hire local people, give them trust.
 
 
+Costs required:
+- Land Cost
+- Water Sourcing
+- Electricity Sourcing
+- Laying road and boundary
+- preparing land
+- Maintenance Staff
+
+
+Business Plans:
+- Tour and Farming classes
+- Grow herbs and sell online
+- Multilayer Farming (https://youtu.be/FyOzeO6fQwI)
+
+Permaculture:
+- add fence. cemented pillar and wires. gate.
+- borewell/canal or borrow from neighbour.
+- electricity/solar check subsidy
+- hire local people. nigh watch man.
+- buy tools, spades sabad, measuring tape, wheel barrow.
+- 
 
 ------------------------------------------------
 

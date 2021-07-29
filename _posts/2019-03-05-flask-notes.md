@@ -10,7 +10,9 @@ Flask is a microframework in Python. It is used to create a webapp. It can start
 * Do not remove this line (it will not be displayed)
 {:toc}
 
-## Virtual Environments
+## Making a Simple Flask App - The Basics
+
+### Set up Virtual Environment
 
 Why? - It gives different apps isolation and personal environment so that modules don't interfere and it is easy when we have to productionize the app.
 
@@ -19,17 +21,18 @@ What is Python Virtual Environment?
 - This creates a folder which contains all the necessary **executables** to use the packages that a Python project would need
 
 How to use Virtual Environments in Python3?
+- python3 or python depends on your installation.
 - `python3 -m venv venv_app` - created folder venv_app
 - `source venv_app/bin/activate` - activates this environment, for use
 - now do `pip3 install flask` - this installs the package only in this environment.
 - add `#!venv_app/bin/python3` on top of main.py file to make it use this python.
 
-## Creating a Simple Flask App
+### Creating a Simple Flask App
 We can start with the 'Hello World!' of flask app.
 
 Create a python file:
 
-```py
+```python
 #!venv_app/bin/python3
 from flask import Flask
 app = Flask(__name__)
@@ -42,26 +45,69 @@ if __name__ == '__main__':
     app.run(debug=True)
 ```
 
-## Running a flask app:
+### Running a flask app:
 - `chmod a+x main.py ` to make app executable.
 - `./main.py` runs app on localhost in debug mode.
 - to access type `http://localhost:5000` in browser.
 
-Access flask app on Virtual Machine localhost from host machine:
+### Add ons:
+- `from flask import Flask, render_template, request, url_for, flash, redirect`
+- render_template - to show html page.
+- request - to get get/post data
+- url_for - to get path for resource
+- flash - to store messages to session var, handy for form error messages.
+  - add session info, after `app = Flask(__name__)` add `app.secret_key = 'super secret key'` 
+
+- for loop
+```python
+  {% for item in items %}
+    <h2> {{ item['title'] }} </h2>
+    {{ item['content'] }}
+  {% endfor %}
+```
+
+- if loop
+```python
+    {% if 'term' in data %}
+      <p>Result for {{data['term']}}:</p>
+      {{ tables }}
+    {% endif %}
+```
+
+
+### Access flask app on Virtual Machine localhost from host machine:
 - Run flask app with `app.run(host='0.0.0.0', debug=True)`
 - This tells your operating system to listen on all public IPs.
 - then access `192.168.10.33:5000` from host machine.
 
-Now that our app is running we can add a database to this app. We will use FlaskSQLAlchemy package for this.
+Now that our app is running we can add a database to this app. We will use FlaskSQLAlchemy package for this. Or Pandas.
 
-## Flask-SQLAlchemy
+
+
+
+## Flask App for Machine Learning - Pandas
+
+Now that we have an app we can use it with Pandas, Matplot and other ML libraries to make it easily usable for end users.
+
+- Import all your libs in flask app that you have used in Jupyter NB.
+- Add code and functions to read data and perform tasks.
+- Flask routes are executed for each request, so keep data reads outsite to read them once.
+- `return render_template( 'search.html', data=df_result.to_html(classes='table table-striped table-hover')` - to_html makes html table that can be passed to html page.
+- `{{ data|safe }}` - safe makes it as markup and browser renders it.
+
+Reference:
+- https://sarahleejane.github.io/learning/python/2015/08/09/simple-tables-in-webapps-using-flask-and-pandas-with-python.html
+
+
+
+## Add DataBase to Flask app using Flask-SQLAlchemy
 It is an extension of `SQLAlchemy` which is ORM for major databases.
 - It is an designe for Flask that adds support for SQLAlchemy to your application. 
 - You can define table as a class, called model, with member variables as column names.
 - Create an object to make new instance.
 - Example
 
-```py
+```python
 class User(db.Model):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key = True)
@@ -79,7 +125,6 @@ user = User.query.filter_by(username=data['username']).first() # or .all()
 # select * from users
 users = User.query.all()
 ```
-
 ### Creating Tables
 
 Once you have created a db model in flask app, you can create db and tables using follwing steps:
@@ -93,6 +138,12 @@ Now you can check SQL for tables created. You can do:
 
 Caution: 
 - Provide full path to db file, so that apache can locate it.
+
+Reference:
+- https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3
+
+
+
 
 ## REST API and RESTful Web Services - The Basics Guide
 
@@ -131,11 +182,20 @@ Data of a task can be, JSON blob, as:
 - This API can be consumed by client side app which can be single page HTML.
 - Note, JSON obect is defined in python as dict, `jonify` converts and send as JSON Object.
 
----
+
+
+
+
+
+
+----------------------------------------------------------
+
+
+
 
 # Flask Mega Tutorial Notes
 
-In this tutorial by Miguel Grinberg, we are learning to crate a micro-blogging site using flask and other dependencies.
+This is understanding of a tutorial by Miguel Grinberg, we are learning to create a micro-blogging site using flask and other dependencies.
 
 - `before_request` is a flask native function that gets executed before any request is made. It can be used to update last_seen timestamp.
 

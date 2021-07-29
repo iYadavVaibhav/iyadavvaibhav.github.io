@@ -66,5 +66,18 @@ Now we see that, done would be triggered once myFunction is completed. All jQuer
 - JS Object can hold anything, they can even hold another function.
 - They are accessed using . DOT notation.
 
+## How to quickly scrape all links from page
+
+Use JS path to get all a tags you are interested in, do inspect, go to div having all a, then right click and copy `JS Path`. Then add path till `a` tag to this `div JS Path`. Now that you have JS Path to all the anchor tags, you can iterate over them and make a list then copy. You can execute this in console directly, eg:
+- JS Path to div `#root > div > div.sc-AxjAm.tlQbp > div > main > div > div > div`
+- JS Path to all a tags `article > div:nth-child(2) > div > div:nth-child(5) > a`
+- Join both together, then loop
+
+```javascript
+links = '';
+document.querySelectorAll("#root > div > div.sc-AxjAm.tlQbp > div > main > div > div > div > article > div:nth-child(2) > div > div:nth-child(5) > a").forEach(function (e) {links+="yourCmd "+e.href+" \n";})
+copy(links)
+```
+ This copies the output to clipboard.
 **Related Posts:**
 - [NativeScript](../nativescript-notes)
