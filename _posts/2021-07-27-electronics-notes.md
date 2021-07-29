@@ -198,7 +198,7 @@ R = (9-3.2) / 0.024 = 240 ohms
 
 
 **Electric Motor Speed Controller**
-- using 555 timer IC - IP 4.5v-16v, OP \~200mA. pin1 ground, pin8 +ve. 
+- using 555 timer IC - IP 4.5v-16v, OP <200mA. pin1 ground, pin8 +ve. 
 - Motor, 12V, 1.5A. It needs more current, so we use mosfet  to power 12v motor and use signal from 555.
 - Mosfet - IRFZ24N - <17A, <55V - uses small current in gate pin1 to output more current from drain pin2. Source pin3 is ground. No current in gate, no flow of current. More volt in gate, more volts from drain.- Current to gate is given by 555 pin3. This volt is on/off pulse. this gives average volts and called Pulse Width Modulation.
 - Add 1k ohm resistor in series b/w 555pin3 and mosfetpin1 to prevent 555 in case mosfet malfunctions and allows 12v to flow. Also add 1k ohm resistor in parallel to discharge this current. Need Explaination.
@@ -216,7 +216,7 @@ R = (9-3.2) / 0.024 = 240 ohms
 
 
 **DTH - Free Dish - Settop Box**
-- SMPS - 2658A1.PCB (\~200 rs) - converts 220v to 5v DC
+- SMPS - 2658A1.PCB - 200 rs - converts 220v to 5v DC
 
 
 **Fan Resistor 220v B1 R-783**

@@ -58,22 +58,6 @@ if __name__ == '__main__':
 - flash - to store messages to session var, handy for form error messages.
   - add session info, after `app = Flask(__name__)` add `app.secret_key = 'super secret key'` 
 
-- for loop
-```python
-  {% for item in items %}
-    <h2> {{ item['title'] }} </h2>
-    {{ item['content'] }}
-  {% endfor %}
-```
-
-- if loop
-```python
-    {% if 'term' in data %}
-      <p>Result for {{data['term']}}:</p>
-      {{ tables }}
-    {% endif %}
-```
-
 
 ### Access flask app on Virtual Machine localhost from host machine:
 - Run flask app with `app.run(host='0.0.0.0', debug=True)`
