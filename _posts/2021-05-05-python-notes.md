@@ -2,8 +2,45 @@
 layout: post
 title: R Python Conda PIPs Venv RegEx
 categories: notes python
-last_modified_at: 2021-05-06 14:09:51
+last_modified_at: 2021-08-24 13:43:39
 ---
+
+Python Notes:
+- [Python Coding Kaggle](https://www.kaggle.com/iyadavvaibhav/python-notes)
+- [Pandas Kaggle](https://www.kaggle.com/iyadavvaibhav/pandas-notes)
+- [Flask](../flask-notes) - back end web framework micro
+- [Pelican](../pelican-python-notes/) - Static Site Generator
+
+## Python for Animation and Modelling:
+
+VPython GlowScript
+- can be used to create objects and animate them
+- VPython makes it unusually easy to write programs that generate navigable real-time 3D animations.
+- https://www.glowscript.org/docs/VPythonDocs/videos.html
+
+
+Manim
+- can animate equations and plots
+- https://github.com/3b1b/manim
+- https://www.youtube.com/watch?v=ENMyFGmq5OA
+
+Sage
+- Allows equation animations and plotting
+- https://www.sagemath.org/download-mac.html
+
+Povray
+- The Persistence of Vision Raytracer is a high-quality, Free Software tool for creating stunning three-dimensional graphics. The source code is available for those wanting to do their own ports.
+- http://www.povray.org/
+
+ImageMagick
+- Create, edit, compose, or convert digital images.
+- It can resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves.
+
+EdX
+- https://learning.edx.org/course/course-v1:CornellX+ENGR2000X+1T2017/home
+
+
+
 
 ## Anaconda and Conda Notes with Jupyter and R Studio
 
@@ -53,8 +90,6 @@ sayHello <- function(){
 
 sayHello()
 ```
-
-
 
 ## Regex Notes:
 

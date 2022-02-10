@@ -2,16 +2,16 @@
 layout: post
 title: JavaScript Libraries and Frameworks Notes
 categories: notes javascript
-last_modified_at: 2020-08-13 15:30:08
+last_modified_at: 2021-08-24 14:05:45
 ---
 
 ## Node JS
 Overview:
-- node js is like asp/php/flask
+- node js is like asp/php/python, it makes use of JS for backend lang.
 - you can run .js files outside browser
-- give ability to use js in backend
-- npm is package manager like pip for node js
+- npm is package manager for node js, like pip
 - pakages are nothing but js libraries.
+- `npm install` downloads a package and it's dependencies defined in a `package.json` file and generates a node_modules folder with the installed modules.
 
 ## Angular JS
 Overview:

@@ -27,3 +27,6 @@ Banks makes money by following methods:
 **Retail banking (Consumer Banking):**
 - Individual consumers can manage their money, take credit, and deposit their money
 - Services include checking and savings accounts, mortgages, personal loans, credit cards, FD/RD.
+
+**Income TAX**
+- Form 26as has information on FD interest

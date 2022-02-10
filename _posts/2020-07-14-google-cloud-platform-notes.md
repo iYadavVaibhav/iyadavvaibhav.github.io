@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Google Cloud Platform and its Services
+title: Google Cloud Platform (GCP) and its Services
 categories: notes
-last_modified_at: 2020-07-14 11:16:39
+last_modified_at: 2021-08-24 13:43:41
 ---
 
 Google Cloud Platform is cloud service from Google just like AWS and Azure. It provides SaaS, PaaS and IaaS.
@@ -103,4 +103,4 @@ Initialization:
 - create table, called collection, users
 - create rows, called document, doc_id
 
-More on Flutter notes.
+More on [Flutter](../flutter-notes/) notes.

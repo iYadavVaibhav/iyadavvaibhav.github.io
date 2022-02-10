@@ -167,3 +167,8 @@ Triggers:
   - `firebase login` - login to your google account to use CLI.
   - `firebase init fucntions` - create fucntions folder in flutter project.
   - `firebase deploy --only functions` - deploy functions to firebase cloud.
+
+References:
+- Felix Angelov - https://www.youtube.com/watch?v=knMvKPKBzGE
+- Brian Egan - https://www.youtube.com/watch?v=Wfc5LMgWaRA
+

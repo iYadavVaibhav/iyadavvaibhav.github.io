@@ -2,7 +2,7 @@
 layout: post
 title: Electronics Notes, IoT, DIY, Hobby
 categories: notes electronics
-last_modified_at: 2021-07-27 23:26:15
+last_modified_at: 2021-07-29 15:31:45
 ---
 
 
@@ -62,7 +62,10 @@ R = (9-3.2) / 0.024 = 240 ohms
 
 ## Components
 
-**LEDs** - bulb, usually added with resister. This give resistance to circuit.
+**LEDs** - bulb, usually added with resister. This give resistance to circuit. Longer leg is +ve.
+- RGB has common anode and cathode LED. long to GND, light then cathode else anode.
+- Control brightness by PWM - pulse width modulation.
+- Mine is CC.
 
 **Multimeter** - measures volts, amps and resistance. Continuity, NPN and PNP, for AC and DC. When measuring AMPs do switch red com.
 
@@ -150,11 +153,6 @@ R = (9-3.2) / 0.024 = 240 ohms
 **Bridge Rectifier**:
 - Converts AC to DC
 
-**Tips/Concepts**:
-- Didode in parallel prevent volt volt reply on connct and disconnect.
-- Capacitor in parallel prevent jerk and high volts reply. Reduces plasma.
-- add 1kohm resistor in series to prevent damage by current.
-
 **MicroControllers**:
 - can be programmed to change current of output pins
 - Arduino, tiny computer on IC. 
@@ -190,12 +188,87 @@ R = (9-3.2) / 0.024 = 240 ohms
 
 **Touch Switch** - TTP223 , rs. 20. - is a PCB with A/B modes.
 
+**Time - DS3231 RTC** Rs. 250, module Precise Real-Time Clock Module is a low-cost, extremely accurate I²C real-time clock (RTC) with an integrated temperature-compensated crystal oscillator (TCXO) and crystal. The device incorporates a battery input and maintains accurate timekeeping when the main power to the device is interrupted
+
+**LED RGB ws2812b 5v led Strip** is controllable via Arduino, we can specify color and brightness of every single LED.
+
+---
 
 
-## Small Projects and Devices
+## Tips/Concepts
+
+- Didode in parallel prevent volt volt reply on connct and disconnect.
+- Capacitor in parallel prevent jerk and high volts reply. Reduces plasma.
+- add 1kohm resistor in series to prevent damage by current.
+- resistor could drop current however, the supply volt varies, to cover this use IC to for volt drop. To cover heat loss, and make efficient use 'DC-DC step-down buck converter'. 90% efficient. Ususally in car charger to convert 12v to 5v, [more](https://www.quora.com/Does-a-resistor-reduce-current-and-voltage#:~:text=%2C%20BA-,Philosophy,-%26%20History%2C%20Vrije%20Universiteit)..
+
+## Arduino KIT
 
 **Arduino** boards having microporcessor. single board computer. uno for begineers, nano for breadboard. Kit has related components. It is open source microcontroller. It comes original and compatible copies. Arduino nano is 125 each and can be used as processing unit.
 
+It has libraries same like python to do complex stuff. Install using library manager.
+
+**LED** with 220ohm
+- 12mA current, LED 2V, Resistor 2.7
+
+**Active Buzzer** makes sound. It has IC for sound, green circuit is passive, black is active. Active makes sound on current while passive needs square waves with 2K and 5K freq. So we can send high low signal to a pin, varying by a delay of 1 to 10 ms. THis will make sound with freq depending on delay. We can pass notes to passive buzzer and make play any song.
+
+**Tilt Sensor** are used to detect inclination or orientation. They are reliable, low-power, long- lasting and very inexpensive. Can tell arduino about on/off based on orientation, then based on that we can make another component operate, like making LED on/off.
+
+**servo motor** is a geared one, only capable of rotating 180 degrees and is commanded by transmitting electrical pulses from your Arduino. Brown wire is GND, Red is 5V, orange is signal. Signal can be position 0-180, this will make servo move that degree as quickly as possible, then we can delay.  Need servo lib.
+
+**Ultrasonic sensor** can measure distance, HC-SR04 is inexpensive and very easy to use. Need lib. capacity of 2cm to 400cm 
+
+**DHT11 Temperature and Humidity Sensor**, The sensor includes a sensor of wet components and a temperature measurement device. It returns binary data string, which is the coverted by library to tell temp and humidity. 
+has pin GND, Data and 5V,
+
+**Analog Joystick Module** is used to control components. 5 pins, GND, VCC +5, X, Y, SW Key. It has XY analog output which gives direction with magnitude. and key is digital. 
+- Key on press connects to GND. Todo: A pull-up resistor or pull-down resistor is a resistor used to ensure a known state for a signal. To get accurate readings from the Key/Select pin, it should be connected to VCC with a pull-up resistor, which we can do using the built in resistors on the UNO digital pins
+- Range of X or Y is from 0-1024, mid value is approx 512.
+- Switch is 1/0 pressed or free.
+
+**IR Module** using lib, we can program IR receiver. 
+- IR hexa decimal codes are required to interpret the OP.
+- IR RECEIVER SENSOR - IR detectors are essentially small microchips with a photocell that are created to detect infrared light,
+- They detect and send low signal else high 5v.
+- 3 pins, GND -, 5V, Signal. Signal send digitalvalues which are converted to HEX by library `case 0xFFA25D: Serial.println("CH-"); break;`. 
+
+**LCD Display** LCD1602 
+- 16 pins
+  - VSS: A pin that connects to ground
+  - VDD: A pin that connects to a +5V power supply
+  - VO: A pin that adjusts the contrast of LCD1602
+  - RS: A register select pin that controls where in the LCD’s memory you are writing data: either the data register, which holds what is displayed on the screen, or an instruction register, which is where the LCD’s controller looks for instructions on what to do next.
+  - R/W: A Read/Write pin that selects reading mode or writing mode
+  - E: An enabling pin that causes the LDC module to execute relevant instructions when supplied with low-level energy.
+  - D0-D7:Pins that read and write data
+  - A and K: Pins that control the LED backlight
+- The LCD display requires six UNO pins as digital outputs. Additionally, it needs 5V and GND connections. 
+- We need to set Potentiometer to control brightness of Letter (not backlit) and then reset Arduino to display.
+
+**Thermistor** is simply a thermal resistor - a resistor that changes its resistance according to the temperature. 100ohm or more per degree.
+
+**74HC595 Shift Register** 
+- The shift register is a kind of chip containing eight memory locations, with the values 1 or 0. We input the data using the 'Data' and 'Clock' pins of the chip to set these values on or off. 8 clock pins and 8 data pins. We can combine this with arduino analog PWN write to control brightness of LED.
+- Serial to Parallel Converter - useful to power multiple LEDs from one output pin.
+- Pin 1 of the chip is to the left of this notch. +5v
+- Pin, Q0.
+- right side is Q1-Q7 and ground at bottom
+- Pin 14, 12 and 11 connect to UNO. 
+
+**Stepper Motor** is an electromechanical device which converts electrical pulses into discrete mechanical movements. Used for movements and controlled with pulse of current. Has driver module. 
+
+
+
+
+
+
+
+
+
+---
+
+## Small Projects and Devices
 
 **Electric Motor Speed Controller**
 - using 555 timer IC - IP 4.5v-16v, OP <200mA. pin1 ground, pin8 +ve. 
@@ -213,6 +286,8 @@ R = (9-3.2) / 0.024 = 240 ohms
 - add 0.1uF ceramic cap, to smooth noise.
 - 10uf elector cap, and 0.1uF ceramic cap in OP to smooth out flow.
 - add diode in IP to prevent polarity fault. schottky diode has less drop so add it.
+- ref - https://www.youtube.com/watch?v=d-j0onzzuNQ
+- this has isse of heat loss by 7805.
 
 
 **DTH - Free Dish - Settop Box**
@@ -220,26 +295,70 @@ R = (9-3.2) / 0.024 = 240 ohms
 
 
 **Fan Resistor 220v B1 R-783**
+- cap - 3.3uF 250V
+- res - 1m in parallel
+- res - 4.7ohm, 0.5w
+- 1p4t switch.
+
 - SE 104j2A - capacitor, 100V 2A
 - BT124 600E - Thyristors - TRIACs
+- ref - https://www.youtube.com/watch?v=k4c3_yCfLWA
 
 
 **diac triac light dimmer circuit**
 - triac - bt136
-- ref - https://www.youtube.com/watch?v=C1qGVaGgGOo
+- diac - DB3
+- capacitor - 104k 440v
+- potentiomenter - 500k
+- resistor - 10k
+- ref 
+  - en https://www.youtube.com/watch?v=OmBu3emRdV8
+  - hi https://www.youtube.com/watch?v=C1qGVaGgGOo
 
 
 **Step-down buck converters**
 - reduces volts without wasting energy.
 
+**WiFi Relay Switch**
+- ref - https://www.youtube.com/watch?v=TZnrHkjlgLk
 
 **Malaysian Baloon**
 - 6v, 40mA - working.
 
-
 **Trimmer** 
 - resistor - 100ohm 5%
 
+**D Duke Adapter**
+- 500mA or 0.5A at 12V = 6W max load.
+
+**Balaji Adapter**
+- OP = 12V 2A = 24W max load.
+
+**Lights LEDs**
+- MegaGold - 2.4W = 0.2A = 200mA. 10 lights with BalaJi Adapter.
+- Car Music RGB - 0.23A at 12V = 2.76W
+
+**2CH RC Remote Control 27MHz**
+- RC Remote Car
+
+---
+
+DIYs:
+- building material:
+  - PVC sheets, PVC pipe to flat, PVC fanti. 
+  - MDF boards
+  - Rubber sheets
+- tools:
+  - Small Drill Bits
+  - Glue Gun
+  - Fevi Quick
+- Elec:
+  - PCB Board, empty board
+  - Switches. 
+  - Hot Glue Gun
+
+
+--- 
 Todo:
 - Add remote to symphony cooler
 - Add mobile controlled Motor starter and water level monitor
@@ -253,5 +372,11 @@ Todo:
 - Multimeter Manual - https://www.petervis.com/meters/dt830d/dt830d-how-to-use-instructions.html
 - https://quadstore.in/
 - Water plants auto - https://www.electromaker.io/blog/article/elecrow-smart-plant-watering-system-using-arduino-uno-review-and-tutorial
-
-
+- Channels:
+  - Circuit Digest - https://www.youtube.com/channel/UCy3CUAIYgZdAOG9k3IPdLmw
+  - Manmohan Pal - https://www.youtube.com/c/ManmohanPal
+  - tech Ideas - https://www.youtube.com/channel/UCNtV2t2MX3qGkBSD_uRtCGg
+  - The engiuneering mindset - https://www.youtube.com/c/Theengineeringmindset
+  - Mega Electronics - https://www.youtube.com/channel/UCl9W8s1E1aXmODa_8fTSbhw
+  - DD ELectro Tech - https://www.youtube.com/user/Deba9681895487
+- 

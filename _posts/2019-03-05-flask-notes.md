@@ -22,7 +22,7 @@ What is Python Virtual Environment?
 
 How to use Virtual Environments in Python3?
 - python3 or python depends on your installation.
-- `python3 -m venv venv_app` - created folder venv_app
+- `python3 -m venv venv_app` - creates folder venv_app
 - `source venv_app/bin/activate` - activates this environment, for use
 - now do `pip3 install flask` - this installs the package only in this environment.
 - add `#!venv_app/bin/python3` on top of main.py file to make it use this python.
@@ -59,7 +59,8 @@ if __name__ == '__main__':
   - add session info, after `app = Flask(__name__)` add `app.secret_key = 'super secret key'` 
 
 
-### Access flask app on Virtual Machine localhost from host machine:
+### Access "Virtual Machine localhost flask app" on a host machine:
+- Suppose on an Ubuntu VM a flask app is running on localhost and you want to access it from you host machine that is Mac.
 - Run flask app with `app.run(host='0.0.0.0', debug=True)`
 - This tells your operating system to listen on all public IPs.
 - then access `192.168.10.33:5000` from host machine.
@@ -85,6 +86,7 @@ Reference:
 
 
 ## Add DataBase to Flask app using Flask-SQLAlchemy
+
 It is an extension of `SQLAlchemy` which is ORM for major databases.
 - It is an designe for Flask that adds support for SQLAlchemy to your application. 
 - You can define table as a class, called model, with member variables as column names.
@@ -98,6 +100,8 @@ class User(db.Model):
     username = db.Column(db.String(50), unique=True)
     admin = db.Column(db.Boolean)
     created_on = db.Column(db.DateTime(), default=datetime.now)
+    updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.now)
+
 
 db.session.add(obj)     # insert new record to database
 db.session.delete(obj)  # delete a record from database
@@ -123,8 +127,17 @@ Now you can check SQL for tables created. You can do:
 Caution: 
 - Provide full path to db file, so that apache can locate it.
 
+### Migrations using Alembic and Flask-Migrate
+
+Alembic is a database migration tool for SQLAlchemy. It generates Py script to keep the database schema update with the models defined. It help upgrade and roll back the schemas.
+
+- We use library `Flask-Migrate` library that helps use alembic for flask apps using cli
+  - `flask db migrate -m 'relations_added'` - creates migration script to update the tables. -m helps add caption to file.
+  - `flask db upgrade` can be used to run the Py file generated and this will updated the database schema.
+
 Reference:
 - https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3
+- SQLite explorer - https://sqlitebrowser.org/
 
 
 
@@ -166,7 +179,11 @@ Data of a task can be, JSON blob, as:
 - This API can be consumed by client side app which can be single page HTML.
 - Note, JSON obect is defined in python as dict, `jonify` converts and send as JSON Object.
 
+## Serving over HTTPS
 
+- generate certificate key using `openssl req -x509 -newkey rsa:4096 -nodes -out cert.pem -keyout key.pem -days 365`
+- allow insecure connection to localhost in chrome, paste `chrome://flags/#allow-insecure-localhost`
+- https://blog.miguelgrinberg.com/post/running-your-flask-application-over-https
 
 
 

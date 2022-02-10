@@ -18,6 +18,87 @@ We can improve model's performance by changing parameters of model.
 
 -----------------------------------------------
 
+
+
+# Personal Leadership - ISB Final Classes
+
+D.V.R. Seshadri, ISB
+
+i am gift to the world the way I am.
+
+you can be a leader of yourself, no need to be MD or CEO. Coder can be a leader. 
+
+thought - get a thought in mind, swatch bharat
+
+strategic - make a strategy to execute, 11m toilets
+
+enterpreneurial - make people build 
+
+people leadership - educate people to use app / toilet
+
+self leadership - personal leadership - most required for above leaserships.
+
+iq - intellectual quotient
+eq - emotional
+sq - spiritual - max for personal leasdership, how do you face tsunami of life?
+
+What make you happy
+- self satisfaction
+- surrounded by friends and family
+- connecting with nature
+
+References:
+- neem karoli baba and the train story
+- book - The Executive and the Elephant: A Leader's Guide for Building Inner Excellence
+Book by Richard L. Daft
+- Oxford time management - https://www.ox.ac.uk/students/academic/guidance/skills/time
+- Scientist's Search for Truth Paperback – 1 December 2005
+by Swami Virajeshwara (Author)
+
+
+
+
+# Story Telling ST
+
+Emotions along with the functionality for a product. Emotions create a good start.. people listen when you say I am from ISB. ST is like swimming, you have to do and learn, can't learn by watching videos. 
+
+Story retains in mind of people, we remember thirsty crow story but not pascals law.
+
+Take 1: business presentation - the problem, the solution, the architecture, the impact, thank you
+
+Take 2: Story - here is the story of marc, marc is manager in a retail store, he spends 50% time just arranging items, and with our solution now he is free and can spend time with customers. Story can also be around Owner, Manager, Consumer or between two stores?
+
+Status update can be boring when BAU update is give, like busiess as usual. 
+
+Add emotion in story, like Suresh ki dukaan nhi chalti thi, wo dept me gya but using Our app he has no time to sit back and has earned a car and house.
+
+5 ways to begin a story
+- start with quote and contextualize it, connect the quote with context, take a stand on it. A quote with picture makes a big impact. 
+- start with a set up question
+- tell an anecdote - a short amusing or interesting story about a real incident or person. specially related to audience. 
+- share an interesting fact or data - 
+- imagine a world where - 
+
+Presentation to story is facts to emotions. checklist:
+- does it has emotions
+- does it build a common groung
+- does it engage a visual brain?
+- it is truth , well told?
+- Does it have a contrast? - achoring effect?
+
+Develop a niggle around it.
+
+References:
+- Obama speaks to Israel - https://www.youtube.com/watch?v=Oxfw3ZfBx6I
+- https://economictimes.indiatimes.com/tech/information-tech/sebi-bans-ex-infy-wipro-staffers-in-insider-trading-case/articleshow/86632276.cms?from=mdr#:~:text=Two%20former%20employees%20of%20IT,US%2Dbased%20investment%20advisor%20Vanguard.
+- hacker asks 18m - https://www.bbc.com/news/technology-53214783
+
+
+
+
+
+
+
 # ISB T6 Pricing Analytics
 
 Prof. Abhinav Uppal                         
@@ -1917,9 +1998,108 @@ deterministic vs stochastic
 
 - seasonality occurs at regular interval while cyclicality is random in time interval.
 
+## Time Series Modelling
+
+There are different methods of forecasting, but three terms need to be taken care of:
+1. Seasonality - Some months have peak output value compared to other months. eg, more travel during christmas time. we need to capture this seasonality while forecasting. 
+2. Trend - Inc/Dec in behaviour over time, 
+3. Unexpected Events or Irregularity or Noise - Dynamic changes that occur in market or organization that cannot be captured. eg, pendemic, recession. 
+
+We can use algo and other methods to capture seasonality and trend but unexpected events are dynamic and difficult to capture.
+
+**Stationary timeseries** means that the mean and variance are same between two timestamps. We need to make timeseries stationay if it is not (maybe it is like standardizing the values). We can use **rolling statistics** to find moving average, on a window size, to make a TS stationary. Moving avg plot is smoother than the actual values. This makes TS stationary, we can also do it by using Exponential smoothing. 
+
+Simple exponential smoothing $ yT = α * XT + α(1−α) * yT−1  $.
+
+Double exponential smoothing for capturing trend and seasonality $ Yt =  α * Xt + (1-α) (yt-1 + bt-1) $ where, $ bt = beta * (Yt – Yt-1) +  (1-beta) * bt-1 $.
 
 
-## FA Session 2:
+
+
+
+In **descriptrive modelling** of timeseries data we model to determine its **components** like seasonal patterns, trends, relation to external factors etc. This is **analysis** of timeseries data, it tells the underlying causes and the why behind the data. We decompose the timeseries data into **constitution components**. The quality is determined by how well the model describes the data. The primary objective is to develop the **mathematical model** from the data that can provide **plausible description** from the sample data.
+
+In **Predective modelling or forecasting** we use this information to find future values. The future values can only be estimated from what has already happened. 
+
+**Components of Time Series:**
+- **Level** - baseline value of series if it was a stright line
+- **Trend** - optimal linear inc/dec behaviour over time
+- **Seasonality** - optional repeating patterns or cyclic behaviour over time.
+- **Noise** - optional varability that cannot be explained by the model.
+
+These constituent components can be thought to combine in some way to provide the observed time series.
+
+TS can be additive or multiplicative. if these components add then additive, else multiplied then multiplicative. 
+
+$$ y = level + trend + seasonality + noise $$
+
+this can be modelled with assumptions using traditional statistical methods.
+
+these components can help make forecast but not always.
+
+**Data Prepration** needs to be done to check NULLs or non-continuous data, to make date granularity on the level we are interested in. Then:
+- Group metrics by granularity of date, like, roll up to daily/monthly etc, use group by with sum/mean.
+- Make date column as **index**. 
+
+**Visualizing** the data helps us see seasonality, trend.
+
+We can also visualize our data using a method called **time-series decomposition** that allows us to decompose our time series into three distinct components: trend, seasonality, and noise.
+
+```python
+import statsmodels.api as sm
+decomposition = sm.tsa.seasonal_decompose(df, model='additive')
+fig = decomposition.plot()
+plt.show()
+```
+
+This gives:
+observed - timeseries as is
+trend - how metric has gone up or down
+seasonal - cyclic up and down in series, and
+residual - left over after fitting a model, its actual - trend - seasonality.
+
+## Using ARIMA - Autoregressive Integrated Moving Average
+
+ARIMA(p, d, q), these account for seasonality, trend, and noise in data
+
+We can find values of pdq by using machine learning algos and can improve it by using grid search. We can check for lowest AIC value, and can consider those parameters. 
+
+Summary Table - `print(results.summary().tables[1])` to print the results. This gives stats output table with coefficient value, p value and t scores.
+
+Diagnostics - we can run model diagnostic to see how are the variations and can usnderstand if it is feasible to use this model. if the residuals are normally distributed it indicates that we can make use of model.
+
+Validations - we can validate to understand accuracy, the predicted values are compared with real values. `pred = results.get_prediction(start=pd.to_datetime('2017-01-01'), dynamic=False)`. We can plot this to have a better unserstanding of the results. The trend should align and make sense. Next, we can find MSE and RMSE using the predicted and actual values. 
+
+Once we are happy with the model we can **Forecast** the values for the future dates.
+
+
+
+## Using FB Prophet
+
+Developed by Facebook in 2017, it also has advanced capabilities for modeling the **effects of holidays** on a time-series and implementing custom changepoints. 
+
+Install:
+- `sudo conda install -c conda-forge fbprophet`
+- in case of error, `sudo pip install pystan==2.18.0.0`, then above step.
+
+- `import fbprophet`
+
+- in case of error, 
+  - in file `/Users/vaibhavyadav/anaconda3/lib/python3.7/site-packages/fbprophet/hdays.py`
+  - replace `from holidays import WEEKEND, HolidayBase, easter, rd`, 
+  - with 
+
+```
+from holidays import WEEKEND, HolidayBase
+from dateutil.easter import easter
+from dateutil.relativedelta import relativedelta as rd
+```
+
+References:
+- https://machinelearningmastery.com/time-series-forecasting-with-prophet-in-python/
+- https://towardsdatascience.com/an-end-to-end-project-on-time-series-analysis-and-forecasting-with-python-4835e6bf050b
+- https://www.analyticsvidhya.com/blog/2021/07/time-series-forecasting-complete-tutorial-part-1/
+
 
 
 ------------------------------------
