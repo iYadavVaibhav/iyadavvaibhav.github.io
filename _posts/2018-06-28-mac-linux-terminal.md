@@ -2,7 +2,7 @@
 layout: post
 title: Mac and Linux Ways
 categories: notes snippets
-last_modified_at: 2021-05-06 13:57:56
+last_modified_at: 2022-02-20 12:57:56
 ---
 
 Here are some basic understandings and commands that can be used on UNIX terminal and eventually on Mac. 
@@ -81,6 +81,20 @@ Packages are maintained in **repositories**, Main, Universe, Restricted and Mult
 PPA - Personal Package Archive - allows application developers to create their own repositories to distribute.
 
 `sudo add-apt-repository ppa:mkusb/ppa` add a ppa repo
+
+Ubuntu initial setups
+- update and upgrade `sudo apt update && sudo apt upgrade`
+- codecs flash and fonts `sudo apt install ubuntu-restricted-extras`
+- vlc - `sudo apt install vlc`
+- chrome `wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb` then `sudo dpkg -i google-chrome-stable_current_amd64.deb`
+- more - https://itsfoss.com/things-to-do-after-installing-ubuntu-20-04/
+
+Clean up
+- Delete apps - `sudo apt purge thunderbird`
+- remove sw dependencies `sudo apt autoremove`
+- remove partially installed packages `sudo apt autoclean`
+- remove cache `sudo apt clean`
+
 
 **APT - Advanced Package Tool** is CLT UI that works with core libraries to handle the installation and removal of software on Debian, Ubuntu. IT manages dependencies, config files and upgrades/downgrades.
 
