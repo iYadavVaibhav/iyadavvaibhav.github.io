@@ -75,26 +75,10 @@ Ubuntu is debain based os, others are Mint, Elementary and PoP OS.
 Debain uses dpkg packaging system, for install/uninstall software.
 
 Packages are maintained in **repositories**, Main, Universe, Restricted and Multiverse. 
-
-`sudo add-apt-repository universe` to enable a repo.
+- `sudo add-apt-repository universe` to enable a repo.
 
 PPA - Personal Package Archive - allows application developers to create their own repositories to distribute.
-
-`sudo add-apt-repository ppa:mkusb/ppa` add a ppa repo
-
-Ubuntu initial setups
-- update and upgrade `sudo apt update && sudo apt upgrade`
-- codecs flash and fonts `sudo apt install ubuntu-restricted-extras`
-- vlc - `sudo apt install vlc`
-- chrome `wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb` then `sudo dpkg -i google-chrome-stable_current_amd64.deb`
-- more - https://itsfoss.com/things-to-do-after-installing-ubuntu-20-04/
-
-Clean up
-- Delete apps - `sudo apt purge thunderbird`
-- remove sw dependencies `sudo apt autoremove`
-- remove partially installed packages `sudo apt autoclean`
-- remove cache `sudo apt clean`
-
+- `sudo add-apt-repository ppa:mkusb/ppa` add a ppa repo
 
 **APT - Advanced Package Tool** is CLT UI that works with core libraries to handle the installation and removal of software on Debian, Ubuntu. IT manages dependencies, config files and upgrades/downgrades.
 
@@ -126,19 +110,32 @@ Or simply use below to install with dependecies
 
 `dpkg` does not handle dependency, while `apt` does. apt under the hood uses dpkg.
 
-Virtual box add on:
-- `sudo apt update`
-- `sudo apt install virtualbox-guest-dkms virtualbox-guest-x11 virtualbox-guest-utils`
+### First Steps
 
-Install nsepa and Citrix Workspace:
+Do following in a new install
+- update and upgrade `sudo apt update && sudo apt upgrade`
+- codecs flash and fonts `sudo apt install ubuntu-restricted-extras`
+- vlc - `sudo apt install vlc`
+- chrome `wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb` then `sudo dpkg -i google-chrome-stable_current_amd64.deb`
+- more - https://itsfoss.com/things-to-do-after-installing-ubuntu-20-04/
 
-- `wget http://ftp.br.debian.org/debian/pool/main/n/network-manager/libnm-util2_1.6.2-3+deb9u2_amd64.deb http://ftp.br.debian.org/debian/pool/main/n/network-manager/libnm-glib4_1.6.2-3+deb9u2_amd64.deb` download debs
-- `sudo apt install ./libnm-util2_1.6.2-3+deb9u2_amd64.deb ./libnm-glib4_1.6.2-3+deb9u2_amd64.deb` install the debs downloaded
+Clean up
+- Delete apps - `sudo apt purge thunderbird`
+- remove sw dependencies `sudo apt autoremove`
+- remove partially installed packages `sudo apt autoclean`
+- remove cache `sudo apt clean`
 
-- Download .deb file from Citrix, amd 64
-- `cd ~/Downloads`
-- `sudo dpkg -i icaclient_21.4.0.11_amd64.deb`
-- `sudo apt-get install -f`
+Dev Softwares
+- sublime `sudo snap install sublime-text --classic`
+- vs code `sudo snap install code --classic`
+
+
+Install Git and Gh:
+- git and essentials `sudo apt-get install build-essential procps curl file git`
+- set up git - `git config --global user.name "Vaibhav Yadav"`
+- set up git - `git config --global user.email "vebs0205@gmail.com"`
+- install gh - `sudo snap install gh`
+- gh authenticate - `gh auth login`
 
 Install Jupyter notebook:
 - `sudo apt-get update`
@@ -150,6 +147,15 @@ Install Jupyter notebook:
 - `source env/bin/activate` activate it
 - `pip install jupyter` install jupyter
 - `jupyter notebook` run it
+
+
+Install nsepa and Citrix Workspace:
+- `wget http://ftp.br.debian.org/debian/pool/main/n/network-manager/libnm-util2_1.6.2-3+deb9u2_amd64.deb http://ftp.br.debian.org/debian/pool/main/n/network-manager/libnm-glib4_1.6.2-3+deb9u2_amd64.deb` download debs
+- `sudo apt install ./libnm-util2_1.6.2-3+deb9u2_amd64.deb ./libnm-glib4_1.6.2-3+deb9u2_amd64.deb` install the debs downloaded
+- Download .deb file from Citrix, amd 64
+- `cd ~/Downloads`
+- `sudo dpkg -i icaclient_21.4.0.11_amd64.deb`
+- `sudo apt-get install -f`
 
 
 ### Others
@@ -178,6 +184,12 @@ USB Installation
 - Clean grub of mac - https://apple.stackexchange.com/questions/337189/unwanted-grub-on-macos-high-sierra
 - Tripe boot mac - https://www.youtube.com/watch?v=B0EuYHFeLAA
 - First steps on Ubuntu - https://www.youtube.com/watch?v=GrI5c9PXS5k
+
+Virtual box add on:
+- `sudo apt update`
+- `sudo apt install virtualbox-guest-dkms virtualbox-guest-x11 virtualbox-guest-utils`
+
+
 
 ## Linux Ways
 
