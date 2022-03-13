@@ -137,6 +137,9 @@ Install Git and Gh:
 - install gh - `sudo snap install gh`
 - gh authenticate - `gh auth login`
 
+git remote set-url origin git@github.com:username/repo.git
+
+
 Install Jupyter notebook:
 - `sudo apt-get update`
 - `sudo apt install python3-pip` PIP is required for Jupyter
