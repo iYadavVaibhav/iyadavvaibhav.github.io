@@ -117,7 +117,7 @@ Install a `.deb` file, eg, Chrome:
 - `sudo dpkg -i /path/to/foo.deb` installs.
 - `sudo apt-get install -f` fix-broken dependencies.
 
-Or simply use below to install with dependecies
+Or simply use below to install with dependencies
 
 - `sudo apt install ./name.deb`
 
