@@ -186,7 +186,25 @@ Install nsepa and Citrix Workspace:
 
 ### Others
 
-`lsblk` lists disk
+- `lsblk` lists disk
+
+Check graphics card installed
+
+- check hardware using **lshw** (list hardware) is a small Linux/Unix tool which is used to generate the detailed information of the system's hardware configuration from various files in the /proc directory. E.g. to see graphics driver - `sudo lshw -c video`
+- check loaded modules using **lsmod** - it shows which loadable kernel modules are currently loaded. `lsmod | grep radeon`
+- The glxinfo program shows information about the OpenGL and GLX implementations running on a given X display. `sudo apt install mesa-utils` and `glxinfo -b`
+- Check boot message for graphics card in use `dmesg | grep -i radeon`
+
+Windows on Linux
+
+- `sudo apt-get install playonlinux`
+- installs wine too, 32 bit
+- to install a program, create a virtual machine and install it. 
+- to install nfsmw
+  - create a machine, 32bit
+  - add drivers dcdx9 and vcrun6
+  - more on install <https://www.youtube.com/watch?v=lUqU_uf-o9E>
+  - more on download <https://www.youtube.com/watch?v=no8-fB4MX00&t=1s>
 
 ### Users and Groups
 
