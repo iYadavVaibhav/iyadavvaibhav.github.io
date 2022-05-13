@@ -2,9 +2,6 @@
 
 Everything you read see understand goes here. Then can go to iYV github articles or Kaggle.
 
-Goal -> reach 30lpa by eoy. to buy big house. Each day do ML DS in office. If not in work then do yourself.
-
-
 # Android Notes
 
 ADB is utility to interact with android phone. It can install/uninstall apks. change connections etc.
