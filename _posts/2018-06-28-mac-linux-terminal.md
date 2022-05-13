@@ -157,8 +157,7 @@ Install Git and Gh:
 - set up git - `git config --global user.email "vebs0205@gmail.com"`
 - install gh - `sudo snap install gh`
 - gh authenticate - `gh auth login`
-
-git remote set-url origin git@github.com:username/repo.git
+- git remote set-url origin git@github.com:username/repo.git
 
 
 Install Jupyter notebook:
