@@ -152,12 +152,14 @@ Dev Softwares
 
 Install Git and Gh:
 
-- git and essentials `sudo apt-get install build-essential procps curl file git`
-- set up git - `git config --global user.name "Vaibhav Yadav"`
-- set up git - `git config --global user.email "vebs0205@gmail.com"`
+- install git and essentials `sudo apt-get install build-essential procps curl file git`
+- set up git - `git config --global user.name "YOUR NAME"`
+- set up git - `git config --global user.email "YOUR EMAIL ADDRESS"`
+
+<!---
 - install gh - `sudo snap install gh`
 - gh authenticate - `gh auth login`
-- git remote set-url origin git@github.com:username/repo.git
+-->
 
 
 Install Jupyter notebook:
