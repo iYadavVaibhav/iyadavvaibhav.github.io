@@ -162,17 +162,7 @@ Install Git and Gh:
 -->
 
 
-Install Jupyter notebook:
-
-- `sudo apt-get update`
-- `sudo apt install python3-pip` PIP is required for Jupyter
-- `sudo -H pip3 install --upgrade pip` upgrade pip, -h for sudo to take home dir of root rather than current user. Prevents user dir to be owned by root.
-- `sudo -H pip3 install virtualenv` to create virtual envs
-- `mkdir jupyter && cd jupyter`
-- `virtualenv env` create env named env
-- `source env/bin/activate` activate it
-- `pip install jupyter` install jupyter
-- `jupyter notebook` run it
+Install Jupyter notebook, see Python Notes <https://iyadavvaibhav.github.io/python-notes/>
 
 
 Install nsepa and Citrix Workspace:

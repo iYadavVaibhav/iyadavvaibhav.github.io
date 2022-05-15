@@ -1,6 +1,6 @@
 # Notepad
 
-Everything you read see understand goes here. Then can go to iYV github articles or Kaggle.
+Everything tech you read see understand goes here. Then can go to iYV github articles or Kaggle.
 
 # Android Notes
 
@@ -92,7 +92,7 @@ Instagram page earning:
 
 Instagram Bot:
 
-- Scrapper - <https://towardsdatascience.com/increase-your-instagram-followers-with-a-simple-python-bot-fde048dce20d>
+- Scrapper - <https://towardsdatascience.com/increase-your-instagram-followers-with-a-simple-python-bot-fde048dce20d#:~:text=Open%20a%20browser%20and%20login,users%20you%20followed%20using%20the>
 - Post - <https://www.youtube.com/watch?v=vnfhv1E1dU4>
 
 
