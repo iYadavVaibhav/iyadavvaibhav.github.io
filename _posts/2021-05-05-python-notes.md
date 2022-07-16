@@ -5,7 +5,7 @@ categories: notes python
 last_modified_at: 2021-08-24 13:43:39
 ---
 
-## Other Python Notes:
+## Other Python Notes
 
 - [Python Coding Kaggle](https://www.kaggle.com/iyadavvaibhav/python-notes)
 - [Pandas Kaggle](https://www.kaggle.com/iyadavvaibhav/pandas-notes)
@@ -14,7 +14,10 @@ last_modified_at: 2021-08-24 13:43:39
 
 ## Web Scraping - Selenium
 
-- Install web driver
+Install web driver
+
+- visit `https://chromedriver.chromium.org/downloads` and download version same as your browser version.
+- unzip and move `chromedriver` to `/usr/local/bin/chromedriver`
 
 More - <https://realpython.com/modern-web-automation-with-python-and-selenium/>
 
@@ -22,22 +25,31 @@ More - <https://realpython.com/modern-web-automation-with-python-and-selenium/>
 
 ## Data Science Setup
 
-Python installed in Ubuntu or Mac should not be used. Instead create a VirtualEnvironment for it.
+Python installed in Ubuntu or Mac should not be used. Instead create a Virtual Environment for it.
 
-**Quick Start** for a new project
+**Virtual Environments** can be created using conda or venv module. Each virtual environment has its own Python binary and can have its own independent set of installed Python packages in its site directories. More [here](https://docs.python.org/3/library/venv.html).
+
+**Quick Start on Linux** more [here](https://cloud.google.com/python/docs/setup).
 
 ```sh
-conda deactivate
-mkdir prj1 && cd prj1
-conda create -n prj1env pandas numpy jupyter scikit-learn matplotlib seaborn
-conda activate prj1env
-touch README.md
-code .
+sudo apt update
+sudo apt install python3 python3-dev python3-venv
+
+sudo apt-get install wget
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python3 get-pip.py
+
+pip --version
+
+cd your-project
+python3 -m venv env
+
+source env/bin/activate
 ```
 
-Run `conda activate prj1env` in code shell.
+This will create a dir `env` and will have its own python, python3, pip and pip3. Now you can install any packages and this will not interfere with system.
 
-Undo `conda deactivate && conda remove --name prj1env --all` and remove files if any.
+
 
 **Conda** is package and virtual environment manager, like pip, for any language—Python, R, Ruby and more. It is a CLI and can
 
@@ -55,10 +67,26 @@ So we can use conda alone to create a development virtual environment for new da
 **Installing Conda** on Linux
 
 - `wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh`
-- `bash Miniconda3-latest-Linux-x86_64.sh` this installs python, conda, vevn. ssl others, all in virtual environment.
-- After installation, restart terminal, and it will load new environmnet called 'base'. Now python is not the default one.
+- `bash Miniconda3-latest-Linux-x86_64.sh` this installs python, conda, vevn and others, all in virtual environment.
+- After installation, restart terminal, and it will load new environmnet called 'base'. Now python is not the default system python.
   - If you'd prefer that conda's base environment not be activated on startup, set the auto_activate_base parameter to false: `conda config --set auto_activate_base false`
   - more: <https://www.projectdatascience.com/step-by-step-guide-to-setting-up-a-professional-data-science-environment-on-a-linux/>
+
+**Quick Start using Conda** for a new project
+
+```sh
+conda deactivate
+mkdir prj1
+cd prj1
+conda create -n prj1env pandas numpy jupyter scikit-learn matplotlib seaborn
+conda activate prj1env
+touch README.md
+code .
+```
+
+Run `conda activate prj1env` in code shell.
+
+Undo `conda deactivate && conda remove --name prj1env --all` and remove files if any.
 
 **Install Jupyter** in the venv. Now that we have an environment (base) you can use it, or create a new. Then
 

@@ -1,13 +1,55 @@
 # Notepad
 
-Everything tech you read see understand goes here. Then can go to iYV github articles or Kaggle.
+Everything tech / *publishable* you read see understand goes here. Then can go to iYV github articles or Kaggle.
+
+# Pet Projects
+
+## Youtube-dl Utility on Mobile
+
+cd ~ytdl || touch mp || ls
+
+
+Playlist:
+
+```shell
+youtube-dl -f bestaudio[ext=m4a] --embed-thumbnail  --add-metadata -o './Singles/%(title)s-%(id)s.%(ext)s' https://music.youtube.com/watch?v=QNvC_bp4Um4
+
+youtube-dl -i -f bestaudio[ext=m4a] --write-thumbnail --add-metadata --download-archive './archive.txt' -o './%(playlist)s/%(id)s/%(title)s-%(id)s.%(ext)s' https://music.youtube.com/playlist?list=PLyAyDdlMr3GPXejbtjvIQzxuF-_FUrNKv
+
+youtube-dl -i -f bestaudio[ext=m4a] --embed-thumbnail --add-metadata -o './%(playlist)s/%(id)s/%(title)s-%(id)s.%(ext)s' https://music.youtube.com/playlist?list=PLyAyDdlMr3GOHFBt0IzgvED-n3uhwyrhd
+
+https://music.youtube.com/playlist?list=PLyAyDdlMr3GPXejbtjvIQzxuF-_FUrNKv
+
+youtube-dl -f bestaudio[ext=m4a] --write-thumbnail --add-metadata --download-archive ./%(playlist)s-archive.txt -o './%(playlist)s/%(playlist_index)s - %(title)s-%(id)s.%(ext)s' https://music.youtube.com/playlist?list=PLyAyDdlMr3GO27Fyqy4kn3q8Lrh7cCnJb
+```
+
+Singles:
+
+```shell
+$ youtube-dl 
+-f bestaudio[ext=m4a]
+--embed-thumbnail 
+--add-metadata
+-o '~ytdl/Singles/%(title)s-%(id)s.%(ext)s' <URL>
+
+youtube-dl -f bestaudio[ext=m4a] --embed-thumbnail  --add-metadata -o '~ytdl/Singles/%(title)s-%(id)s.%(ext)s' https://music.youtube.com/watch?v=DFGHScEXIPo
+
+youtube-dl -f "bestaudio[ext=m4a]" -i "https://music.youtube.com/watch?v=hifVLNuEJeA" -o "./songs/%(title)s.%(ext)s"
+```
+
+
+## Instauto: Post to insta via Terminal
+
+## Personal Blog - github.io Upgrade
+
+## Personal App - Daily Logger in Flask Build, PWA
 
 # Android Notes
 
 ADB is utility to interact with android phone. It can install/uninstall apks. change connections etc.
  All commands here, [adb shell](https://adbshell.com/).
 
-Enable Developer Options > USB Debugginh
+Enable Developer Options > USB Debugging
 
 adb must be installed on your mac/pc.
 
@@ -256,6 +298,10 @@ Add D3 library. Then specific module.
 
 # GCP Firebase Notes
 
+# Google Cloud Platform Notes
+
+Everything is in project
+s
 # YouTube Channel Notes
 
 Start creating a web of terms , make understand each thing, chamkao cheezo ko.
@@ -273,8 +319,6 @@ Follow:
 
 - `alias vynote="subl ~/path/to/file/notepad.txt"` add to `.bash_profile` to make shortcut
 - cheat book - <https://github.com/0nn0/terminal-mac-cheatsheet#english-version>
-
-# Google Cloud Platform Notes
 
 # Flask Notes
 

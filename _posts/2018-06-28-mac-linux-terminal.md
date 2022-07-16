@@ -254,5 +254,38 @@ Other
 
 - `youtube-dl --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" http://www.youtube.com/watch?v=fdf4542t5g` -o is --output of filename.
 
+## Mobile Linux
+
+Everything related to iOS and Android Linux.
+
+Install Termux App on Android.
+
+```shell
+termux-setup-storage
+termux-change-repo
+pkg update
+
+pkg install git
+git --version
+
+pkg install python
+
+pkg install openssl
+
+pip install --upgrade youtube-dl
+
+youtube-dl -i PLyAyDdlMr3GOHFBt0IzgvED-n3uhwyrhd
+```
+
+Install on `a-Shell` iOS App
+
+```shell
+cd ~/code
+wget -qO- http://dl-cdn.alpinelinux.org/alpine/v3.12/main/x86/apk-tools-static-2.10.6-r0.apk | tar -xz sbin/apk.static && ./sbin/apk.static add apk-tools && rm sbin/apk.static
+apk add python3
+apk add py3-pip
+pip install youtube-dl
+```
+
 
 

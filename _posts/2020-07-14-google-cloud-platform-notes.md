@@ -7,10 +7,11 @@ last_modified_at: 2021-08-24 13:43:41
 
 Google Cloud Platform is cloud service from Google just like AWS and Azure. It provides SaaS, PaaS and IaaS.
 
-* Do not remove this line (it will not be displayed)
+- Do not remove this line (it will not be displayed)
 {:toc}
 
 ## GCP Services
+
 - GCP Firebase as datastoage engine.
 - GCP App Engine is PaaS for deploying web apps on cloud:
   - App Engine also helps us deploy dockers and containers
@@ -27,7 +28,7 @@ Google Cloud Platform is cloud service from Google just like AWS and Azure. It p
 
 ## GCP Compute Engine
 
-Google Compute Engine is a cloud service from GCP which offers Infrastructure as a Service. You can get a machine with configurations as required and it can be easily scaled. 
+Google Compute Engine is a cloud service from GCP which offers Infrastructure as a Service. You can get a machine with configurations as required and it can be easily scaled.
 
 Example, start a Micro Machine `f1-micro`, with Ubuntu Server installed on  20gb HDD, in region 'us-central', and can allow traffic 'http and https'. This is also free for lifetime.
 
@@ -35,7 +36,8 @@ Example, start a Micro Machine `f1-micro`, with Ubuntu Server installed on  20gb
 
 Get an instance on GCE as per requirement or as in example above. We will configure it and add swap memory, then we will make it web server by installing Apache. We will also install MySQL database and PHP/Python as backend languages to serve web apps.
 
-#### Install gcloud on mac:
+#### Install gcloud on mac
+
 - Follow [this](https://cloud.google.com/sdk/docs/quickstart-macos) guide.
 - Install `gcloud` on workstation machine, mac, `wget > tar -xf > install.sh > gcloud init`
 - Connect to the VM machine using ssh gcloud command, get it from the SSH dropdown on GCP console near VM.
@@ -45,6 +47,7 @@ Get an instance on GCE as per requirement or as in example above. We will config
 Congratualations, you have your own linux machine on cloud, free for lifetime and is scalable. It is time to get your hand dirty.
 
 #### Transferring files to and from GCE instance
+
 - You can transfer files using various options mentioned in [this](https://cloud.google.com/compute/docs/instances/transfer-files#transfergcloud) guide.
 - we are using `gcloud` cli to transfer files between workstation and gce instance.
 - Upload `gcloud compute scp local-file-path instance-name:dir-on-instance`
@@ -56,7 +59,7 @@ Congratualations, you have your own linux machine on cloud, free for lifetime an
 
 ## GCP Firebase
 
-Firebase is cloud based, app-backend service that is scalable and it helps in authentication, database, file storage, hosting, crashlytics, messeging, adMob, analytics, campaigns etc. 
+Firebase is cloud based, app-backend service that is scalable and it helps in authentication, database, file storage, hosting, crashlytics, messeging, adMob, analytics, campaigns etc.
 
 It has following components:
 
@@ -81,7 +84,7 @@ It has following components:
 
 - Firebase Hosting
   - Static files hosting
-  - on SSD, serves SSL, 
+  - on SSD, serves SSL,
   - can host PWA
 
 - Firebase Storage
@@ -95,12 +98,18 @@ It has following components:
 ### Firestore Notes
 
 It is NoSQL database storage engine in firebase
+
 - Works online and offline
-- Sotores data in collections
+- Stores data in collections
 
 Initialization:
+
 - create database
 - create table, called collection, users
 - create rows, called document, doc_id
 
 More on [Flutter](../flutter-notes/) notes.
+
+## App Script
+
+Create app script <https://developers.google.com/apps-script/add-ons/translate-addon-sample>
