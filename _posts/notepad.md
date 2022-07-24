@@ -1,48 +1,8 @@
-# Notepad
+---
+title: Notepad Public
+---
 
-Everything tech / *publishable* you read see understand goes here. Then can go to iYV github articles or Kaggle.
-
-# Pet Projects
-
-## Youtube-dl Utility on Mobile
-
-cd ~ytdl || touch mp || ls
-
-
-Playlist:
-
-```shell
-youtube-dl -f bestaudio[ext=m4a] --embed-thumbnail  --add-metadata -o './Singles/%(title)s-%(id)s.%(ext)s' https://music.youtube.com/watch?v=QNvC_bp4Um4
-
-youtube-dl -i -f bestaudio[ext=m4a] --write-thumbnail --add-metadata --download-archive './archive.txt' -o './%(playlist)s/%(id)s/%(title)s-%(id)s.%(ext)s' https://music.youtube.com/playlist?list=PLyAyDdlMr3GPXejbtjvIQzxuF-_FUrNKv
-
-youtube-dl -i -f bestaudio[ext=m4a] --embed-thumbnail --add-metadata -o './%(playlist)s/%(id)s/%(title)s-%(id)s.%(ext)s' https://music.youtube.com/playlist?list=PLyAyDdlMr3GOHFBt0IzgvED-n3uhwyrhd
-
-https://music.youtube.com/playlist?list=PLyAyDdlMr3GPXejbtjvIQzxuF-_FUrNKv
-
-youtube-dl -f bestaudio[ext=m4a] --write-thumbnail --add-metadata --download-archive ./%(playlist)s-archive.txt -o './%(playlist)s/%(playlist_index)s - %(title)s-%(id)s.%(ext)s' https://music.youtube.com/playlist?list=PLyAyDdlMr3GO27Fyqy4kn3q8Lrh7cCnJb
-```
-
-Singles:
-
-```shell
-$ youtube-dl 
--f bestaudio[ext=m4a]
---embed-thumbnail 
---add-metadata
--o '~ytdl/Singles/%(title)s-%(id)s.%(ext)s' <URL>
-
-youtube-dl -f bestaudio[ext=m4a] --embed-thumbnail  --add-metadata -o '~ytdl/Singles/%(title)s-%(id)s.%(ext)s' https://music.youtube.com/watch?v=DFGHScEXIPo
-
-youtube-dl -f "bestaudio[ext=m4a]" -i "https://music.youtube.com/watch?v=hifVLNuEJeA" -o "./songs/%(title)s.%(ext)s"
-```
-
-
-## Instauto: Post to insta via Terminal
-
-## Personal Blog - github.io Upgrade
-
-## Personal App - Daily Logger in Flask Build, PWA
+Staging area - Start with H1, later move to `term-notes.md`
 
 # Android Notes
 

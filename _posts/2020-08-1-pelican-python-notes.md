@@ -5,10 +5,10 @@ categories: notes javascript
 last_modified_at: 2020-08-01 12:53:18
 ---
 
-# Pelican
 Pelican is a static site generator in Python.
 
-### Quickstart
+## Quickstart
+
 - make a dir
 - create virtual env `python3 -m venv venv`
 - upgrade pip `./venv/bin/pip install --upgrade pip`
@@ -18,8 +18,9 @@ Pelican is a static site generator in Python.
 - start server `make devserver` go to `http://localhost:8000/`
 - It builds the `output` dir
 
-### Structure
-- `content` holds all contents, 
+## Structure
+
+- `content` holds all contents,
   - articles can be created as `.md .html or .rst`
   - `content/pages` dir can have pages
   - `content/downloads` can serve static content for pages
@@ -28,7 +29,8 @@ Pelican is a static site generator in Python.
 
 - `output` has all the static pages built using content and theme.
 
-### Adding Theme
+## Adding Theme
+
 - Make a themes dir anywhere
 - add this dir to `pelicanconf.py` as `THEME = 'themes_dir/my_theme`
 - `my_theme` should have two folders
@@ -39,19 +41,22 @@ Pelican is a static site generator in Python.
     - `index.html` lists all blog articles
     - other pages are mandatory like article, author, tag etc can be copied from [here](https://github.com/getpelican/pelican/tree/master/pelican/themes/simple/templates).
 
-### Dev Sprints
+## Dev Sprints
+
 - Go to folder
 - activate env `source venv/bin/activate`
 - start server `make devserver` go to `http://localhost:8000/`
 - this will launch the site and will autoupdate site on page modifications.
 
-### Production Push
+## Production Push
+
 - Delete the output dir
 - run `make devserver` go to `http://localhost:8000/` verify all changes
 - then make an archive of `output` folder and upload to your host.
-- for GCP please follow steps (here)[https://iyadavvaibhav.github.io/google-cloud-platform-notes/#transferring-files-to-and-from-gce-instance].
+- for GCP please follow steps [here](https://iyadavvaibhav.github.io/google-cloud-platform-notes/#transferring-files-to-and-from-gce-instance).
 
-### Tips and Tricks:
+## Tips and Tricks
+
 - to replace blog index page, add following metas to any new `homepage.html`
 
 ```html
@@ -61,7 +66,7 @@ Pelican is a static site generator in Python.
 
 - sorting menu items
   - in `pelicanconf.py` add `PAGE_ORDER_BY = 'reversed-date'`
-  - then in pages meta add `<meta name="date" content="2020-07-26 07:00" />` 
+  - then in pages meta add `<meta name="date" content="2020-07-26 07:00" />`
   - you can then change time to sort pages in menu bar.
 
 Minimum html required for pages:
@@ -78,5 +83,6 @@ Minimum html required for pages:
 ```
 
 To do:
+
 - exclude some pages from menu
 - add articles
