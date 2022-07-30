@@ -100,90 +100,76 @@ Instagram Bot:
 
 # Tableau
 
-- Order Date `DATEPARSE('yyyy-MM-dd',[Order Month]+'-01')`
-- Order Year - `Left([Order Month],4)`
-- Max Date - `{MAX([Order Date])}`
 
-- Monthly
 
-```js
-IF ( DATEDIFF('month', [Order Date], [Max Date], 'monday') = 0  AND DAY([Order Date])<=DAY([Max Date]))
-THEN 'Current Month'
-ELSEIF ( 
-    DATEDIFF('month', [Order Date], [Max Date], 'monday') = 1
-    //AND
-    //DAY([Order Date])<=DAY([Max Date])
-)
-THEN 'Last Month'
-ELSEIF ( 
-    DATEDIFF('month', [Order Date], [Max Date], 'monday') = 12 
-    // AND DAY([Order Date])<=DAY([Max Date])
-)
-THEN 'Last Year Month'
-END
-```
+## Writeback in Tableau
 
-- Rolling 13 months
+## Mega String
 
-```js
-[Order Date] > DATEADD('month',-13,{MAX([Order Date])})
-and
-[Order Date] <= {MAX([Order Date])}
-```
+"( '"
++[CC interaction_artifact_ID]
++"', '"
++[CC Status]
++"', '"+[CC Note]+"', '"+USERNAME()+"' )"
 
-- yearly
+## HideInsert
 
-```js
-IF ( DATEDIFF('year', [Order Date], [Max Date], 'monday') = 0   AND MONTH([Order Date])<=MONTH([Max Date]))
-THEN 'Current Year'
-ELSEIF ( 
-    DATEDIFF('year', [Order Date], [Max Date], 'monday') = 1  
-    AND ( 
-            (  MONTH([Order Date]) <= MONTH([Max Date])  ) 
-            //OR 
-            //( 
-                // ( MONTH([Order Date])=MONTH([Max Date]) ) AND ( DAY([Order Date])<=DAY([Max Date]) ) 
-            //)
-        )
-)
-THEN 'Last Year'
-END
-```
+[CC W InsertRun] = 0
 
-- CM `SUM(IIF([Monthly]=='Current Month',[Customers],NULL))`
+## HideReset
 
-- MOM
+[CC W InsertRun] = 4
 
-```js
-(
-    SUM(IIF ([Monthly] == 'Current Month',[Users],0)) - 
-    SUM(IIF ([Monthly] == 'Last Month',[Users],0) ) 
-)
-/
-SUM(IIF ([Monthly] == 'Last Month',[Users],0))
-```
+## IncrementAdd
 
-- MOM up `IF [Customers MOM] > 0 THEN "▲" END`
-- MOM Donw `IF [Customers MOM] <= 0 THEN "▼" END`
+[CC W Incrementer]+1
 
-- YOY
+## zero
 
-```js
-( SUM(IIF ([Yearly] == 'Current Year',[Customers],0)) - SUM(IIF ([Yearly] == 'Last Year',[Customers],0) ) )
-/
-SUM(IIF ([Yearly] == 'Last Year',[Customers],0))
-```
+0
 
-- YOY Up `IF [Customers YOY] > 0 THEN "▲" END`
-- YOY Donw `IF [Customers YOY] <= 0 THEN "▼" END`
-- YTD `SUM(IIF([Yearly] == 'Current Year',[Customers],0))`
+## One
 
-**KPI Format**
+1
 
-- small arrows `0%  ⯅; -0% ⯆; 0%⠀⠀;` ⯇ ⯈ ⯅ ⯆
-- ⮜ ⮞ ⮝ ⮟ `0%  ⮝; -0% ⮟; 0%⠀⠀;`  \(U+2800\)
-- 🡄 🡆 🡅 🡇 `0%  🡅; -0% 🡇; 0%⠀⠀;`
-- more arrows - <http://xahlee.info/comp/unicode_arrows.html>
+## Blank
+
+""
+
+## sheet reset
+
+Saved successfully!
+Go To Flow View ⮞
+
+## Seet Sumbit
+
+Submit ⮟
+
+## CC Submitted
+
+Writeback proc source
+
+## Actions on form
+
+select - reset - go to - next
+
+select - reset - set - insertrun to 0
+
+select - submit - set - cc mega string
+
+select - submit - set - increment to +1
+
+select - submit - set - insetRun 1
+
+## actions on table sheet
+
+select - table - set - insertRun 1
+
+select - table - set - string blank
+
+select - table - set - id to row selected
+
+
 
 
 
@@ -261,7 +247,7 @@ Add D3 library. Then specific module.
 # Google Cloud Platform Notes
 
 Everything is in project
-s
+
 # YouTube Channel Notes
 
 Start creating a web of terms , make understand each thing, chamkao cheezo ko.
