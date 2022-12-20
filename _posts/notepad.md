@@ -25,7 +25,6 @@ References:
 - <https://technastic.com/vivo-bloatware-preinstalled-apps-list/>
 
 
-# Blogging and Notes Taking Decisions
 
 ## Easy Soft Sys
 
@@ -240,13 +239,6 @@ Add D3 library. Then specific module.
 <https://observablehq.com/@d3/d3-hierarchy?collection=@d3/d3-hierarchy>
 
 
-# Flutter Notes
-
-# GCP Firebase Notes
-
-# Google Cloud Platform Notes
-
-Everything is in project
 
 # YouTube Channel Notes
 
@@ -266,9 +258,6 @@ Follow:
 - `alias vynote="subl ~/path/to/file/notepad.txt"` add to `.bash_profile` to make shortcut
 - cheat book - <https://github.com/0nn0/terminal-mac-cheatsheet#english-version>
 
-# Flask Notes
 
-# Web Server Notes
-
-# Python Notes
+# Python web app development
 
