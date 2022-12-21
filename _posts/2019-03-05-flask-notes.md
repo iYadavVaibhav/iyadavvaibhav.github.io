@@ -20,6 +20,7 @@ Why? - It gives different apps isolation and personal environment so that module
 
 - Basically a folder having python core binaries and use this new installation to install libraries that will be specific to this installation (or environment).
 - It is an isolated environment
+- When you activate a virtual environment, your PATH variable is changed. The Scripts directory of `venv_app` is put in front of everything else, effectively overriding all the system-wide Python software.
 
 ### Set correct Python Interpretor
 
@@ -33,19 +34,25 @@ Why? - It gives different apps isolation and personal environment so that module
 
 ### How to use Virtual Environments in Python3?
 
-- python3 or python depends on your installation.
-- `python3 -m venv venv_app` - creates folder venv_app
-- `source venv_app/bin/activate` - activates this environment, for use
-- check using `python3 -V` or `which python3`
-- now do `python -m pip install <package-name>` - this installs the package only in this environment.
-- add `#!venv_app/bin/python3` on top of main.py file to make it use this python.
+- **Create**
+  - python3 or python depends on your installation.
+  - `python3 -m venv venv_app` - creates folder venv_app
+  - `source venv_app/bin/activate` - activates this environment, for use
+  - check using `python3 -V` or `which python3`
+  - now do `python -m pip install <package-name>` - this installs the package only in this environment.
+  - add `#!venv_app/bin/python3` on top of main.py file to make it use this python.
 
-- `deactivate` to deactivate the current env.
+- **Deactivate**
+  - `deactivate` to deactivate the current env.
 
-- `python -m pip list` to see installed libs.
-- `python3 -m pip freeze` to share libs.
-  - `python3 -m pip freeze > requiremeents.txt` to make a file.
-  - `python3 -m pip install -r requirements.txt` to install all libs from file
+- **View & Share**
+  - `python -m pip list` to see installed libs.
+  - `python3 -m pip freeze` to share libs.
+    - `python3 -m pip freeze > requiremeents.txt` to make a file.
+    - `python3 -m pip install -r requirements.txt` to install all libs from file
+
+- **Delete**
+  - `rm -r venv_app` delete
 
 ## Flask Hello World
 
@@ -80,6 +87,34 @@ Why? - It gives different apps isolation and personal environment so that module
 - Using Flask CLI
   - `export FLASK_APP=main.py` will make an variable that tells python which app to run.
   - `flask run` executes the app or if flask is not in path then do `python -m flask run`
+
+## Flask Logging
+
+```python
+import logging
+
+app = Flask(__name__)
+logging.basicConfig(level=logging.DEBUG)
+
+app.logger.info('some log')
+```
+
+## Deployment - PythonAnywhere
+
+- WSGI configuration
+  - On your Web App Configuration page, open "WSGI configuration file", and ensure you add your project folder to code below.
+
+  ```python
+  import sys
+
+  # add your project directory to the sys.path
+  project_home = u'/home/username/mysite'
+  if project_home not in sys.path:
+      sys.path = [project_home] + sys.path
+
+  # import flask app but need to call it "application" for WSGI to work
+  from flask_app import app as application  # noqa
+  ```
 
 ## Access "Virtual Machine localhost flask app" on a host machine
 
