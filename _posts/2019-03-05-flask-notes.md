@@ -88,6 +88,57 @@ Why? - It gives different apps isolation and personal environment so that module
   - `export FLASK_APP=main.py` will make an variable that tells python which app to run.
   - `flask run` executes the app or if flask is not in path then do `python -m flask run`
 
+## Flask native modules
+
+- `Flask` - is a class of which instance `app` is created using `app = Flask(__name__)`
+- `redirect` - takes URL to redirect to.
+- `url_for` - takes function name as str and gives its URL.
+  - `redirect(url_for("profile"))`
+- `session` - can be used to store values, specific to current session, it is server side. Helps to pass values from one function to another.
+  - `session["username"] = username`
+  - permanent sessions store session data for a timeperiod
+- `flash` - lets send extra messages to frontend
+  - `flash("The message", "info")` message and level.
+  - `get_flashed_messages()` to get messages
+
+### Flask Blueprints
+
+- Blueprint lets us divide app into mini apps. It is a collection of views, templates, static files that can be applied to an application. Blueprints are a great way to organize your application.
+- you can have a sub-folder for mini app, having its own static and templtes folder, just app `__init__` to the sub-folder and import it to main app
+- In a functional structure, each blueprint is just a collection of views. The templates are all kept together, as are the static files.
+
+```python
+from flask import Blueprint
+
+second = Blueprint("second", __name__)
+
+@second.route("/home")
+def home():
+    return ("from second")
+```
+
+- and in `app.py`
+
+```python
+from flask import Flask
+from second import second
+
+app = Flask(__name__)
+
+app.register_blueprint(second, url_prefix="")
+
+@app.route("/")
+def home():
+    return "Hi"
+
+if __name__ == "__main__":
+    app.run(debug=True)
+```
+
+- Link - <http://exploreflask.com/en/latest/blueprints.html>
+
+
+
 ## Flask Logging
 
 ```python
